@@ -52,12 +52,12 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	"%localappdata%\revanced-cli\revanced-curl\curl.exe" -L "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.0/revanced-cli-3.1.0-all.jar" --output "%localappdata%\revanced-cli\revanced-tools\revanced-cli-3.1.0-all.jar"
 	echo.
 )
-set CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe
-set JDK=%localappdata%\revanced-cli\revanced-jdk\bin\java.exe
-set CLI=%localappdata%\revanced-cli\revanced-tools\revanced-cli-3.1.0-all.jar
-set PATCHES=%localappdata%\revanced-cli\revanced-tools\revanced-patches-2.190.0.jar
-set INTEGRATIONS=%localappdata%\revanced-cli\revanced-tools\revanced-integrations-0.117.1.apk
-set KEYSTORE=%localappdata%\revanced-cli\keystore
+set "CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe"
+set "JDK=%localappdata%\revanced-cli\revanced-jdk\bin\java.exe"
+set "CLI=%localappdata%\revanced-cli\revanced-tools\revanced-cli-3.1.0-all.jar"
+set "PATCHES=%localappdata%\revanced-cli\revanced-tools\revanced-patches-2.190.0.jar"
+set "INTEGRATIONS=%localappdata%\revanced-cli\revanced-tools\revanced-integrations-0.117.1.apk"
+set "KEYSTORE=%localappdata%\revanced-cli\keystore"
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%CURL%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%JDK%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%CLI%' | Select-Object -ExpandProperty Hash"`) DO ( SET CLI_h=%%F )
@@ -241,7 +241,7 @@ echo.
 echo [92m Vanced MicroG downloaded to the revanced-cli-output folder! [0m
 :end_end
 echo  If something goes wrong, screenshot the ENTIRE terminal in your support request in the revanced discord support channel.
-echo  bat Version 1.19
+echo  bat Version 1.20
 echo.
 echo  Backups, keystore and supporting files can be found in AppData\Local\revanced-cli
 echo.
