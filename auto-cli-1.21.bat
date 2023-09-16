@@ -65,7 +65,7 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%INTEGRATIONS%' | Select-Object -ExpandProperty Hash"`) DO ( SET INTEGRATIONS_h=%%F )
 set "comb_h=%CURL_h%%JDK_h%%CLI_h%%PATCHES_h%%INTEGRATIONS_h%"
 set "comp_h=7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599290D1 6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A720B D53327788EBB1D96647736C375A69D64910B2897616339332718C0BE99CCCBE0 6C0AAE909547CB563F3F536EF420FA69FC83FB28B3C263F8ECEDACDAEA2A50F1 C2FC01E5F9B5866A38533A4BA37C0AE1CF2F8F353ACBED2D334693506FFE32EA "
-if "%comb_h%" == "%comp_h%" (
+if /i "%comb_h%" == "%comp_h%" (
 	echo  [92m File integrity validated! [0m
 	echo.
 	goto start
@@ -92,52 +92,64 @@ echo.
 set choice=
 set /p choice=Type the number or letter to fetch the corresponding app and hit enter. 
 if not '%choice%'=='' set choice=%choice:~0,1%
-if '%choice%'=='1' goto YT
-if '%choice%'=='2' goto YT
-if '%choice%'=='3' goto YTM
-if '%choice%'=='4' goto trash
-if '%choice%'=='5' goto twitch
-if '%choice%'=='6' goto twitter
+if '%choice%'=='1' goto app_download
+if '%choice%'=='2' goto app_download
+if '%choice%'=='3' goto app_download
+if '%choice%'=='4' goto app_download
+if '%choice%'=='5' goto app_download
+if '%choice%'=='6' goto app_download
 if '%choice%'=='A' goto custom
 echo "%choice%" is not valid, try again
 echo.
 goto start
-:YT
-echo.
-echo downloading YT...
-echo.
-"%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149347604904292472/com.google.android.youtube_18.32.39-1539440064.apk" --output .\YouTube-stock.apk
+:app_download
+if '%choice%'=='1' "%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149347604904292472/com.google.android.youtube_18.32.39-1539440064.apk" --output .\YouTube-stock.apk 
+if '%choice%'=='2' "%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149347604904292472/com.google.android.youtube_18.32.39-1539440064.apk" --output .\YouTube-stock.apk 
+if '%choice%'=='3' "%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149346807814570064/com.google.android.apps.youtube.music_6.16.52-61652240.apk" --output .\YouTube-music-stock.apk
+if '%choice%'=='4' "%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149348108535353484/com.zhiliaoapp.musically_30.8.4-2023008040.apk" --output .\TikTok-stock.apk
+if '%choice%'=='5' "%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149766585272246364/tv.twitch.android.app_15.4.1-1504010.apk" --output .\Twitch-stock.apk
+if '%choice%'=='6' "%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1150412361979658340/com.twitter.android_10.6.0-release.0-310060000.apk" --output .\Twitter-stock.apk
+goto app_integ_check
+:app_integ_check
+if '%choice%'=='1' FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 'YouTube-stock.apk' | Select-Object -ExpandProperty Hash"`) DO ( SET APP_h=%%F ) && set "app_comp_h=342ab2dba5a099bf108a5cf21c3fbee37cdf09865a30cbc0140db7f81cb7164c "
+if '%choice%'=='2' FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 'YouTube-stock.apk' | Select-Object -ExpandProperty Hash"`) DO ( SET APP_h=%%F ) && set "app_comp_h=342ab2dba5a099bf108a5cf21c3fbee37cdf09865a30cbc0140db7f81cb7164c "
+if '%choice%'=='3' FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 'YouTube-music-stock.apk' | Select-Object -ExpandProperty Hash"`) DO ( SET APP_h=%%F ) && set "app_comp_h=cee5753b9290e1c6d8c3eac2dcf692dce7fc97f260c05f3d60eee04d28285e25 "
+if '%choice%'=='4' FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 'TikTok-stock.apk' | Select-Object -ExpandProperty Hash"`) DO ( SET APP_h=%%F ) && set "app_comp_h=f0b5834a56d3e8a3f2fd005f9a2d7d6da4cd8b8ff558258467296a8666c83144 "
+if '%choice%'=='5' FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 'Twitch-stock.apk' | Select-Object -ExpandProperty Hash"`) DO ( SET APP_h=%%F ) && set "app_comp_h=beb6f68c7003b6d168f8d5368a878c988569c3c70fbf0e30abb9078d4e47c982 "
+if '%choice%'=='6' FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 'Twitter-stock.apk' | Select-Object -ExpandProperty Hash"`) DO ( SET APP_h=%%F ) && set "app_comp_h=7321513751e36fc2a044c6032edfd89ec9eb3ef72f9fd5c1a850d52d708b3863 "
+if /i "%APP_h%" == "%app_comp_h%" (
+	echo  [92m File integrity validated! [0m
+	echo.
+	goto app_integ_check_passed
+) else (
+	if '%second_check%'=='1' goto download_abort
+	set second_check=1
+	echo  [93m File integrity damaged... Something must've become corrupted during the download or curl had some issue... [0m
+	echo  Falling back to Invoke WebRequest... This might take a bit longer and doesn't give a nice status indication for the download.
+	echo.
+	if '%choice%'=='1' powershell -command "Invoke-WebRequest 'https://cdn.discordapp.com/attachments/1149345921516187789/1149347604904292472/com.google.android.youtube_18.32.39-1539440064.apk' -OutFile '.\YouTube-stock.apk'"
+	if '%choice%'=='2' powershell -command "Invoke-WebRequest 'https://cdn.discordapp.com/attachments/1149345921516187789/1149347604904292472/com.google.android.youtube_18.32.39-1539440064.apk' -OutFile '.\YouTube-stock.apk'"
+	if '%choice%'=='3' powershell -command "Invoke-WebRequest 'https://cdn.discordapp.com/attachments/1149345921516187789/1149346807814570064/com.google.android.apps.youtube.music_6.16.52-61652240.apk' -OutFile '.\YouTube-music-stock.apk'"
+	if '%choice%'=='4' powershell -command "Invoke-WebRequest 'https://cdn.discordapp.com/attachments/1149345921516187789/1149348108535353484/com.zhiliaoapp.musically_30.8.4-2023008040.apk' -OutFile '.\TikTok-stock.apk'"
+	if '%choice%'=='5' powershell -command "Invoke-WebRequest 'https://cdn.discordapp.com/attachments/1149345921516187789/1149766585272246364/tv.twitch.android.app_15.4.1-1504010.apk' -OutFile '.\Twitch-stock.apk'"
+	if '%choice%'=='6' powershell -command "Invoke-WebRequest 'https://cdn.discordapp.com/attachments/1149345921516187789/1150412361979658340/com.twitter.android_10.6.0-release.0-310060000.apk' -OutFile '.\Twitter-stock.apk'"
+	goto app_integ_check
+)
+:app_integ_check_passed
 if '%choice%'=='1' "%JDK%" -jar "%CLI%" patch YouTube-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" --keystore "%KEYSTORE%\PATCHED_YouTube.keystore" -o PATCHED_YouTube_18.32.39.apk
 if '%choice%'=='2' "%JDK%" -jar "%CLI%" patch YouTube-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" --keystore "%KEYSTORE%\PATCHED_YouTube.keystore" -i "custom branding" -o PATCHED_YouTube.apk
+if '%choice%'=='3' "%JDK%" -jar "%CLI%" patch YouTube-music-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" --keystore "%KEYSTORE%\PATCHED_YouTube_Music.keystore" -o PATCHED_YouTube_Music.apk
+if '%choice%'=='4' "%JDK%" -jar "%CLI%" patch TikTok-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" -i "Sim spoof" --keystore "%KEYSTORE%\PATCHED_TikTok.keystore" -o PATCHED_TikTok.apk
+if '%choice%'=='5' "%JDK%" -jar "%CLI%" patch Twitch-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" --keystore "%KEYSTORE%\PATCHED_Twitch.keystore" -o PATCHED_Twitch.apk
+if '%choice%'=='6' "%JDK%" -jar "%CLI%" patch Twitter-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" --keystore "%KEYSTORE%\PATCHED_Twitter.keystore" -o PATCHED_Twitter.apk
 goto end
-:YTM
+:download_abort
+echo  [91m The base APKs could not be downloaded... Is the Discord CDN down? Open this script in an editor and check if you can download the APKs directly. [0m
+echo  If you can, report to ReVanced Support Discord. If not, they might be gone or your internet connection may be interrupted.
+echo  Pressing any key will end this script.
 echo.
-echo downloading YTM...
-echo.
-"%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149346807814570064/com.google.android.apps.youtube.music_6.16.52-61652240.apk" --output .\YouTube-music-stock.apk
-"%JDK%" -jar "%CLI%" patch YouTube-music-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" --keystore "%KEYSTORE%\PATCHED_YouTube_Music.keystore" -o PATCHED_YouTube_Music.apk
-goto end
-:trash
-echo.
-echo downloading TikTok...
-echo.
-"%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149348108535353484/com.zhiliaoapp.musically_30.8.4-2023008040.apk" --output .\TikTok-stock.apk
-"%JDK%" -jar "%CLI%" patch TikTok-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" -i "Sim spoof" --keystore "%KEYSTORE%\PATCHED_TikTok.keystore" -o PATCHED_TikTok.apk
-goto end
-:twitch
-echo.
-echo downloading Twitch...
-echo.
-"%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149766585272246364/tv.twitch.android.app_15.4.1-1504010.apk" --output .\Twitch-stock.apk
-"%JDK%" -jar "%CLI%" patch Twitch-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" --keystore "%KEYSTORE%\PATCHED_Twitch.keystore" -o PATCHED_Twitch.apk
-goto end
-:twitter
-echo.
-echo downloading Twitter...
-echo.
-"%CURL%" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1150412361979658340/com.twitter.android_10.6.0-release.0-310060000.apk" --output .\Twitter-stock.apk
-"%JDK%" -jar "%CLI%" patch Twitter-stock.apk -b "%PATCHES%" -m "%INTEGRATIONS%" --keystore "%KEYSTORE%\PATCHED_Twitter.keystore" -o PATCHED_Twitter.apk
-goto end
+pause
+EXIT
 :custom
 if exist ..\revanced-cli-input\ (
 	echo [93m The revanced-cli-input folder already exists at the location you're running this script in. [0m
@@ -151,7 +163,6 @@ echo  The app [93mMUST[0m be called 'input.apk'
 echo  The patches [93mMUST[0m be called 'patches.jar'.
 echo  The integrations [93mMUST[0m be called 'integrations.apk'
 echo [93m Patches and integrations are optional. Not providing them will cause the script to use official ReVanced sources. [0m
-
 echo Once you're ready, press any key to continue...
 echo.
 pause
@@ -240,8 +251,8 @@ goto microG
 echo.
 echo [92m Vanced MicroG downloaded to the revanced-cli-output folder! [0m
 :end_end
-echo  If something goes wrong, screenshot the ENTIRE terminal in your support request in the revanced discord support channel.
-echo  bat Version 1.20
+echo  If something goes wrong, screenshot the ENTIRE terminal in your support request in the ReVanced discord support channel.
+echo  bat Version 1.21
 echo.
 echo  Backups, keystore and supporting files can be found in AppData\Local\revanced-cli
 echo.
