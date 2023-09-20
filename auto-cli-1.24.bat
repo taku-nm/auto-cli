@@ -18,7 +18,7 @@ rmdir /s /q revanced-cli-output > nul 2> nul
 mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 echo.
-set batVersion=1.23
+set batVersion=1.24
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date! [0m
@@ -91,19 +91,19 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	set "INTEGRATIONS=%localappdata%\revanced-cli\revanced-tools\!fname!"
 )
 :start
+set "k=0"
 echo.
-echo   1. YouTube (stock logo)
-echo   2. YouTube (revanced logo)
-echo   3. YouTube Music
-echo   4. TikTok
-echo   5. Twitch
-echo   6. Twitter
+for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%') | ConvertFrom-Json | Select-Object -ExpandProperty downloads.apps"') do (
+	set /a "k=k+1"
+	for /f "tokens=*" %%j in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
+        echo  [0m %%j
+    )
+)
 echo.
 echo   A. Custom
 echo.
 set choice=
 set /p choice=Type the number or letter to fetch the corresponding app and hit enter. 
-if not '%choice%'=='' set choice=%choice:~0,1%
 if %choice% geq 1 if %choice% leq 30 ( goto app_download )
 if '%choice%'=='A' goto custom
 echo "%choice%" is not valid, try again
