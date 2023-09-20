@@ -18,7 +18,7 @@ rmdir /s /q revanced-cli-output > nul 2> nul
 mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 echo.
-set batVersion=1.22
+set batVersion=1.23
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date! [0m
@@ -200,6 +200,7 @@ echo [92m DONE! [0m
 echo [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
 echo.
 if %choice% geq 1 if %choice% leq 3 ( goto microG )
+if %choice% geq 4 if %choice% leq 30 ( goto end_end )
 if '%choice%'=='A' goto end_end
 :microG
 echo [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
