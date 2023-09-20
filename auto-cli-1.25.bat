@@ -18,7 +18,7 @@ rmdir /s /q revanced-cli-output > nul 2> nul
 mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 echo.
-set batVersion=1.24
+set batVersion=1.25
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date! [0m
@@ -104,7 +104,8 @@ echo   A. Custom
 echo.
 set choice=
 set /p choice=Type the number or letter to fetch the corresponding app and hit enter. 
-if %choice% geq 1 if %choice% leq 30 ( goto app_download )
+set /a "k=k-1"
+if %choice% geq 1 if %choice% leq %k% ( goto app_download )
 if '%choice%'=='A' goto custom
 echo "%choice%" is not valid, try again
 echo.
