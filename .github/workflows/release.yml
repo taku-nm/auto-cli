@@ -1,0 +1,22 @@
+name: "Release Build"
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Add version to file
+        run: mv auto-cli.bat auto-cli-${{ env.RELEASE_VERSION }}.bat
+      - name: Publish release file
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: auto-cli-${{ env.RELEASE_VERSION }}.bat
