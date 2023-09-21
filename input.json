@@ -19,7 +19,9 @@
             }
         },
         "apps": [
-			{   "debug": "do not populate" },
+	    {
+                "fname": null
+            },
             {
                 "fname": "YouTube.apk",
                 "dname": "1. YouTube (Stock logo)",
