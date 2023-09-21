@@ -1,5 +1,6 @@
 {
-    "batVersion": "1.27",
+
+    "batVersion": "1.28",
     "downloads": {
         "tools": {
             "cli": {
