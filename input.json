@@ -1,5 +1,5 @@
 {
-    "batVersion": "1.25",
+    "batVersion": "1.26",
     "downloads": {
         "tools": {
             "cli": {
@@ -60,6 +60,20 @@
                 "dname": "6. Twitter",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1150412361979658340/com.twitter.android_10.6.0-release.0-310060000.apk",
                 "hash": "7321513751e36fc2a044c6032edfd89ec9eb3ef72f9fd5c1a850d52d708b3863",
+                "patches": " "
+            },
+			{
+                "fname": "Boost.apk",
+                "dname": "7. Boost for Reddit",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154219206418628709/free.reddit.news_10.2.19-625.apk",
+                "hash": "a68c22d632a5dd1f446c3759a171c7dbb9edab2afc3c2f87e39323f198606742",
+                "patches": " "
+            },
+			{
+                "fname": "Relay.apk",
+                "dname": "8. Relay for Reddit",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154219206418628709/free.reddit.news_10.2.19-625.apk",
+                "hash": "9049e00231458fac677d0c6c301bea0b998f211a90bfc0dfa534bdf44d54b9c9",
                 "patches": " "
             }
         ]
