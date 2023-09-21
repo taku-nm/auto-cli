@@ -17,8 +17,9 @@ copy /y C:\revanced-cli-keystore\*.keystore "%localappdata%\revanced-cli\keystor
 rmdir /s /q revanced-cli-output > nul 2> nul
 mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
+mklink /D "backups and more" "%localappdata%\revanced-cli\"
 echo.
-set batVersion=1.26
+set batVersion=1.28
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date! [0m
@@ -34,7 +35,7 @@ if exist "%localappdata%\revanced-cli\revanced-curl\" (
     powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '%localappdata%\revanced-cli\curl.zip'"
 	powershell -command "Expand-Archive '%localappdata%\revanced-cli\curl.zip' -DestinationPath '%localappdata%\revanced-cli\'"
 	mkdir "%localappdata%\revanced-cli\revanced-curl\" > nul 2> nul
-	Xcopy "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\bin\" "%localappdata%\revanced-cli\revanced-curl\"  > nul 2> nul
+	copy /y "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\bin\*.*" "%localappdata%\revanced-cli\revanced-curl\*.*"  > nul 2> nul
 	rmdir /s /q "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\"  > nul 2> nul
 	del "%localappdata%\revanced-cli\curl.zip"
     echo.
@@ -104,7 +105,6 @@ echo   A. Custom
 echo.
 set choice=
 set /p choice=Type the number or letter to fetch the corresponding app and hit enter. 
-set /a "k=k-1"
 if %choice% geq 1 if %choice% leq %k% ( goto app_download )
 if '%choice%'=='A' goto custom
 echo "%choice%" is not valid, try again
@@ -228,6 +228,7 @@ echo  If something goes wrong, screenshot the ENTIRE terminal in your support re
 echo  bat Version %batVersion%
 echo.
 echo  Backups, keystore and supporting files can be found in AppData\Local\revanced-cli
+echo  [93m To use the backup files, rename them to .apk instead of .backup [0m
 echo.
 echo  Pressing any key will close this window.
 echo.
