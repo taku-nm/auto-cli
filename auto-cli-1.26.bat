@@ -18,7 +18,7 @@ rmdir /s /q revanced-cli-output > nul 2> nul
 mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 echo.
-set batVersion=1.25
+set batVersion=1.26
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date! [0m
@@ -93,7 +93,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 :start
 set "k=0"
 echo.
-for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%') | ConvertFrom-Json | Select-Object -ExpandProperty downloads.apps"') do (
+for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
 	set /a "k=k+1"
 	for /f "tokens=*" %%j in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
         echo  [0m %%j
@@ -114,6 +114,7 @@ goto start
 call :fetchAppJson "%inputJson%" %choice%
 echo Downloading !fname!
 call :downloadWithFallback !fname! !link! !hash!
+if %choice% geq 7 if %choice% leq 9 call :redditOptions
 echo Patching !fname!
 call :patchApp !fname!
 goto end
@@ -293,5 +294,34 @@ EXIT /B 0
 :patchApp
 set "inputString=%~1"
 set "keyString=!inputString:.apk=!"
-"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! --keystore "%KEYSTORE%\PATCHED_!keyString!.keystore" -o PATCHED_%~1
+"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.keystore" -o PATCHED_%~1
+EXIT /B 0
+:redditOptions
+echo.
+echo You're patching a third-party reddit client. This requires you to create a client ID at https://www.reddit.com/prefs/apps
+echo You can leave "description" and "about url" empty. Make sure to select "installed app".
+echo.
+echo For "redirect uri" enter the following:
+if '%choice%'=='7' echo [92m http://rubenmayayo.com [0m
+if '%choice%'=='8' echo [92m dbrady://relay [0m
+echo.
+if exist "%localappdata%\revanced-cli\options.json" (
+	echo  [92m option.json found! [0m
+	echo The provided client ID will be used. Make sure it is the correct one.
+	echo Pressing any key will open notepad for you to check this value.
+) else (
+	"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
+	move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
+	echo An options.json as been created.
+	echo The client ID has to be entered where it says null, after value under the spoof client section.
+	echo.
+	echo Example:    "value"  :  "example_client_id" 
+	echo.
+	echo Pressing any key will open notepad for you to edit this value.
+)
+echo Close notepad once you're ready. Don't forget to save within notepad.
+echo.
+pause
+START "" /wait notepad "%localappdata%\revanced-cli\options.json"
+set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
 EXIT /B 0
