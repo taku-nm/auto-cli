@@ -16,12 +16,16 @@ jobs:
         run: mv auto-cli.bat auto-cli-${{ env.RELEASE_VERSION }}.bat
       - name: Publish the release
         run: |
-            gh release create "${{ env.RELEASE_VERSION }}" \
-            --title "${{ env.RELEASE_VERSION }}" \
-            --generate-notes \
-            auto-cli-${{ env.RELEASE_VERSION }}.bat
+          gh release create "${{ env.RELEASE_VERSION }}" \
+          --title "${{ env.RELEASE_VERSION }}" \
+          --generate-notes \
+          auto-cli-${{ env.RELEASE_VERSION }}.bat
         env:
-            GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Update the README link
         run: |
-            sed -i -E 's/v[0-9]+\.[0-9]+/${{ env.RELEASE_VERSION }}/g' README.md
+          sed -i -E 's/v[0-9]+\.[0-9]+/${{ env.RELEASE_VERSION }}/g' README.md
+          git add README.md
+          git commit -m "Update README direct link with latest release"
+          git push origin
+          git push origin main:dev

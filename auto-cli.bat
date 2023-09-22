@@ -9,7 +9,7 @@ pause
 pushd "%~dp0"
 mkdir "%localappdata%\revanced-cli\" > nul 2> nul
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/dev/input.json' -OutFile '%localappdata%\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '%localappdata%\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 set "inputJson=%localappdata%\revanced-cli\input.json"
 mkdir "%localappdata%\revanced-cli\keystore" > nul 2> nul
 mkdir "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
