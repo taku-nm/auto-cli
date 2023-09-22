@@ -74,27 +74,21 @@ if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A
 	goto jdk_integ_failed
 )
 if exist "%localappdata%\revanced-cli\revanced-tools\" (
-	call :checkTool cli
-	set "CLI=%localappdata%\revanced-cli\revanced-tools\!fname!" > nul 2> nul
-	call :checkTool patches
-	set "PATCHES=%localappdata%\revanced-cli\revanced-tools\!fname!" > nul 2> nul
-	call :checkTool integrations
-	set "INTEGRATIONS=%localappdata%\revanced-cli\revanced-tools\!fname!" > nul 2> nul
+	for %%i in (cli, patches, integrations) do (
+	   call :checkTool %%i
+	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!" > nul 2> nul
+	)
 	if !update! == 1 echo [93m Your ReVanced Tools are out of date or damaged... Re-downloading... [0m && rmdir /s /q "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul && goto update_jump
 	if !update! == 0 goto start
 ) else (
 	echo  [93m No ReVanced Tools found... Downloading... [0m
 	:update_jump
 	mkdir "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul
-	call :fetchToolsJson "%inputJson%" cli
-	call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
-	set "CLI=%localappdata%\revanced-cli\revanced-tools\!fname!"
-	call :fetchToolsJson "%inputJson%" patches
-	call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
-	set "PATCHES=%localappdata%\revanced-cli\revanced-tools\!fname!"
-	call :fetchToolsJson "%inputJson%" integrations
-	call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
-	set "INTEGRATIONS=%localappdata%\revanced-cli\revanced-tools\!fname!"
+	for %%i in (cli, patches, integrations) do (
+	   call :fetchToolsJson "%inputJson%" %%i
+	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
+	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
+	)
 )
 :start
 set "KEYSTORE=%localappdata%\revanced-cli\keystore"
