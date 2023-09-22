@@ -114,7 +114,7 @@ goto start
 call :fetchAppJson "%inputJson%" %choice%
 echo Downloading !fname!
 call :downloadWithFallback !fname! !link! !hash!
-if not !uri! == " " call :redditOptions
+if defined !uri! call :redditOptions
 echo Patching !fname!
 call :patchApp !fname!
 goto end
@@ -254,18 +254,20 @@ set fname=
 set link=
 set hash=
 set patch_sel=
+set apc=0
 for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].hash, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].patches, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].uri"') do (
-     if not defined fname (
+	if !apc!==0 (
         set "fname=%%i"
-    ) else if not defined link (
+    ) else if !apc!==1 (
         set "link=%%i"
-    ) else if not defined hash (
+    ) else if !apc!==2 (
         set "hash=%%i"
-    ) else if not defined patch_sel (
+    ) else if !apc!==3 (
         set "patch_sel=%%i"
-    ) else (
+    ) else if !apc!==4 (
 		set "uri=%%i"
 	)
+	set /a "apc=!apc!+1"
 )
 EXIT /B 0
 :downloadWithFallback
@@ -305,7 +307,7 @@ echo You're patching a third-party reddit client. This requires you to create a 
 echo You can leave "description" and "about url" empty. Make sure to select "installed app".
 echo.
 echo For "redirect uri" enter the following:
-if '%choice%'=='7' echo [92m !uri! [0m
+echo [92m !uri! [0m
 echo.
 if exist "%localappdata%\revanced-cli\options.json" (
 	echo  [92m option.json found! [0m

@@ -36,7 +36,8 @@
                 "dname": "2. YouTube (ReVanced logo)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149347604904292472/com.google.android.youtube_18.32.39-1539440064.apk",
                 "hash": "342ab2dba5a099bf108a5cf21c3fbee37cdf09865a30cbc0140db7f81cb7164c",
-                "patches": "-i \"custom branding\""
+                "patches": "-i \"custom branding\"",
+                "uri" : " "
             },
 			{
                 "fname": "YouTube_Music.apk",
