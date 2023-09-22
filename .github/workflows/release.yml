@@ -22,6 +22,10 @@ jobs:
           auto-cli-${{ env.RELEASE_VERSION }}.bat
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Clean working directory
+        run: |
+          git reset --hard HEAD
+          git clean -f -d
       - name: Create and switch to a new branch
         run: |
           git checkout -b update-readme-${{ env.RELEASE_VERSION }}
