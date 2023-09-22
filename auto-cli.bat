@@ -83,8 +83,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	if !update! == 1 echo [93m Your ReVanced Tools are out of date or damaged... Re-downloading... [0m && rmdir /s /q "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul && goto update_jump
 	if !update! == 0 goto start
 ) else (
-	echo [93m No ReVanced Tools found... Downloading... [0m
-	echo.
+	echo  [93m No ReVanced Tools found... Downloading... [0m
 	:update_jump
 	mkdir "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul
 	call :fetchToolsJson "%inputJson%" cli
@@ -171,7 +170,7 @@ if exist ..\revanced-cli-input\integrations.apk (
 	echo  No integrations.apk found... Continuing using official ReVanced integrations
 )
 echo.
-echo [92m All files loaded! [0m
+echo  [92m All files loaded! [0m
 if exist ..\revanced-cli-input\patches.jar (
 	echo  You've selected a custom patch source. At the next step you will see all available patches.
 	echo.
@@ -182,7 +181,7 @@ if exist ..\revanced-cli-input\patches.jar (
 )
 echo.
 echo  You now have the opportunity to include and exclude patches using the following syntax:
-echo [92m -i "name of a patch to include" -e "name of a patch to exclude" -i "another patch to include" [0m
+echo  [92m -i "name of a patch to include" -e "name of a patch to exclude" -i "another patch to include" [0m
 echo  Type your options now. Leave empty to apply default patches. Hit enter once you're done.
 echo.
 set /p SELECTION=
@@ -193,7 +192,7 @@ echo  Giving it the same name the last time you patched, ensures that your keyst
 echo  [92m Example: PATCHED_WhatsApp [0m
 echo.
 set /p OUTPUT=
-if '%OUTPUT%'=='' echo [91m Nu-uh! Provide a name. [0m && goto filename
+if '%OUTPUT%'=='' echo  [91m Nu-uh! Provide a name. [0m && goto filename
 echo.
 "%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% --keystore "%KEYSTORE%\%OUTPUT%.keystore" -o %OUTPUT%.apk
 goto end
@@ -205,14 +204,14 @@ del .\options.json > nul 2> nul
 copy /y "PATCHED_*.apk" "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
 ren "%localappdata%\revanced-cli\apk_backups\PATCHED_*.apk"  "PATCHED_* %time:~0,2%%time:~3,2%-%DATE:/=%.backup" > nul 2> nul
 echo.
-echo [92m DONE! [0m
-echo [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
+echo  [92m DONE! [0m
+echo  [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
 echo.
 if %choice% geq 1 if %choice% leq 3 ( goto microG )
 if %choice% geq 4 if %choice% leq 30 ( goto end_end )
 if '%choice%'=='A' goto end_end
 :microG
-echo [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
+echo  [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
 echo.
 echo Would you like to download Vanced MicroG from GitHub now?
 echo.
@@ -229,7 +228,7 @@ goto microG
 :microG_d
 call :downloadWithFallback vanced_microG.apk "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk" "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
 echo.
-echo [92m Vanced MicroG downloaded to the revanced-cli-output folder! [0m
+echo  [92m Vanced MicroG downloaded to the revanced-cli-output folder! [0m
 :end_end
 echo  If something goes wrong, screenshot the ENTIRE terminal in your support request in the ReVanced discord support channel.
 echo  bat Version %batVersion%
