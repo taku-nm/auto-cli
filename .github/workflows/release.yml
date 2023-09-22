@@ -23,3 +23,5 @@ jobs:
       - name: Update the README link
         run: |
             sed -i -E 's/v[0-9]+\.[0-9]+/${{ env.RELEASE_VERSION }}/g' README.md
+        env:
+            GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
