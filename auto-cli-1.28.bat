@@ -17,7 +17,7 @@ copy /y C:\revanced-cli-keystore\*.keystore "%localappdata%\revanced-cli\keystor
 rmdir /s /q revanced-cli-output > nul 2> nul
 mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
-mklink /D "backups and more" "%localappdata%\revanced-cli\"
+mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
 set batVersion=1.28
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
