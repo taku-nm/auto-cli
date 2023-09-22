@@ -129,7 +129,7 @@ goto end
 echo.
 echo  [91m Some download or file integrity check failed... Is the Discord CDN down? Is your internet interrupted? [0m
 echo  Other causes might include a very outdated script... Check https://github.com/taku-nm/auto-cli for new releases.
-echo  If you can, report to ReVanced Support Discord. If not, they might be gone or your internet connection may be interrupted.
+echo  If you can, report to ReVanced Support Discord.
 echo  Pressing any key will end this script.
 echo.
 pause
