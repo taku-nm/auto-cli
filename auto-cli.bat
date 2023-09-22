@@ -19,53 +19,59 @@ mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
-set batVersion=1.28
+set batVersion=1.29
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
-	echo  [92m Script up-to-date! [0m
+	echo  [92m Script up-to-date!   Version %batVersion% [0m
 ) else (
 	echo  [93m This script is likely outdated. Check https://github.com/taku-nm/auto-cli for new releases. [0m
+	echo  [93m Your version: %batVersion% [0m
+	echo  [93m Available version: %jsonBatVersion% [0m
 )
-:integ_failed
 if exist "%localappdata%\revanced-cli\revanced-curl\" (
     echo  [92m cURL found! [0m
 ) else (
-    echo [93m No cURL found... Downloading... [0m
-	echo.
+    echo  [93m No cURL found... Downloading... [0m
     powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '%localappdata%\revanced-cli\curl.zip'"
 	powershell -command "Expand-Archive '%localappdata%\revanced-cli\curl.zip' -DestinationPath '%localappdata%\revanced-cli\'"
 	mkdir "%localappdata%\revanced-cli\revanced-curl\" > nul 2> nul
 	copy /y "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\bin\*.*" "%localappdata%\revanced-cli\revanced-curl\*.*"  > nul 2> nul
 	rmdir /s /q "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\"  > nul 2> nul
 	del "%localappdata%\revanced-cli\curl.zip"
-    echo.
 )
+set "CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe"
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%CURL%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
+if /i "%CURL_h%" == "7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599290D1 " (
+	echo  [92m cURL integrity validated! [0m
+) else (
+	echo  [93m cURL integrity invalid... [0m
+	rmdir /s /q "%localappdata%\revanced-cli\revanced-curl\" > nul 2> nul
+	if exist "%windir%\System32\curl.exe" (
+		echo  [92m Windows cURL found... Attempting to fall back on that. [0m
+		set "CURL=%windir%\System32\curl.exe"
+	) else (
+		echo  [93m cURL could not be validated... All downloads will likely revert to Invoke WebRequest... [0m
+	)
+)
+:jdk_integ_failed
 if exist "%localappdata%\revanced-cli\revanced-jdk\" (
 	echo  [92m JDK found! [0m
 ) else (
-	echo [93m No JDK found... Downloading... [0m
+	echo  [93m No JDK found... Downloading... [0m
 	echo.
-	"%localappdata%\revanced-cli\revanced-curl\curl.exe" -L "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip" --output "%localappdata%\revanced-cli\jdk.zip"
+	call :downloadWithFallback "%localappdata%\revanced-cli\jdk.zip" "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip" "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
 	powershell -command "Expand-Archive '%localappdata%\revanced-cli\jdk.zip' -DestinationPath '%localappdata%\revanced-cli'"
 	del "%localappdata%\revanced-cli\jdk.zip"
-	echo.
 )
-set "CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe"
 set "JDK=%localappdata%\revanced-cli\revanced-jdk\bin\java.exe"
-set "KEYSTORE=%localappdata%\revanced-cli\keystore"
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%CURL%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%JDK%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
-set "comb_h=%CURL_h%%JDK_h%"
-set "comp_h=7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599290D1 6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A720B "
-if /i "%comb_h%" == "%comp_h%" (
-	echo  [92m cURL and JDK integrity validated! [0m
+if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A720B " (
+	echo  [92m JDK integrity validated! [0m
 ) else (
-	echo  [93m cURL and JDK integrity damaged... Something must've become corrupted during the download [0m
-	echo Deleting everyting and retrying...
-	rmdir /s /q "%localappdata%\revanced-cli\revanced-curl\" > nul 2> nul
+	echo  [93m JDK integrity invalid... Something must've become corrupted during the download [0m
+	echo Deleting JDK and retrying...
 	rmdir /s /q "%localappdata%\revanced-cli\revanced-jdk\" > nul 2> nul
-	echo.
-	goto integ_failed
+	goto jdk_integ_failed
 )
 if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	call :checkTool cli
@@ -92,6 +98,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	set "INTEGRATIONS=%localappdata%\revanced-cli\revanced-tools\!fname!"
 )
 :start
+set "KEYSTORE=%localappdata%\revanced-cli\keystore"
 set "k=0"
 echo.
 for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
@@ -220,7 +227,7 @@ if '%vancedDownload%'=='2' goto end_end
 echo "%vancedDownload%" is not valid, try again
 goto microG
 :microG_d
-"%CURL%" -L "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk" --output .\vanced_microG.apk
+call :downloadWithFallback vanced_microG.apk "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk" "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
 echo.
 echo [92m Vanced MicroG downloaded to the revanced-cli-output folder! [0m
 :end_end
@@ -239,14 +246,16 @@ EXIT
 set fname=
 set link=
 set hash=
+set tpc=0
 for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.tools.%~2.fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.tools.%~2.link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.tools.%~2.hash"') do (
-     if not defined fname (
+    if !tpc!==0 (
         set "fname=%%i"
-    ) else if not defined link (
+    ) else if !tpc!==1 (
         set "link=%%i"
-    ) else (
+    ) else if !tpc!==2 (
         set "hash=%%i"
     )
+	set /a "tpc=!tpc!+1"
 )
 EXIT /B 0
 :fetchAppJson
@@ -272,7 +281,7 @@ for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | Conver
 EXIT /B 0
 :downloadWithFallback
 set second_check=0
-"%localappdata%\revanced-cli\revanced-curl\curl.exe" -L "%~2" --output "%~1"
+"!CURL!" -L "%~2" --output "%~1"
 :fallback_2
 set ram_h=
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%~1' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
