@@ -29,5 +29,5 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add README.md
           git commit -m "Update README direct link with latest release"
-          git push origin
+          git push origin main
           git push origin main:dev
