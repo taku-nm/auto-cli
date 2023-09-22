@@ -25,6 +25,8 @@ jobs:
       - name: Update the README link
         run: |
           sed -i -E 's/v[0-9]+\.[0-9]+/${{ env.RELEASE_VERSION }}/g' README.md
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
           git add README.md
           git commit -m "Update README direct link with latest release"
           git push origin
