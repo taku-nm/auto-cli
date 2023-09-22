@@ -200,30 +200,9 @@ ren "%localappdata%\revanced-cli\apk_backups\PATCHED_*.apk"  "PATCHED_* %time:~0
 echo.
 echo  [92m DONE! [0m
 echo  [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
+if "!fname!" == "YouTube.apk" call :microG
+if "!fname!" == "YouTube_Music.apk" call :microG
 echo.
-if %choice% geq 1 if %choice% leq 3 ( goto microG )
-if %choice% geq 4 if %choice% leq 30 ( goto end_end )
-if '%choice%'=='A' goto end_end
-:microG
-echo  [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
-echo.
-echo Would you like to download Vanced MicroG from GitHub now?
-echo.
-echo   1. Yes
-echo   2. No
-echo.
-set vancedDownload=
-set /p vancedDownload=Type the number to select your answer and hit enter. 
-if not '%vancedDownload%'=='' set vancedDownload=%vancedDownload:~0,1%
-if '%vancedDownload%'=='1' goto microG_d
-if '%vancedDownload%'=='2' goto end_end
-echo "%vancedDownload%" is not valid, try again
-goto microG
-:microG_d
-call :downloadWithFallback vanced_microG.apk "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk" "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
-echo.
-echo  [92m Vanced MicroG downloaded to the revanced-cli-output folder! [0m
-:end_end
 echo  If something goes wrong, screenshot the ENTIRE terminal in your support request in the ReVanced discord support channel.
 echo  bat Version %batVersion%
 echo.
@@ -330,4 +309,15 @@ echo.
 pause
 START "" /wait notepad "%localappdata%\revanced-cli\options.json"
 set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
+EXIT /B 0
+:microG
+echo  [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
+echo  Would you like to download Vanced MicroG from GitHub now?
+echo.
+echo   1. Yes
+echo   2. No
+echo.
+set vD=
+set /p vD=Type the number to select your answer and hit enter. 
+if '%vD%'=='1' call :downloadWithFallback vanced_microG.apk "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk" "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
 EXIT /B 0
