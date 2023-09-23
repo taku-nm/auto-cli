@@ -114,7 +114,7 @@ goto start
 call :fetchAppJson "%inputJson%" %choice%
 echo Downloading !fname!
 call :downloadWithFallback !fname! !link! !hash!
-if defined !uri! call :redditOptions
+if defined uri call :redditOptions
 echo Patching !fname!
 call :patchApp !fname!
 goto end
