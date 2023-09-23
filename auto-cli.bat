@@ -311,7 +311,7 @@ START "" /wait notepad "%localappdata%\revanced-cli\options.json"
 set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
 EXIT /B 0
 :microG
-echo  [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
+echo [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
 echo  Would you like to download Vanced MicroG from GitHub now?
 echo.
 echo   1. Yes
