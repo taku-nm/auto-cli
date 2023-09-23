@@ -21,7 +21,7 @@ jobs:
           --generate-notes \
           auto-cli-${{ env.RELEASE_VERSION }}.bat
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.SHIT_PUSHER }}"
       - name: Clean working directory
         run: |
           git reset --hard HEAD
