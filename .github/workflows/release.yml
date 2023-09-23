@@ -38,7 +38,9 @@ jobs:
           git add README.md
           git commit -m "Update README.md"
           git push origin update-readme-${{ env.RELEASE_VERSION }}
-      - name: Force push dev to main (overwrite main with dev and README update)
+      - name: Force push updater to all and delete branch
         run: |
-          git checkout dev
-          git push origin dev:main --force
+          git checkout update-readme-${{ env.RELEASE_VERSION }}
+          git push origin --force update-readme-${{ env.RELEASE_VERSION }}:main
+          git push origin --force update-readme-${{ env.RELEASE_VERSION }}:dev
+          git push origin :update-readme-${{ env.RELEASE_VERSION }}
