@@ -43,5 +43,7 @@ jobs:
         run: |
           git checkout update-readme-${{ env.RELEASE_VERSION }}
           git push origin --force update-readme-${{ env.RELEASE_VERSION }}:dev
-          git push origin --force dev:main
           git push origin :update-readme-${{ env.RELEASE_VERSION }}
+          git checkout dev
+          git push origin --force dev:main
+          
