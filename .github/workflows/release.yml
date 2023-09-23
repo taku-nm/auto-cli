@@ -46,4 +46,5 @@ jobs:
           git push origin :update-readme-${{ env.RELEASE_VERSION }}
           git checkout dev
           git push origin --force dev:main
+        continue-on-error: true
           
