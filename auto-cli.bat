@@ -19,7 +19,7 @@ mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
-set batVersion=1.31
+set batVersion=1.32
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
@@ -190,6 +190,19 @@ echo  [92m -i "name of a patch to include" -e "name of a patch to exclude" -i "
 echo  Type your options now. Leave empty to apply default patches. Hit enter once you're done.
 echo.
 set /p SELECTION=
+if exist "%localappdata%\revanced-cli\options.json" (
+	echo  [92m option.json found! [0m
+) else (
+	"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
+	move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
+	echo An options.json as been created.
+)
+echo Pressing any key will open notepad for you to customize your install.
+echo Close notepad once you're ready. Don't forget to save within notepad.
+echo.
+pause
+START "" /wait notepad "%localappdata%\revanced-cli\options.json"
+set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
 :filename
 echo.
 echo  Final question: What app are you patching? This will be your output file.[93m No spaces. No file extensions.[0m
@@ -199,7 +212,7 @@ echo.
 set /p OUTPUT=
 if '%OUTPUT%'=='' echo  [91m Nu-uh! Provide a name. [0m && goto filename
 echo.
-"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% --keystore "%KEYSTORE%\%OUTPUT%.keystore" -o %OUTPUT%.apk
+"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\%OUTPUT%.keystore" -o %OUTPUT%.apk
 goto end
 :end
 copy /y *.keystore "%localappdata%\revanced-cli\keystore" > nul 2> nul
