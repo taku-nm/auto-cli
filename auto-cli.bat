@@ -105,6 +105,7 @@ echo   A. Custom
 echo.
 set choice=
 set /p choice=Type the number or letter to fetch the corresponding app and hit enter. 
+if not defined choice goto start
 if %choice% geq 1 if %choice% leq %k% ( goto app_download )
 if '%choice%'=='A' goto custom
 echo "%choice%" is not valid, try again
@@ -134,6 +135,16 @@ if exist ..\revanced-cli-input\ (
 	mkdir ..\revanced-cli-input\ > nul 2> nul
 	echo [92m The folder revanced-cli-input has been created at the location you're running this script in. [0m 
 )
+echo  Would you like to provide your own APK to patch or download one of the above and customize the rest?
+set /p c_choice=Type the number to fetch the corresponding app from above and hit enter. Leave empty to provide your own APK. 
+if not defined c_choice goto custom_missing
+if %c_choice% geq 1 if %c_choice% leq %k% ( 
+    call :fetchAppJson "%inputJson%" %c_choice%
+    echo Downloading !fname!
+    call :downloadWithFallback !fname! !link! !hash!
+	 move /y "!fname!" "..\revanced-cli-input\input.apk" > nul 2> nul
+	 echo [92m input.apk placed in revanced-cli-input [0m
+ )
 :custom_missing
 echo [93m Ensure that the ONLY files in revanced-cli-input are the app, patches and integrations that you would want to use. [0m
 echo  The app [93mMUST[0m be called 'input.apk' 
