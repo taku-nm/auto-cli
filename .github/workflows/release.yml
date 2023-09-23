@@ -1,46 +1,39 @@
-name: "Release Build"
-
+name: Release
 on:
-  push:
-    tags:
-      - "v*"
-
+  workflow_dispatch:
+    inputs: 
+      version:
+        required: true
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set env
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - name: Add version to file
-        run: mv auto-cli.bat auto-cli-${{ env.RELEASE_VERSION }}.bat
+      - name: Checkout branch
+        uses: actions/checkout@v4
+      - name: Check if on dev
+        run: |
+          if [[ $(git branch --show-current) != "dev" ]]; then
+            echo "This is not a development branch. Cancelling workflow..."
+            exit 1
+          fi
+      - name: Update the README link
+        run: sed -i -E 's/v[0-9]+\.[0-9]+/${{ github.event.inputs.version }}/g' README.md
+      - name: Commit readme
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'README.md' 
+          message: 'chore: Release ${{ github.event.inputs.version }}'
+          tag: ${{ github.event.inputs.version }} 
+          push: true
+      - name: Sync dev to main
+        run: git push origin dev:main --force
+      - name: Append release version to filename
+        run: cp auto-cli.bat auto-cli-${{ github.event.inputs.version }}.bat
       - name: Publish the release
         run: |
-          gh release create "${{ env.RELEASE_VERSION }}" \
-          --title "${{ env.RELEASE_VERSION }}" \
+          gh release create "${{ github.event.inputs.version }}" \
+          --title "${{ github.event.inputs.version }}" \
           --generate-notes \
-          auto-cli-${{ env.RELEASE_VERSION }}.bat
+          auto-cli-${{ github.event.inputs.version }}.bat
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Clean working directory
-        run: |
-          git reset --hard HEAD
-          git clean -f -d
-      - name: Create and switch to a new branch
-        run: |
-          git checkout -b update-readme-${{ env.RELEASE_VERSION }}
-        continue-on-error: true
-      - name: Update the README link
-        run: |
-          sed -i -E 's/v[0-9]+\.[0-9]+/${{ env.RELEASE_VERSION }}/g' README.md
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add README.md
-          git commit -m "Update README.md"
-          git push origin update-readme-${{ env.RELEASE_VERSION }}
-      - name: Force push updater to all and delete branch
-        run: |
-          git checkout update-readme-${{ env.RELEASE_VERSION }}
-          git push origin --force update-readme-${{ env.RELEASE_VERSION }}:dev
-          git push origin --force dev:main
-          git push origin :update-readme-${{ env.RELEASE_VERSION }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
