@@ -42,14 +42,14 @@ jobs:
           git push origin --force update-readme-${{ env.RELEASE_VERSION }}:dev
           git push origin :update-readme-${{ env.RELEASE_VERSION }}
         continue-on-error: true
-      - name: Debug List Branches
-        run: git branch
+      - name: load dev
+        run: git checkout dev
       - name: Wait for branch synchronization
         run: sleep 10
+      - name: Debug List Branches
+        run: git branch
       - name: Force push dev to main
-        run: |
-          git checkout dev
-          git push origin --force dev:main
+        run: git push origin --force dev:main
         env:
           GITHUB_TOKEN: "${{ secrets.SHIT_PUSHER }}"
           permissions: read-all|write-all
