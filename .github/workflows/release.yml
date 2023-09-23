@@ -38,6 +38,7 @@ jobs:
           git add README.md
           git commit -m "Update README.md"
           git push origin update-readme-${{ env.RELEASE_VERSION }}
+        continue-on-error: true
       - name: Force push updater to all and delete branch
         run: |
           git checkout update-readme-${{ env.RELEASE_VERSION }}
