@@ -45,5 +45,7 @@ jobs:
           git push origin --force update-readme-${{ env.RELEASE_VERSION }}:dev
           git push origin :update-readme-${{ env.RELEASE_VERSION }}
           git checkout dev
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
           git push origin --force dev:main
           
