@@ -39,13 +39,14 @@ jobs:
           git add README.md
           git commit -m "Update README.md"
           git push origin update-readme-${{ env.RELEASE_VERSION }}
+          git push origin --force update-readme-${{ env.RELEASE_VERSION }}:dev
+          git push origin :update-readme-${{ env.RELEASE_VERSION }}
         continue-on-error: true
       - name: Force push updater to all and delete branch
         run: |
-          git checkout update-readme-${{ env.RELEASE_VERSION }}
-          git push origin --force update-readme-${{ env.RELEASE_VERSION }}:dev
-          git push origin :update-readme-${{ env.RELEASE_VERSION }}
           git checkout dev
           git push origin --force dev:main
-        continue-on-error: true
+        env:
+          GITHUB_TOKEN: "${{ secrets.SHIT_PUSHER }}"
+          permissions: read-all|write-all
           
