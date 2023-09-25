@@ -84,11 +84,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	echo  [93m No ReVanced Tools found... Downloading... [0m
 	:update_jump
 	mkdir "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul
-	for %%i in (cli, patches, integrations) do (
-	   call :fetchToolsJson "%inputJson%" %%i
-	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
-	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
-	)
+	call :getTools cli patches integrations
 )
 :start
 set "KEYSTORE=%localappdata%\revanced-cli\keystore"
@@ -115,6 +111,7 @@ goto start
 call :fetchAppJson "%inputJson%" %choice%
 echo Downloading !fname!
 call :downloadWithFallback !fname! !link! !hash!
+if defined beta echo [93m Your selected app requires beta tools... They will now be loaded [0m && call :getTools cli patches integrations beta
 if defined uri call :redditOptions
 echo Patching !fname!
 call :patchApp !fname!
@@ -243,7 +240,7 @@ set fname=
 set link=
 set hash=
 set tpc=0
-for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.tools.%~2.fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.tools.%~2.link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.tools.%~2.hash"') do (
+for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.hash"') do (
     if !tpc!==0 (
         set "fname=%%i"
     ) else if !tpc!==1 (
@@ -259,8 +256,10 @@ set fname=
 set link=
 set hash=
 set patch_sel=
+set uri=
+set beta=
 set apc=0
-for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].hash, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].patches, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].uri"') do (
+for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].hash, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].patches, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].uri, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].beta"') do (
 	if !apc!==0 (
         set "fname=%%i"
     ) else if !apc!==1 (
@@ -270,8 +269,10 @@ for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | Conver
     ) else if !apc!==3 (
         set "patch_sel=%%i"
     ) else if !apc!==4 (
-		set "uri=%%i"
-	)
+		  set "uri=%%i"
+	 ) else if !apc!==5 (
+		  set "beta=%%i"
+	 )
 	set /a "apc=!apc!+1"
 )
 EXIT /B 0
@@ -344,4 +345,11 @@ echo.
 set vD=
 set /p vD=Type the number to select your answer and hit enter. 
 if '%vD%'=='1' call :downloadWithFallback vanced_microG.apk "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk" "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
+EXIT /B 0
+:getTools
+for %%i in (%~1, %~2, %~3) do (
+	   call :fetchToolsJson "%inputJson%" %%i %~4
+	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
+	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
+	)
 EXIT /B 0
