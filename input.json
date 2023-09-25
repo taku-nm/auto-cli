@@ -47,7 +47,7 @@
                 "hash": "342ab2dba5a099bf108a5cf21c3fbee37cdf09865a30cbc0140db7f81cb7164c",
                 "patches": " ",
                 "uri" : " ",
-                "beta" : " "
+                "toolMod" : " "
             },
             {
                 "fname": "YouTube.apk",
@@ -56,7 +56,7 @@
                 "hash": "342ab2dba5a099bf108a5cf21c3fbee37cdf09865a30cbc0140db7f81cb7164c",
                 "patches": "-i \"custom branding\"",
                 "uri" : " ",
-                "beta" : " "
+                "toolMod" : " "
             },
 			{
                 "fname": "YouTube_Music.apk",
@@ -65,7 +65,7 @@
                 "hash": "cee5753b9290e1c6d8c3eac2dcf692dce7fc97f260c05f3d60eee04d28285e25",
                 "patches": " ",
                 "uri" : " ",
-                "beta" : " "
+                "toolMod" : " "
             },
 			{
                 "fname": "YouTube_Music.apk",
@@ -74,7 +74,7 @@
                 "hash": "73d04e61583f6381b69a51fcfdf32c997d7e2f26aa00916507d6caf1354fd9e9",
                 "patches": " ",
                 "uri" : " ",
-                "beta" : " "
+                "toolMod" : " "
             },
 			{
                 "fname": "TikTok.apk",
@@ -83,7 +83,7 @@
                 "hash": "f0b5834a56d3e8a3f2fd005f9a2d7d6da4cd8b8ff558258467296a8666c83144",
                 "patches": "-i \"Sim spoof\"",
                 "uri" : " ",
-                "beta" : " "
+                "toolMod" : " "
             },
 			{
                 "fname": "Twitch.apk",
@@ -92,7 +92,7 @@
                 "hash": "beb6f68c7003b6d168f8d5368a878c988569c3c70fbf0e30abb9078d4e47c982",
                 "patches": " ",
                 "uri" : " ",
-                "beta" : " "
+                "toolMod" : " "
             },
 			{
                 "fname": "Twitter.apk",
@@ -101,7 +101,7 @@
                 "hash": "7321513751e36fc2a044c6032edfd89ec9eb3ef72f9fd5c1a850d52d708b3863",
                 "patches": " ",
                 "uri" : " ",
-                "beta" : " "
+                "toolMod" : " "
             },
 			{
                 "fname": "Boost.apk",
@@ -110,7 +110,7 @@
                 "hash": "a68c22d632a5dd1f446c3759a171c7dbb9edab2afc3c2f87e39323f198606742",
                 "patches": " ",
                 "uri" : "http://rubenmayayo.com",
-                "beta" : " "
+                "toolMod" : " "
             },
             {
                 "fname": "Sync.apk",
@@ -119,7 +119,7 @@
                 "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
-                "beta" : " "
+                "toolMod" : " "
             },
             {
                 "fname": "Infinity.apk",
@@ -128,7 +128,7 @@
                 "hash": "127294657c753e4ec7e5a228bb647ef6004e896972e048ab7de004c86f74c0c2",
                 "patches": " ",
                 "uri" : "infinity://localhost",
-                "beta" : " "
+                "toolMod" : " "
             },
             {
                 "fname": "Relay.apk",
@@ -137,7 +137,7 @@
                 "hash": "9049e00231458fac677d0c6c301bea0b998f211a90bfc0dfa534bdf44d54b9c9",
                 "patches": " ",
                 "uri" : "dbrady://relay",
-                "beta" : "1"
+                "toolMod" : "beta"
             }
         ]
     }

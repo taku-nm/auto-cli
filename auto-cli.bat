@@ -111,11 +111,11 @@ goto start
 call :fetchAppJson "%inputJson%" %choice%
 echo Downloading !fname!
 call :downloadWithFallback !fname! !link! !hash!
-if defined beta echo [93m Your selected app requires beta tools... They will now be loaded [0m && call :getTools cli patches integrations beta
+if defined tool_mod echo [93m Your selected app requires specific tools... They will now be loaded [0m && call :getTools cli patches integrations !tool_mod!
 if defined uri call :redditOptions
 call :fetchAppJson "%inputJson%" %choice%
 echo Patching !fname!
-if defined beta call :patchBeta !fname! && goto end
+if defined tool_mod call :safePatch !fname! && goto end
 call :patchApp !fname!
 goto end
 :download_abort
@@ -259,9 +259,9 @@ set link=
 set hash=
 set patch_sel=
 set uri=
-set beta=
+set tool_mod=
 set apc=0
-for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].hash, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].patches, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].uri, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].beta"') do (
+for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].hash, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].patches, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].uri, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].toolMod"') do (
 	if !apc!==0 (
         set "fname=%%i"
     ) else if !apc!==1 (
@@ -273,7 +273,7 @@ for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | Conver
     ) else if !apc!==4 (
 		  set "uri=%%i"
 	 ) else if !apc!==5 (
-		  set "beta=%%i"
+		  set "tool_mod=%%i"
 	 )
 	set /a "apc=!apc!+1"
 )
@@ -355,6 +355,6 @@ for %%i in (%~1, %~2, %~3) do (
 	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
 	)
 EXIT /B 0
-:patchBeta
+:safePatch
 "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! -o PATCHED_%~1
 EXIT /B 0
