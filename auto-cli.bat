@@ -9,7 +9,7 @@ pause
 pushd "%~dp0"
 mkdir "%localappdata%\revanced-cli\" > nul 2> nul
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '%localappdata%\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/dev/input.json' -OutFile '%localappdata%\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 set "inputJson=%localappdata%\revanced-cli\input.json"
 mkdir "%localappdata%\revanced-cli\keystore" > nul 2> nul
 mkdir "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
@@ -113,7 +113,9 @@ echo Downloading !fname!
 call :downloadWithFallback !fname! !link! !hash!
 if defined beta echo [93m Your selected app requires beta tools... They will now be loaded [0m && call :getTools cli patches integrations beta
 if defined uri call :redditOptions
+call :fetchAppJson "%inputJson%" %choice%
 echo Patching !fname!
+if defined beta call :patchBeta !fname! && goto end
 call :patchApp !fname!
 goto end
 :download_abort
@@ -352,4 +354,7 @@ for %%i in (%~1, %~2, %~3) do (
 	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
 	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
 	)
+EXIT /B 0
+:patchBeta
+"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! -o PATCHED_%~1
 EXIT /B 0
