@@ -6,11 +6,14 @@ echo Every file's integrity can be checked using checksums.
 echo If you wish to abort, close this window.
 echo.
 pause
+set "localappdata=E:\Desktop\funny path's"
+set "PSlocalData=%localappdata%"
+set "PSlocalData=!PSlocalData:'=''!"
 pushd "%~dp0"
 mkdir "%localappdata%\revanced-cli\" > nul 2> nul
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '%localappdata%\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
-set "inputJson=%localappdata%\revanced-cli\input.json"
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+set "inputJson=!PSlocalData!\revanced-cli\input.json"
 mkdir "%localappdata%\revanced-cli\keystore" > nul 2> nul
 mkdir "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
 copy /y C:\revanced-cli-keystore\*.keystore "%localappdata%\revanced-cli\keystore" > nul 2> nul
@@ -32,15 +35,16 @@ if exist "%localappdata%\revanced-cli\revanced-curl\" (
     echo  [92m cURL found! [0m
 ) else (
     echo  [93m No cURL found... Downloading... [0m
-    powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '%localappdata%\revanced-cli\curl.zip'"
-	powershell -command "Expand-Archive '%localappdata%\revanced-cli\curl.zip' -DestinationPath '%localappdata%\revanced-cli\'"
+    powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '!PSlocalData!\revanced-cli\curl.zip'"
+	powershell -command "Expand-Archive '!PSlocalData!\revanced-cli\curl.zip' -DestinationPath '!PSlocalData!\revanced-cli\'"
 	mkdir "%localappdata%\revanced-cli\revanced-curl\" > nul 2> nul
 	copy /y "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\bin\*.*" "%localappdata%\revanced-cli\revanced-curl\*.*"  > nul 2> nul
 	rmdir /s /q "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\"  > nul 2> nul
 	del "%localappdata%\revanced-cli\curl.zip"
 )
 set "CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe"
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%CURL%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
+set "CURL_ps=!PSlocalData!\revanced-cli\revanced-curl\curl.exe"
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%CURL_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
 if /i "%CURL_h%" == "7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599290D1 " (
 	echo  [92m cURL integrity validated! [0m
 ) else (
@@ -60,11 +64,12 @@ if exist "%localappdata%\revanced-cli\revanced-jdk\" (
 	echo  [93m No JDK found... Downloading... [0m
 	echo.
 	call :downloadWithFallback "%localappdata%\revanced-cli\jdk.zip" "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip" "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
-	powershell -command "Expand-Archive '%localappdata%\revanced-cli\jdk.zip' -DestinationPath '%localappdata%\revanced-cli'"
+	powershell -command "Expand-Archive '!PSlocalData!\revanced-cli\jdk.zip' -DestinationPath '!PSlocalData!\revanced-cli'"
 	del "%localappdata%\revanced-cli\jdk.zip"
 )
 set "JDK=%localappdata%\revanced-cli\revanced-jdk\bin\java.exe"
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%JDK%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
+set "JDK_ps=!PSlocalData!\revanced-cli\revanced-jdk\bin\java.exe"
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%JDK_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
 if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A720B " (
 	echo  [92m JDK integrity validated! [0m
 ) else (
@@ -254,6 +259,9 @@ for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json)
 )
 EXIT /B 0
 :fetchAppJson
+set "JSON=%~1"
+set "index=%~2"
+echo !index!
 set fname=
 set link=
 set hash=
@@ -261,7 +269,7 @@ set patch_sel=
 set uri=
 set tool_mod=
 set apc=0
-for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].hash, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].patches, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].uri, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.apps[%~2].toolMod"') do (
+for /f "tokens=* " %%i in ('powershell -command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod"') do (
 	if !apc!==0 (
         set "fname=%%i"
     ) else if !apc!==1 (
@@ -283,21 +291,23 @@ set second_check=0
 "!CURL!" -L "%~2" --output "%~1"
 :fallback_2
 set ram_h=
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%~1' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
+set "ram_path=%~1"
+set "ram_path=!ram_path:'=''!"
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "%~3 " (
-	echo  [92m Integrity validated! : %~1 [0m
+	echo  [92m Integrity validated !ram_path! [0m
 ) else (
-	if '%second_check%'=='1' echo [91m FATAL : Download or integrity check for %~1 failed completely! [0m && goto download_abort
+	if '%second_check%'=='1' echo [91m FATAL : Download or integrity check for !ram_path! failed completely! [0m && goto download_abort
 	set second_check=1
 	echo  [93m File integrity damaged... Something must've become corrupted during the download or curl had some issue... [0m
 	echo  Falling back to Invoke WebRequest... This might take a bit longer and doesn't give a nice status indication for the download.
-	powershell -command "Invoke-WebRequest '%~2' -OutFile '%~1'"
+	powershell -command "Invoke-WebRequest '%~2' -OutFile '!ram_path!'"
 	goto fallback_2
 )
 EXIT /B 0
 :checkTool
 call :fetchToolsJson "%inputJson%" %~1
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%localappdata%\revanced-cli\revanced-tools\!fname!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '!PSlocalData!\revanced-cli\revanced-tools\!fname!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "!hash! " (
 	echo  [92m !fname! validated [0m
 ) else (
