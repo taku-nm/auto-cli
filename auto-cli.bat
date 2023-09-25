@@ -22,7 +22,7 @@ mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
-set batVersion=1.36
+set batVersion=1.37
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
