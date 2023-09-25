@@ -6,17 +6,34 @@
             "cli": {
                 "fname": "revanced-cli-3.1.0-all.jar",
                 "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.0/revanced-cli-3.1.0-all.jar",
-                "hash": "D53327788EBB1D96647736C375A69D64910B2897616339332718C0BE99CCCBE0 "
+                "hash": "D53327788EBB1D96647736C375A69D64910B2897616339332718C0BE99CCCBE0"
             },
             "patches": {
                 "fname": "revanced-patches-2.190.0.jar",
                 "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.190.0/revanced-patches-2.190.0.jar",
-                "hash": "6C0AAE909547CB563F3F536EF420FA69FC83FB28B3C263F8ECEDACDAEA2A50F1 "
+                "hash": "6C0AAE909547CB563F3F536EF420FA69FC83FB28B3C263F8ECEDACDAEA2A50F1"
             },
             "integrations": {
                 "fname": "revanced-integrations-0.117.1.apk",
                 "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.117.1/revanced-integrations-0.117.1.apk",
-                "hash": "C2FC01E5F9B5866A38533A4BA37C0AE1CF2F8F353ACBED2D334693506FFE32EA "
+                "hash": "C2FC01E5F9B5866A38533A4BA37C0AE1CF2F8F353ACBED2D334693506FFE32EA"
+            }
+        },
+        "betatools": {
+            "cli": {
+                "fname": "revanced-cli-4.0.0-dev.2-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.0.0-dev.2/revanced-cli-4.0.0-dev.2-all.jar",
+                "hash": "b39371c70afb5f1145e33536e11ab7d7a910ec8a4f003732bfae12f47276b73d"
+            },
+            "patches": {
+                "fname": "revanced-patches-2.191.0-dev.8.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.191.0-dev.8/revanced-patches-2.191.0-dev.8.jar",
+                "hash": "291ac8830e4ed3ce96bde1748bf85069229adbe82a5b5963e93f0effd9558c45"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-0.117.1.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.118.0-dev.4/revanced-integrations-0.118.0-dev.4.apk",
+                "hash": "0daca9aa95d15957ee8e850b4a8afce9d75a0041dec6b84b8134f8f779b81f51"
             }
         },
         "apps": [
