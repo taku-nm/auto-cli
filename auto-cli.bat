@@ -93,7 +93,7 @@ echo.
 for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
 	set /a "k=k+1"
 	for /f "tokens=*" %%j in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
-        echo  [0m %%j
+        echo  [0m !k!. %%j
     )
 )
 echo.
