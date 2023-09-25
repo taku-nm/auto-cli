@@ -9,7 +9,7 @@ pause
 pushd "%~dp0"
 mkdir "%localappdata%\revanced-cli\" > nul 2> nul
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/dev/input.json' -OutFile '%localappdata%\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '%localappdata%\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 set "inputJson=%localappdata%\revanced-cli\input.json"
 mkdir "%localappdata%\revanced-cli\keystore" > nul 2> nul
 mkdir "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
@@ -19,7 +19,7 @@ mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
-set batVersion=1.32
+set batVersion=1.33
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
