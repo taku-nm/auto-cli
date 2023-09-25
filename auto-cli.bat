@@ -6,7 +6,7 @@ echo Every file's integrity can be checked using checksums.
 echo If you wish to abort, close this window.
 echo.
 pause
-set "localappdata=E:\Desktop\funny path's"
+set "localappdata=%localappdata%"
 set "PSlocalData=%localappdata%"
 set "PSlocalData=!PSlocalData:'=''!"
 pushd "%~dp0"
@@ -22,7 +22,7 @@ mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
-set batVersion=1.35
+set batVersion=1.36
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
