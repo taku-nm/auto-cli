@@ -261,7 +261,6 @@ EXIT /B 0
 :fetchAppJson
 set "JSON=%~1"
 set "index=%~2"
-echo !index!
 set fname=
 set link=
 set hash=
