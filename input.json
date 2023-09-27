@@ -138,6 +138,15 @@
                 "patches": " ",
                 "uri" : "dbrady://relay",
                 "toolMod" : "beta"
+            },
+            {
+                "fname": "Reddit.apk",
+                "dname": "Reddit",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156498197699625000/com.reddit.frontpage_2023.37.0-1182743.apk",
+                "hash": "29f5919f9fcab71b88ebdb0d56078aa37a600a788587586fac0ecca236418d88",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : " "
             }
         ]
     }
