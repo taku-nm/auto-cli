@@ -104,6 +104,15 @@
                 "toolMod" : " "
             },
 			{
+                "fname": "Instagram.apk",
+                "dname": "Instagram",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk",
+                "hash": "8957feb085f5a6acd20b284853c23f8b6c9c2e554262bdbee76d75a6e5e7fa4b",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : " "
+            },
+			{
                 "fname": "Boost.apk",
                 "dname": "Boost for Reddit",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154220795447488552/com.rubenmayayo.reddit_1.12.12-210011212.apk",
