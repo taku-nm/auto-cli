@@ -149,6 +149,15 @@
                 "toolMod" : "beta"
             },
             {
+                "fname": "RiF.apk",
+                "dname": "Rif for Reddit",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk",
+                "hash": "88d39f859c850f51542c6a12d8bd3c79706debe0f1dff061ed0fe32b3dc688e1",
+                "patches": " ",
+                "uri" : "redditisfun://auth",
+                "toolMod" : " "
+            },
+            {
                 "fname": "Reddit.apk",
                 "dname": "Reddit",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156498197699625000/com.reddit.frontpage_2023.37.0-1182743.apk",
