@@ -1,0 +1,16 @@
+name: input-clone
+on: push
+jobs:
+    web-deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        steps:
+        - name: Get latest input json
+          uses: actions/checkout@v4
+        - name: 📂 Sync files
+          uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+          with:
+            server: user737.bplaced.net
+            server-dir: www/downloads/revanced
+            username: user737
+            password: ${{ secrets.ftp_password }}
