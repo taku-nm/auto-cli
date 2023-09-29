@@ -257,24 +257,39 @@ copy /y *.keystore "%localappdata%\revanced-cli\keystore" > nul 2> nul
 rmdir /s /q C:\revanced-cli-keystore\ > nul 2> nul
 rmdir /s /q revanced-resource-cache\ > nul 2> nul
 del .\options.json > nul 2> nul
-copy /y "PATCHED_*.apk" "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
-ren "%localappdata%\revanced-cli\apk_backups\PATCHED_*.apk"  "PATCHED_* %time:~0,2%%time:~3,2%-%DATE:/=%.backup" > nul 2> nul
-echo.
-echo  [92m DONE! [0m
-echo  [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
-if "!fname!" == "YouTube.apk" call :microG
-if "!fname!" == "YouTube_Music.apk" call :microG
-echo.
-echo  If something goes wrong, screenshot the ENTIRE terminal in your support request in the ReVanced discord support channel.
-echo  bat Version %batVersion%
-echo.
-echo  Backups, keystore and supporting files can be found in AppData\Local\revanced-cli
-echo  [93m To use the backup files, rename them to .apk instead of .backup [0m
-echo.
-echo  Pressing any key will close this window.
-echo.
-pause
-EXIT
+if exist PATCHED_*.apk (
+    copy /y "PATCHED_*.apk" "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
+    ren "%localappdata%\revanced-cli\apk_backups\PATCHED_*.apk"  "PATCHED_* %time:~0,2%%time:~3,2%-%DATE:/=%.backup" > nul 2> nul
+	 :custom_jump
+    echo.
+    echo  [92m DONE! [0m
+    echo  [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
+    if "!fname!" == "YouTube.apk" call :microG
+    if "!fname!" == "YouTube_Music.apk" call :microG
+    echo.
+    echo  If something goes wrong, screenshot the ENTIRE terminal in your support request in the ReVanced discord support channel.
+    echo  bat Version %batVersion%
+    echo.
+    echo  Backups, keystore and supporting files can be found in AppData\Local\revanced-cli
+    echo  To use the backup files, rename them to .apk instead of .backup
+    echo.
+    echo  Pressing any key will close this window.
+    echo.
+    pause
+    EXIT
+) else if '%choice%' == 'A' (
+	 goto custom_jump
+) else (
+	 echo.
+    echo  [91m FATAL [0m
+	 echo  [91m Something must've gone wrong during patching. Contact taku on discord or open an issue on github. [0m
+	 echo  bat Version %batVersion%
+	 echo.
+    echo  Pressing any key will close this window.
+    echo.
+    pause
+    EXIT
+)
 
 ::functions
 :fetchToolsJson
