@@ -12,5 +12,11 @@ jobs:
           with:
             server: user737.bplaced.net
             server-dir: www/downloads/revanced/
+            dangerous-clean-slate: true
             username: user737
             password: ${{ secrets.ftp_password }}
+            exclude: |
+                **/.git*
+                **/.git*/**
+                auto-cli.bat
+                README.md
