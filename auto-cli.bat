@@ -34,7 +34,24 @@ echo.
 ::refresh input json 
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
 powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
-set "inputJson=!PSlocalData!\revanced-cli\input.json"
+if exist "%localappdata%\revanced-cli\input.json" (
+   set "inputJson=!PSlocalData!\revanced-cli\input.json"
+) else (
+	echo  [93m Input.json download failed... Attempting to circumvent geo-blocking... [0m
+	powershell -command "Invoke-WebRequest 'http://user737.bplaced.net/downloads/revanced/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+	if exist "%localappdata%\revanced-cli\input.json" (
+       set "inputJson=!PSlocalData!\revanced-cli\input.json"
+   ) else (
+		 echo.
+	    echo  [91m FATAL [0m
+		 echo  [91m input.json could not be loaded... are you offline? [0m
+		 echo.
+       echo  Pressing any key will close this window.
+       echo.
+       pause
+       EXIT
+	)
+)
 
 ::script version check
 set batVersion=1.37
@@ -49,7 +66,7 @@ if /i '%batVersion%' == '%jsonBatVersion%' (
 
 ::curl setup
 if exist "%localappdata%\revanced-cli\revanced-curl\" (
-    echo  [92m cURL found! [0m
+   echo  [92m cURL found! [0m
 ) else (
    echo  [93m No cURL found... Downloading... [0m
    powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '!PSlocalData!\revanced-cli\curl.zip'"
@@ -222,7 +239,7 @@ if exist ..\revanced-cli-input\patches.jar (
 	echo  You are using official ReVanced patches. Please look up the patches names at revanced.app/patches.
 )
 echo.
-echo  You now have the opportunity to include and exclude patches using the following syntax:
+echo  You now have the opportunity to include and exclude patches using the following syntax:[93m Including the quotes[0m
 echo  [92m -i "name of a patch to include" -e "name of a patch to exclude" -i "another patch to include" [0m
 echo  Type your options now. Leave empty to apply default patches. Hit enter once you're done.
 echo.
