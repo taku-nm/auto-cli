@@ -11,6 +11,6 @@ jobs:
           uses: SamKirkland/FTP-Deploy-Action@v4.3.4
           with:
             server: user737.bplaced.net
-            server-dir: www/downloads/revanced
+            server-dir: www/downloads/revanced/
             username: user737
             password: ${{ secrets.ftp_password }}
