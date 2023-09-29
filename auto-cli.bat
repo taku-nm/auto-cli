@@ -6,22 +6,37 @@ echo Every file's integrity can be checked using checksums.
 echo If you wish to abort, close this window.
 echo.
 pause
+::pre-escape usernames with single quotes
 set "localappdata=%localappdata%"
 set "PSlocalData=%localappdata%"
 set "PSlocalData=!PSlocalData:'=''!"
+
+::set script location to working dir
 pushd "%~dp0"
+
+::create needed folders
 mkdir "%localappdata%\revanced-cli\" > nul 2> nul
-del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
-set "inputJson=!PSlocalData!\revanced-cli\input.json"
 mkdir "%localappdata%\revanced-cli\keystore" > nul 2> nul
 mkdir "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
+
+::legacy function to preserve keystore from old versions
 copy /y C:\revanced-cli-keystore\*.keystore "%localappdata%\revanced-cli\keystore" > nul 2> nul
+
+::refresh and enter output dir
 rmdir /s /q revanced-cli-output > nul 2> nul
 mkdir revanced-cli-output > nul 2> nul
 cd revanced-cli-output
+
+::create link to install dir
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
+
+::refresh input json 
+del "%localappdata%\revanced-cli\input.json" > nul 2> nul
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+set "inputJson=!PSlocalData!\revanced-cli\input.json"
+
+::script version check
 set batVersion=1.37
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
@@ -31,11 +46,13 @@ if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [93m Your version: %batVersion% [0m
 	echo  [93m Available version: %jsonBatVersion% [0m
 )
+
+::curl setup
 if exist "%localappdata%\revanced-cli\revanced-curl\" (
     echo  [92m cURL found! [0m
 ) else (
-    echo  [93m No cURL found... Downloading... [0m
-    powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '!PSlocalData!\revanced-cli\curl.zip'"
+   echo  [93m No cURL found... Downloading... [0m
+   powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '!PSlocalData!\revanced-cli\curl.zip'"
 	powershell -command "Expand-Archive '!PSlocalData!\revanced-cli\curl.zip' -DestinationPath '!PSlocalData!\revanced-cli\'"
 	mkdir "%localappdata%\revanced-cli\revanced-curl\" > nul 2> nul
 	copy /y "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\bin\*.*" "%localappdata%\revanced-cli\revanced-curl\*.*"  > nul 2> nul
@@ -57,6 +74,8 @@ if /i "%CURL_h%" == "7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599
 		echo  [93m cURL could not be validated... All downloads will likely revert to Invoke WebRequest... [0m
 	)
 )
+
+::JDK setup
 :jdk_integ_failed
 if exist "%localappdata%\revanced-cli\revanced-jdk\" (
 	echo  [92m JDK found! [0m
@@ -78,6 +97,8 @@ if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A
 	rmdir /s /q "%localappdata%\revanced-cli\revanced-jdk\" > nul 2> nul
 	goto jdk_integ_failed
 )
+
+::tools setup (cli, patches, integrations)
 if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	for %%i in (cli, patches, integrations) do (
 	   call :checkTool %%i
@@ -91,10 +112,13 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	mkdir "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul
 	call :getTools cli patches integrations
 )
+
 :start
 set "KEYSTORE=%localappdata%\revanced-cli\keystore"
 set "k=0"
 echo.
+
+::generate app list
 for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
 	set /a "k=k+1"
 	for /f "tokens=*" %%j in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
@@ -112,17 +136,24 @@ if '%choice%'=='A' goto custom
 echo "%choice%" is not valid, try again
 echo.
 goto start
+
 :app_download
+::fetch config for app and download
 call :fetchAppJson "%inputJson%" %choice%
 echo Downloading !fname!
 call :downloadWithFallback !fname! !link! !hash!
+
+::account for special cases such as tool modifiers and third party reddit clients
 if defined tool_mod echo [93m Your selected app requires specific tools... They will now be loaded [0m && call :getTools cli patches integrations !tool_mod!
 if defined uri call :redditOptions
+
+::patch app
 call :fetchAppJson "%inputJson%" %choice%
 echo Patching !fname!
 if defined tool_mod call :safePatch !fname! && goto end
 call :patchApp !fname!
 goto end
+
 :download_abort
 echo.
 echo  [91m Some download or file integrity check failed... Is the Discord CDN down? Is your internet interrupted? [0m
@@ -132,6 +163,7 @@ echo  Pressing any key will end this script.
 echo.
 pause
 EXIT
+
 :custom
 if exist ..\revanced-cli-input\ (
 	echo [93m The revanced-cli-input folder already exists at the location you're running this script in. [0m
@@ -149,6 +181,7 @@ if %c_choice% geq 1 if %c_choice% leq %k% (
 	 move /y "!fname!" "..\revanced-cli-input\input.apk" > nul 2> nul
 	 echo [92m input.apk placed in revanced-cli-input [0m
  )
+
 :custom_missing
 echo [93m Ensure that the ONLY files in revanced-cli-input are the app, patches and integrations that you would want to use. [0m
 echo  The app [93mMUST[0m be called 'input.apk' 
@@ -218,6 +251,7 @@ if '%OUTPUT%'=='' echo  [91m Nu-uh! Provide a name. [0m && goto filename
 echo.
 "%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\%OUTPUT%.keystore" -o %OUTPUT%.apk
 goto end
+
 :end
 copy /y *.keystore "%localappdata%\revanced-cli\keystore" > nul 2> nul
 rmdir /s /q C:\revanced-cli-keystore\ > nul 2> nul
@@ -241,6 +275,7 @@ echo  Pressing any key will close this window.
 echo.
 pause
 EXIT
+
 ::functions
 :fetchToolsJson
 set fname=
@@ -258,6 +293,7 @@ for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json)
 	set /a "tpc=!tpc!+1"
 )
 EXIT /B 0
+
 :fetchAppJson
 set "JSON=%~1"
 set "index=%~2"
@@ -285,6 +321,7 @@ for /f "tokens=* " %%i in ('powershell -command "(Get-Content -Raw '!JSON!' | Co
 	set /a "apc=!apc!+1"
 )
 EXIT /B 0
+
 :downloadWithFallback
 set second_check=0
 "!CURL!" -L "%~2" --output "%~1"
@@ -304,6 +341,7 @@ if /i "%ram_h%" == "%~3 " (
 	goto fallback_2
 )
 EXIT /B 0
+
 :checkTool
 call :fetchToolsJson "%inputJson%" %~1
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '!PSlocalData!\revanced-cli\revanced-tools\!fname!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
@@ -313,11 +351,13 @@ if /i "%ram_h%" == "!hash! " (
 	set update=1
 )
 EXIT /B 0
+
 :patchApp
 set "inputString=%~1"
 set "keyString=!inputString:.apk=!"
 "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.keystore" -o PATCHED_%~1
 EXIT /B 0
+
 :redditOptions
 echo.
 echo You're patching a third-party reddit client. This requires you to create a client ID at https://www.reddit.com/prefs/apps
@@ -346,6 +386,7 @@ pause
 START "" /wait notepad "%localappdata%\revanced-cli\options.json"
 set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
 EXIT /B 0
+
 :microG
 echo  [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
 echo  Would you like to download Vanced MicroG from GitHub now?
@@ -357,6 +398,7 @@ set vD=
 set /p vD=Type the number to select your answer and hit enter. 
 if '%vD%'=='1' call :downloadWithFallback vanced_microG.apk "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk" "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
 EXIT /B 0
+
 :getTools
 for %%i in (%~1, %~2, %~3) do (
 	   call :fetchToolsJson "%inputJson%" %%i %~4
@@ -364,6 +406,7 @@ for %%i in (%~1, %~2, %~3) do (
 	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
 	)
 EXIT /B 0
+
 :safePatch
 "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! -o PATCHED_%~1
 EXIT /B 0
