@@ -441,7 +441,8 @@ echo Close notepad once you're ready. Don't forget to save within notepad.
 echo.
 pause
 START "" /wait notepad "%localappdata%\revanced-cli\options.json"
-set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
+set "optionsPath=%localappdata%\revanced-cli\options.json"
+set "OPTIONS=--options="!optionsPath!""
 EXIT /B 0
 
 :microG
