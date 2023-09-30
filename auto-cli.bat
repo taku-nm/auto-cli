@@ -171,16 +171,6 @@ if defined tool_mod call :safePatch !fname! && goto end
 call :patchApp !fname!
 goto end
 
-:download_abort
-echo.
-echo  [91m Some download or file integrity check failed... Is the Discord CDN down? Is your internet interrupted? [0m
-echo  Other causes might include a very outdated script... Check https://github.com/taku-nm/auto-cli for new releases.
-echo  If you can, report to ReVanced Support Discord.
-echo  Pressing any key will end this script.
-echo.
-pause
-EXIT
-
 :custom
 if exist ..\revanced-cli-input\ (
 	echo [93m The revanced-cli-input folder already exists at the location you're running this script in. [0m
@@ -324,7 +314,19 @@ for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json)
     )
 	set /a "tpc=!tpc!+1"
 )
+if not defined fname goto fetchToolsFail
 EXIT /B 0
+
+:fetchToolsFail
+echo.
+echo  [91m FATAL [0m
+echo  [91m Something has gone wrong when attempting to fetch tool info. Contact taku on discord or open an issue on github. [0m
+echo  bat Version %batVersion%
+echo.
+echo  Pressing any key will close this window.
+echo.
+pause
+EXIT
 
 :fetchAppJson
 set "JSON=%~1"
@@ -352,7 +354,19 @@ for /f "tokens=* " %%i in ('powershell -command "(Get-Content -Raw '!JSON!' | Co
 	 )
 	set /a "apc=!apc!+1"
 )
+if not defined fname goto fetchAppsFail
 EXIT /B 0
+
+:fetchAppsFail
+echo.
+echo  [91m FATAL [0m
+echo  [91m Something has gone wrong when attempting to fetch app info. Contact taku on discord or open an issue on github. [0m
+echo  bat Version %batVersion%
+echo.
+echo  Pressing any key will close this window.
+echo.
+pause
+EXIT
 
 :downloadWithFallback
 set second_check=0
@@ -365,7 +379,7 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm
 if /i "%ram_h%" == "%~3 " (
 	echo  [92m Integrity validated !ram_path! [0m
 ) else (
-	if '%second_check%'=='1' echo [91m FATAL : Download or integrity check for !ram_path! failed completely! [0m && goto download_abort
+	if '%second_check%'=='1' echo [91m FATAL : Download or integrity check for !ram_path! failed completely! [0m && goto downloadFail
 	set second_check=1
 	echo  [93m File integrity damaged... Something must've become corrupted during the download or curl had some issue... [0m
 	echo  Falling back to Invoke WebRequest... This might take a bit longer and doesn't give a nice status indication for the download.
@@ -373,6 +387,17 @@ if /i "%ram_h%" == "%~3 " (
 	goto fallback_2
 )
 EXIT /B 0
+
+:downloadFail
+echo.
+echo  [91m A download or file integrity check failed... Is the Discord CDN down? Is your internet interrupted? [0m
+echo  Other causes might include a very outdated script... Check https://github.com/taku-nm/auto-cli for new releases.
+echo  If you can, report to ReVanced Support Discord.
+echo.
+echo  Pressing any key will end this script.
+echo.
+pause
+EXIT
 
 :checkTool
 call :fetchToolsJson "%inputJson%" %~1
