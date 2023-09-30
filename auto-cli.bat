@@ -54,7 +54,7 @@ if exist "%localappdata%\revanced-cli\input.json" (
 )
 
 REM script version check
-set batVersion=1.38
+set batVersion=1.39
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
