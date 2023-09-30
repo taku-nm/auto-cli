@@ -7,7 +7,7 @@
 ---
 
 <details>
-  <summary>An overview on how it works (in case you're curious)</summary>
+  <summary>An overview on what it does (in case you're curious)</summary>
 
 Setup:
 
@@ -33,4 +33,9 @@ Clean-up:
 </details>
 
 ## Screenshot
+<details>
+  <summary>A visual demonstration</summary>
+
 ![auto-cli-screenshot](https://github.com/taku-nm/auto-cli/assets/23640508/59c81209-e9f5-46ad-a665-080cbff5fd78)
+
+<details>
