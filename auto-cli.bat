@@ -45,10 +45,11 @@ if exist "%localappdata%\revanced-cli\input.json" (
 		 echo.
 	    echo  [91m FATAL [0m
 		 echo  [91m input.json could not be loaded... are you offline? [0m
+		 echo  Contact taku on ReVanced discord or open an issue on GitHub.
+		 echo  Include a screenshot of the entire terminal.
 		 echo.
        echo  Pressing any key will close this window.
-       echo.
-       pause
+       pause > nul 2> nul
        EXIT
 	)
 )
@@ -196,8 +197,7 @@ echo  The patches [93mMUST[0m be called 'patches.jar'.
 echo  The integrations [93mMUST[0m be called 'integrations.apk'
 echo [93m Patches and integrations are optional. Not providing them will cause the script to use official ReVanced sources. [0m
 echo Once you're ready, press any key to continue...
-echo.
-pause
+pause > nul 2> nul
 echo.
 if exist ..\revanced-cli-input\input.apk (
 	echo [92m input.apk found! [0m
@@ -244,7 +244,7 @@ if exist "%localappdata%\revanced-cli\options.json" (
 echo Pressing any key will open notepad for you to customize your install.
 echo Close notepad once you're ready. Don't forget to save within notepad.
 echo.
-pause
+pause > nul 2> nul
 START "" /wait notepad "%localappdata%\revanced-cli\options.json"
 set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
 :filename
@@ -274,27 +274,25 @@ if exist PATCHED_*.apk (
     if "!fname!" == "YouTube.apk" call :microG
     if "!fname!" == "YouTube_Music.apk" call :microG
     echo.
-    echo  If something goes wrong, screenshot the ENTIRE terminal in your support request in the ReVanced discord support channel.
     echo  bat Version %batVersion%
     echo.
     echo  Backups, keystore and supporting files can be found in AppData\Local\revanced-cli
     echo  To use the backup files, rename them to .apk instead of .backup
     echo.
     echo  Pressing any key will close this window.
-    echo.
-    pause
+    pause > nul 2> nul
     EXIT
 ) else if '%choice%' == 'A' (
 	 goto custom_jump
 ) else (
 	 echo.
     echo  [91m FATAL [0m
-	 echo  [91m Something must've gone wrong during patching. Contact taku on discord or open an issue on github. [0m
+	 echo  [91m Something must've gone wrong during patching. Contact taku on ReVanced discord or open an issue on GitHub. [0m
+	 echo  Include a screenshot of the entire terminal.
 	 echo  bat Version %batVersion%
 	 echo.
     echo  Pressing any key will close this window.
-    echo.
-    pause
+    pause > nul 2> nul
     EXIT
 )
 
@@ -320,12 +318,12 @@ EXIT /B 0
 :fetchToolsFail
 echo.
 echo  [91m FATAL [0m
-echo  [91m Something has gone wrong when attempting to fetch tool info. Contact taku on discord or open an issue on github. [0m
+echo  [91m Something has gone wrong when attempting to fetch tool info. Contact taku on ReVanced discord or open an issue on GitHub. [0m
+echo  Include a screenshot of the entire terminal.
 echo  bat Version %batVersion%
 echo.
 echo  Pressing any key will close this window.
-echo.
-pause
+pause > nul 2> nul
 EXIT
 
 :fetchAppJson
@@ -360,12 +358,12 @@ EXIT /B 0
 :fetchAppsFail
 echo.
 echo  [91m FATAL [0m
-echo  [91m Something has gone wrong when attempting to fetch app info. Contact taku on discord or open an issue on github. [0m
+echo  [91m Something has gone wrong when attempting to fetch app info. Contact taku on ReVanced discord or open an issue on GitHub. [0m
+echo  Include a screenshot of the entire terminal.
 echo  bat Version %batVersion%
 echo.
 echo  Pressing any key will close this window.
-echo.
-pause
+pause > nul 2> nul
 EXIT
 
 :downloadWithFallback
@@ -392,11 +390,11 @@ EXIT /B 0
 echo.
 echo  [91m A download or file integrity check failed... Is the Discord CDN down? Is your internet interrupted? [0m
 echo  Other causes might include a very outdated script... Check https://github.com/taku-nm/auto-cli for new releases.
-echo  If you can, report to ReVanced Support Discord.
+echo  Contact taku on ReVanced discord or open an issue on GitHub.
+echo  Include a screenshot of the entire terminal.
 echo.
 echo  Pressing any key will end this script.
-echo.
-pause
+pause > nul 2> nul
 EXIT
 
 :checkTool
@@ -417,32 +415,27 @@ EXIT /B 0
 
 :redditOptions
 echo.
-echo You're patching a third-party reddit client. This requires you to create a client ID at https://www.reddit.com/prefs/apps
-echo You can leave "description" and "about url" empty. Make sure to select "installed app".
-echo.
-echo For "redirect uri" enter the following:
+echo  You're patching a third-party reddit client. This requires you to create a client ID.
+echo [93m You can leave "description" and "about url" empty. Make sure to select "installed app". [0m
+echo  For "redirect uri" enter the following:
 echo [92m !uri! [0m
+echo  Pressing any key will open your browser for you to create a reddit app.
+pause > nul 2> nul
+start https://www.reddit.com/prefs/apps
+echo [93m Paste your client ID now. [0m It is written below "installed app". Do NOT place a space at the end. Press enter once you are done.
 echo.
-if exist "%localappdata%\revanced-cli\options.json" (
-	echo  [92m option.json found! [0m
-	echo The provided client ID will be used. Make sure it is the correct one.
-	echo Pressing any key will open notepad for you to check this value.
-) else (
-	"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
-	move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
-	echo An options.json as been created.
-	echo The client ID has to be entered where it says null, after value under the spoof client section.
-	echo.
-	echo Example:    "value"  :  "example_client_id" 
-	echo.
-	echo Pressing any key will open notepad for you to edit this value.
+set /p client_id=
+if not defined client_id echo [93m Provide a client ID [0m && goto redditOptions 
+del "%localappdata%\revanced-cli\options.json" > nul 2> nul
+"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
+move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
+set "optionsJson=%localappdata%\revanced-cli\options.json"
+for /f "usebackq delims=" %%a in ("%optionsJson%") do (
+    set "jsonContent=!jsonContent!%%a"
 )
-echo Close notepad once you're ready. Don't forget to save within notepad.
-echo.
-pause
-START "" /wait notepad "%localappdata%\revanced-cli\options.json"
-set "optionsPath=%localappdata%\revanced-cli\options.json"
-set "OPTIONS=--options="!optionsPath!""
+set "NEW_jsonContent=!jsonContent:"Spoof client",  "options" : [ {    "key" : "client-id",    "value" : null="Spoof client",  "options" : [ {    "key" : "client-id",    "value" : "%client_id%"!"
+echo !NEW_jsonContent! > "%optionsJson%"
+set "OPTIONS=--options="!optionsJson!""
 EXIT /B 0
 
 :microG
