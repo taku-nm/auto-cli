@@ -426,7 +426,7 @@ start https://www.reddit.com/prefs/apps
 echo [93m Paste your client ID now. [0m It is written below "installed app". Do NOT place a space at the end. Press enter once you are done.
 echo.
 set /p client_id=
-if not defined client_id echo [93m Provide a client ID [0m && goto redditOptions 
+if not defined client_id echo [91m Provide a client ID [0m && goto redditOptions 
 del "%localappdata%\revanced-cli\options.json" > nul 2> nul
 "%JDK%" -jar "%CLI%" options -o "%PATCHES%"
 move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
