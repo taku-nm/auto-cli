@@ -36,6 +36,23 @@
                 "hash": "0daca9aa95d15957ee8e850b4a8afce9d75a0041dec6b84b8134f8f779b81f51"
             }
         },
+        "synctools": {
+            "cli": {
+                "fname": "revanced-cli-4.0.0-dev.4-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.0.0-dev.4/revanced-cli-4.0.0-dev.4-all.jar",
+                "hash": "17341a94a2fb586984de5344904a94b9da18fd55abd4d21ad81b2c8157848cdb"
+            },
+            "patches": {
+                "fname": "revanced-patches-2.191.0-dev.32.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.191.0-dev.32/revanced-patches-2.191.0-dev.32.jar",
+                "hash": "bff82af90de8abe8a05e0617b74dc6a391aca37dd1f1e909a84fd3867db9918b"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-0.118.0-dev.4.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.118.0-dev.4/revanced-integrations-0.118.0-dev.4.apk",
+                "hash": "0daca9aa95d15957ee8e850b4a8afce9d75a0041dec6b84b8134f8f779b81f51"
+            }
+        },
         "apps": [
 	    {
                 "fname": null
@@ -128,7 +145,7 @@
                 "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
-                "toolMod" : " "
+                "toolMod" : "sync"
             },
             {
                 "fname": "Infinity.apk",
