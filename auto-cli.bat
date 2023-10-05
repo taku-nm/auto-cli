@@ -125,7 +125,6 @@ if exist "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_sha
 	 echo !KEY_PW!>"%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
 )
 
-REM KEYSTORE-TEST to KEYSTORE ; change to dev json ; then test it ; ALSO change sync and relay to .no_pw_keystore and then if exist .no_pw_keystore if fname sync or relay do alternative patching
 REM check for and transform old keystores
 if exist "%localappdata%\revanced-cli\keystore-test\*.keystore" (
 	echo  [93m Old keystores found [0m
@@ -282,7 +281,7 @@ echo.
 set /p OUTPUT=
 if '%OUTPUT%'=='' echo  [91m Nu-uh! Provide a name. [0m && goto filename
 echo.
-"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\%OUTPUT%.keystore" -o %OUTPUT%.apk
+"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\%OUTPUT%.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o %OUTPUT%.apk
 goto end
 
 :end
