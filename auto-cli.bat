@@ -105,6 +105,7 @@ if exist "%localappdata%\revanced-cli\revanced-jdk\" (
 	del "%localappdata%\revanced-cli\jdk.zip"
 )
 set "JDK=%localappdata%\revanced-cli\revanced-jdk\bin\java.exe"
+set "KEYTOOL=%localappdata%\revanced-cli\revanced-jdk\bin\keytool.exe"
 set "JDK_ps=!PSlocalData!\revanced-cli\revanced-jdk\bin\java.exe"
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%JDK_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
 if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A720B " (
@@ -114,6 +115,24 @@ if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A
 	echo Deleting JDK and retrying...
 	rmdir /s /q "%localappdata%\revanced-cli\revanced-jdk\" > nul 2> nul
 	goto jdk_integ_failed
+)
+
+REM check for and transform old keystores
+if exist "%localappdata%\revanced-cli\keystore-test\*.keystore" (
+	echo  [93m Old keystores found [0m
+	set new_pw=%random%%random%%random%%random%
+	echo !new_pw! > "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
+	for %%i in ("%localappdata%\revanced-cli\keystore-test\*.keystore") DO (
+		if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Sync.keystore" (
+			del "%%i"
+		) else if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Relay.keystore" (
+         del "%%i"
+		) else (
+	      "%KEYTOOL%" -storepasswd -storepass ReVanced -new !new_pw! -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" -keystore "%%i" -alias alias
+         move "%%i" "%%~dpi%%~ni.secure_keystore" > nul 2> nul
+			echo  [92m Keystore %%~ni transformed [0m
+	   )
+	)
 )
 
 REM tools setup (cli, patches, integrations)
