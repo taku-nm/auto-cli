@@ -55,7 +55,7 @@ if exist "%localappdata%\revanced-cli\input.json" (
 )
 
 REM script version check
-set batVersion=1.41
+set batVersion=2.0
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
@@ -118,21 +118,21 @@ if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A
 )
 
 REM check and create keystore password
-if exist "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt" (
-    set /p KEY_PW=< "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
+if exist "%localappdata%\revanced-cli\keystore\keystore_password_do_not_share.txt" (
+    set /p KEY_PW=< "%localappdata%\revanced-cli\keystore\keystore_password_do_not_share.txt"
 ) else (
 	 set KEY_PW=%random%%random%%random%%random%
-	 echo !KEY_PW!>"%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
+	 echo !KEY_PW!>"%localappdata%\revanced-cli\keystore\keystore_password_do_not_share.txt"
 )
 
 REM check for and transform old keystores
-if exist "%localappdata%\revanced-cli\keystore-test\*.keystore" (
+if exist "%localappdata%\revanced-cli\keystore\*.keystore" (
 	echo  [93m Old keystores found [0m
 	call :downloadWithFallback "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar" "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
-	for %%i in ("%localappdata%\revanced-cli\keystore-test\*.keystore") DO (
-		if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Sync.keystore" (
+	for %%i in ("%localappdata%\revanced-cli\keystore\*.keystore") DO (
+		if "%%i"=="%localappdata%\revanced-cli\keystore\PATCHED_Sync.keystore" (
 			move "%%i" "%%~dpi%%~ni.no_pw_keystore" > nul 2> nul
-		) else if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Relay.keystore" (
+		) else if "%%i"=="%localappdata%\revanced-cli\keystore\PATCHED_Relay.keystore" (
          move "%%i" "%%~dpi%%~ni.no_pw_keystore" > nul 2> nul
 		) else (
 	      "%KEYTOOL%" -storepasswd -storepass ReVanced -new !KEY_PW! -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" -keystore "%%i" -alias alias
@@ -158,7 +158,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 )
 
 :start
-set "KEYSTORE=%localappdata%\revanced-cli\keystore-test"
+set "KEYSTORE=%localappdata%\revanced-cli\keystore"
 set "k=0"
 echo.
 
@@ -285,7 +285,6 @@ echo.
 goto end
 
 :end
-copy /y *.keystore "%localappdata%\revanced-cli\keystore" > nul 2> nul
 rmdir /s /q C:\revanced-cli-keystore\ > nul 2> nul
 rmdir /s /q revanced-resource-cache\ > nul 2> nul
 del .\options.json > nul 2> nul
