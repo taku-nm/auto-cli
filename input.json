@@ -43,7 +43,7 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (Stock logo) (18.37.36)",
+                "dname": "YouTube (Stock logo) (No RYD) (18.37.36)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159599381905940580/com.google.android.youtube_18.37.36-1540089280.apk",
                 "hash": "327f6a337f9833aaa9ccb9d06e87162073e28ff8a6d1fbd26ca15b56e76fa773",
                 "patches": "-e \"Return YouTube Dislike\"",
@@ -52,7 +52,7 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (ReVanced logo) (18.37.36)",
+                "dname": "YouTube (ReVanced logo) (No RYD) (18.37.36)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159599381905940580/com.google.android.youtube_18.37.36-1540089280.apk",
                 "hash": "327f6a337f9833aaa9ccb9d06e87162073e28ff8a6d1fbd26ca15b56e76fa773",
                 "patches": "-i \"Custom branding\" -e \"Return YouTube Dislike\"",
@@ -61,7 +61,7 @@
             },
 			{
                 "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music (compatible with Google Pixel) (6.22.51)",
+                "dname": "YouTube Music (Google Pixel) (6.22.51)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159600461989556254/com.google.android.apps.youtube.music_6.22.51-62251240_v8a.apk",
                 "hash": "ff4218e2b342615b46364357025697d96f8dc258d38305e5eab99adbfc7fd8f8",
                 "patches": " ",
@@ -70,7 +70,7 @@
             },
 			{
                 "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music (compatible with other devices) (6.22.51)",
+                "dname": "YouTube Music (other devices) (6.22.51)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159600415244025926/com.google.android.apps.youtube.music_6.22.51-62251230_v7a.apk",
                 "hash": "29d76414ec0272fe9991d2fc3dab278b6ddf1ee396bac2249caa437598749ae1",
                 "patches": " ",
