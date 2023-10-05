@@ -37,7 +37,7 @@
                 "dname": "YouTube (ReVanced logo)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149347604904292472/com.google.android.youtube_18.32.39-1539440064.apk",
                 "hash": "342ab2dba5a099bf108a5cf21c3fbee37cdf09865a30cbc0140db7f81cb7164c",
-                "patches": "-i \"custom branding\"",
+                "patches": "-i \"Custom branding\"",
                 "uri" : " ",
                 "toolMod" : " "
             },
@@ -64,7 +64,7 @@
                 "dname": "TikTok",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149348108535353484/com.zhiliaoapp.musically_30.8.4-2023008040.apk",
                 "hash": "f0b5834a56d3e8a3f2fd005f9a2d7d6da4cd8b8ff558258467296a8666c83144",
-                "patches": "-i \"Sim spoof\"",
+                "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
                 "toolMod" : " "
             },
