@@ -430,7 +430,7 @@ EXIT /B 0
 :patchApp
 set "inputString=%~1"
 set "keyString=!inputString:.apk=!"
-"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.keystore" -o PATCHED_%~1
+"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="%KEY_PW%" -o PATCHED_%~1
 EXIT /B 0
 
 :redditOptions
