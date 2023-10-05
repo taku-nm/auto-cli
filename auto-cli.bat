@@ -33,12 +33,12 @@ echo.
 
 REM refresh input json 
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 if exist "%localappdata%\revanced-cli\input.json" (
    set "inputJson=!PSlocalData!\revanced-cli\input.json"
 ) else (
 	echo  [93m Input.json download failed... Attempting to circumvent geo-blocking... [0m
-	powershell -command "Invoke-WebRequest 'http://user737.bplaced.net/downloads/revanced/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+	powershell -command "Invoke-WebRequest 'http://user737.bplaced.net/downloads/revanced/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 	if exist "%localappdata%\revanced-cli\input.json" (
        set "inputJson=!PSlocalData!\revanced-cli\input.json"
    ) else (
