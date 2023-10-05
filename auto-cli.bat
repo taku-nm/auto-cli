@@ -194,6 +194,7 @@ if defined uri call :redditOptions
 REM patch app
 call :fetchAppJson "%inputJson%" %choice%
 echo Patching !fname!
+if defined tool_mod call :safePatch !fname! && goto end
 call :patchApp !fname!
 goto end
 
@@ -492,4 +493,8 @@ for %%i in (%~1, %~2, %~3) do (
 	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
 	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
 	)
+EXIT /B 0
+
+:safePatch
+"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! -o PATCHED_%~1
 EXIT /B 0
