@@ -117,18 +117,24 @@ if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A
 	goto jdk_integ_failed
 )
 
+REM check and create keystore password
+if exist "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt" (
+    set /p KEY_PW=< "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
+) else (
+	 set KEY_PW=%random%%random%%random%%random%
+	 echo !KEY_PW! > "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
+)
+
 REM check for and transform old keystores
 if exist "%localappdata%\revanced-cli\keystore-test\*.keystore" (
 	echo  [93m Old keystores found [0m
-	set new_pw=%random%%random%%random%%random%
-	echo !new_pw! > "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
 	for %%i in ("%localappdata%\revanced-cli\keystore-test\*.keystore") DO (
 		if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Sync.keystore" (
 			del "%%i"
 		) else if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Relay.keystore" (
          del "%%i"
 		) else (
-	      "%KEYTOOL%" -storepasswd -storepass ReVanced -new !new_pw! -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" -keystore "%%i" -alias alias
+	      "%KEYTOOL%" -storepasswd -storepass ReVanced -new !KEY_PW! -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" -keystore "%%i" -alias alias
          move "%%i" "%%~dpi%%~ni.secure_keystore" > nul 2> nul
 			echo  [92m Keystore %%~ni transformed [0m
 	   )
