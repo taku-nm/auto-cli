@@ -33,7 +33,7 @@ echo.
 
 REM refresh input json 
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/dev/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 if exist "%localappdata%\revanced-cli\input.json" (
    set "inputJson=!PSlocalData!\revanced-cli\input.json"
 ) else (
@@ -124,15 +124,15 @@ if exist "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_sha
 	 set KEY_PW=%random%%random%%random%%random%
 	 echo !KEY_PW! > "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
 )
-
+REM KEYSTORE-TEST to KEYSTORE ; change to dev json ; then test it ; ALSO change sync and relay to .no_pw_keystore and then if exist .no_pw_keystore if fname sync or relay do alternative patching
 REM check for and transform old keystores
 if exist "%localappdata%\revanced-cli\keystore-test\*.keystore" (
 	echo  [93m Old keystores found [0m
 	for %%i in ("%localappdata%\revanced-cli\keystore-test\*.keystore") DO (
 		if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Sync.keystore" (
-			del "%%i"
+			move "%%i" "%%~dpi%%~ni.no_pw_keystore" > nul 2> nul
 		) else if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Relay.keystore" (
-         del "%%i"
+         move "%%i" "%%~dpi%%~ni.no_pw_keystore" > nul 2> nul
 		) else (
 	      "%KEYTOOL%" -storepasswd -storepass ReVanced -new !KEY_PW! -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" -keystore "%%i" -alias alias
          move "%%i" "%%~dpi%%~ni.secure_keystore" > nul 2> nul
@@ -157,7 +157,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 )
 
 :start
-set "KEYSTORE=%localappdata%\revanced-cli\keystore"
+set "KEYSTORE=%localappdata%\revanced-cli\keystore-test"
 set "k=0"
 echo.
 
@@ -436,7 +436,16 @@ EXIT /B 0
 :patchApp
 set "inputString=%~1"
 set "keyString=!inputString:.apk=!"
-"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="%KEY_PW%" -o PATCHED_%~1
+if !inputString!=="Relay" if exist "%KEYSTORE%\PATCHED_Relay.no_pw_keystore" (
+	echo alternative patching relay
+	"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_Relay.no_pw_keystore" -o PATCHED_%~1
+) else if !inputString!=="Sync" if exist "%KEYSTORE%\PATCHED_Sync.no_pw_keystore" (
+	echo alternative patching sync
+	"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_Sync.no_pw_keystore" -o PATCHED_%~1
+) else (
+	echo standard patching
+   "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="%KEY_PW%" -o PATCHED_%~1
+)
 EXIT /B 0
 
 :redditOptions
