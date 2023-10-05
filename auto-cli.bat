@@ -33,7 +33,7 @@ echo.
 
 REM refresh input json 
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/dev/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 if exist "%localappdata%\revanced-cli\input.json" (
    set "inputJson=!PSlocalData!\revanced-cli\input.json"
 ) else (
