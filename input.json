@@ -124,15 +124,6 @@
             },
             {
                 "fname": "Relay.apk",
-                "dname": "Relay for Reddit",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154219206418628709/free.reddit.news_10.2.19-625.apk",
-                "hash": "9049e00231458fac677d0c6c301bea0b998f211a90bfc0dfa534bdf44d54b9c9",
-                "patches": " ",
-                "uri" : "dbrady://relay",
-                "toolMod" : " "
-            },
-            {
-                "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
