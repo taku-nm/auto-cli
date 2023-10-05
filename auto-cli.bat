@@ -122,12 +122,14 @@ if exist "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_sha
     set /p KEY_PW=< "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
 ) else (
 	 set KEY_PW=%random%%random%%random%%random%
-	 echo !KEY_PW! > "%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
+	 echo !KEY_PW!>"%localappdata%\revanced-cli\keystore-test\keystore_password_do_not_share.txt"
 )
+
 REM KEYSTORE-TEST to KEYSTORE ; change to dev json ; then test it ; ALSO change sync and relay to .no_pw_keystore and then if exist .no_pw_keystore if fname sync or relay do alternative patching
 REM check for and transform old keystores
 if exist "%localappdata%\revanced-cli\keystore-test\*.keystore" (
 	echo  [93m Old keystores found [0m
+	call :downloadWithFallback "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar" "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
 	for %%i in ("%localappdata%\revanced-cli\keystore-test\*.keystore") DO (
 		if "%%i"=="%localappdata%\revanced-cli\keystore-test\PATCHED_Sync.keystore" (
 			move "%%i" "%%~dpi%%~ni.no_pw_keystore" > nul 2> nul
@@ -193,7 +195,6 @@ if defined uri call :redditOptions
 REM patch app
 call :fetchAppJson "%inputJson%" %choice%
 echo Patching !fname!
-if defined tool_mod call :safePatch !fname! && goto end
 call :patchApp !fname!
 goto end
 
@@ -436,15 +437,17 @@ EXIT /B 0
 :patchApp
 set "inputString=%~1"
 set "keyString=!inputString:.apk=!"
-if !inputString!=="Relay" if exist "%KEYSTORE%\PATCHED_Relay.no_pw_keystore" (
-	echo alternative patching relay
-	"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_Relay.no_pw_keystore" -o PATCHED_%~1
-) else if !inputString!=="Sync" if exist "%KEYSTORE%\PATCHED_Sync.no_pw_keystore" (
-	echo alternative patching sync
-	"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_Sync.no_pw_keystore" -o PATCHED_%~1
+if "!inputString!"=="Relay.apk" (
+	if exist "%KEYSTORE%\PATCHED_Relay.no_pw_keystore" (
+	   "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_Relay.no_pw_keystore" -o PATCHED_%~1
+    ) else goto standard_patch
+) else if "!inputString!"=="Sync.apk" (
+	if exist "%KEYSTORE%\PATCHED_Sync.no_pw_keystore" (
+	   "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_Sync.no_pw_keystore" -o PATCHED_%~1
+    ) else goto standard_patch
 ) else (
-	echo standard patching
-   "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="%KEY_PW%" -o PATCHED_%~1
+	:standard_patch
+   "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%~1
 )
 EXIT /B 0
 
@@ -491,8 +494,4 @@ for %%i in (%~1, %~2, %~3) do (
 	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
 	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
 	)
-EXIT /B 0
-
-:safePatch
-"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! -o PATCHED_%~1
 EXIT /B 0
