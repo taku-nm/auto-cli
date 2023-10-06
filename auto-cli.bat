@@ -252,7 +252,7 @@ if exist ..\revanced-cli-input\patches.jar (
 	pause
 	"%JDK%" -jar "%CLI%" list-patches -dopv "%PATCHES%"
 ) else (
-	echo  You are using official ReVanced patches. [92m Please look up the patch names at https://revanced.app/patches.[0m
+	echo  You are using official ReVanced patches. [93m Please look up the patch names at https://revanced.app/patches.[0m
 )
 echo.
 echo  You now have the opportunity to include and exclude patches using the following syntax:[93m Including the quotes[0m
