@@ -60,7 +60,7 @@ for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFr
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
 ) else (
-	echo  [93m This script is likely outdated. Check https://github.com/taku-nm/auto-cli for new releases. [0m
+	echo  [93m This script is likely outdated. Check https://github.com/taku-nm/auto-cli/releases for new releases. [0m
 	echo  [93m Your version: %batVersion% [0m
 	echo  [93m Available version: %jsonBatVersion% [0m
 )
@@ -276,7 +276,7 @@ set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
 :filename
 echo.
 echo  Final question: What app are you patching? This will be your output file.[93m No spaces. No file extensions.[0m
-echo  Giving it the same name the last time you patched, ensures that your keystore is being used and in-place updates are possible.
+echo  Giving it the same name as the last time you patched ensures that the same keystore is used, which allows for updates without needing to uninstall first.
 echo  [92m Example: PATCHED_WhatsApp [0m
 echo.
 set /p OUTPUT=
@@ -476,7 +476,7 @@ set "OPTIONS=--options="!optionsJson!""
 EXIT /B 0
 
 :microG
-echo  [93m Keep in mind that you will need Vanced MicroG for YT and YTM.[0m
+echo  [93m Keep in mind that you will need Vanced MicroG for YT and YT Music.[0m
 echo  Would you like to download Vanced MicroG from GitHub now?
 echo.
 echo   1. Yes
