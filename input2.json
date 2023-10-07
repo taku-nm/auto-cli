@@ -113,6 +113,42 @@
                 "uri" : " ",
                 "toolMod" : " "
             },
+			{
+                "fname": "Boost.apk",
+                "dname": "Boost for Reddit (1.12.12)",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154220795447488552/com.rubenmayayo.reddit_1.12.12-210011212.apk",
+                "hash": "a68c22d632a5dd1f446c3759a171c7dbb9edab2afc3c2f87e39323f198606742",
+                "patches": " ",
+                "uri" : "http://rubenmayayo.com",
+                "toolMod" : " "
+            },
+            {
+                "fname": "Sync.apk",
+                "dname": "Sync for Reddit (23.06.30-13:39)",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155165102341898292/com.laurencedawson.reddit_sync_v23.06.30-13_39-23033.apk",
+                "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
+                "patches": " ",
+                "uri" : "http://redditsync/auth",
+                "toolMod" : " "
+            },
+            {
+                "fname": "Infinity.apk",
+                "dname": "Infinity for Reddit (6.1.1)",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155640928896294982/ml.docilealligator.infinityforreddit_6.1.1-127.apk",
+                "hash": "127294657c753e4ec7e5a228bb647ef6004e896972e048ab7de004c86f74c0c2",
+                "patches": " ",
+                "uri" : "infinity://localhost",
+                "toolMod" : " "
+            },
+            {
+                "fname": "Relay.apk",
+                "dname": "Relay for Reddit (10.2.40)",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk",
+                "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
+                "patches": " ",
+                "uri" : "dbrady://relay",
+                "toolMod" : " "
+            },
             {
                 "fname": "RiF.apk",
                 "dname": "Rif for Reddit (5.6.22)",
