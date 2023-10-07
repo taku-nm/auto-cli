@@ -31,9 +31,12 @@ REM create link to install dir
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
 
+set "MODE=main"
+:modeChange
+
 REM refresh input json 
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/main/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/!MODE!/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 if exist "%localappdata%\revanced-cli\input.json" (
    set "inputJson=!PSlocalData!\revanced-cli\input.json"
 ) else (
@@ -161,6 +164,8 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 set "KEYSTORE=%localappdata%\revanced-cli\keystore"
 set "k=0"
 echo.
+if "!MODE!" == "dev" echo [93m You are currently in developer mode. Do you know what you are doing? [0m
+echo.
 
 REM generate app list
 for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
@@ -171,12 +176,16 @@ for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' 
 )
 echo.
 echo   A. Custom
+if "!MODE!" == "main" echo   B. Developer Mode
+if "!MODE!" == "dev" echo   B. Normal Mode
 echo.
 set choice=
 set /p choice=Type the number or letter to fetch the corresponding app and hit enter. 
 if not defined choice goto start
 if %choice% geq 1 if %choice% leq %k% ( goto app_download )
 if '%choice%'=='A' goto custom
+if '%choice%'=='B' if "!MODE!" == "main" set "MODE=dev" && goto modeChange
+if '%choice%'=='B' if "!MODE!" == "dev" set "MODE=main" && goto modeChange
 echo "%choice%" is not valid, try again
 echo.
 goto start
@@ -339,6 +348,11 @@ for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json)
 	set /a "tpc=!tpc!+1"
 )
 if not defined fname goto fetchToolsFail
+if "!MODE!" == "dev" (
+	echo Filename !fname!
+	echo Link !link!
+	echo Hash !hash!
+)
 EXIT /B 0
 
 :fetchToolsFail
@@ -379,6 +393,14 @@ for /f "tokens=* " %%i in ('powershell -command "(Get-Content -Raw '!JSON!' | Co
 	set /a "apc=!apc!+1"
 )
 if not defined fname goto fetchAppsFail
+if "!MODE!" == "dev" (
+	echo Filename !fname!
+	echo Link !link!
+	echo Hash !hash!
+	echo Patch selection !patch_sel!
+	echo URI !uri!
+	echo Tool modifier !tool_mod!
+)
 EXIT /B 0
 
 :fetchAppsFail
@@ -399,6 +421,7 @@ set second_check=0
 set ram_h=
 set "ram_path=%~1"
 set "ram_path=!ram_path:'=''!"
+if "!MODE!" == "dev" echo !ram_path!
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "%~3 " (
 	echo  [92m Integrity validated !ram_path! [0m
@@ -434,6 +457,17 @@ if /i "%ram_h%" == "!hash! " (
 EXIT /B 0
 
 :patchApp
+if "!MODE!" == "dev" (
+	echo Patch current Filename !fname!
+	echo JDK %JDK%
+	echo CLI %CLI%
+	echo Patches %PATCHES%
+	echo Integrations %INTEGRATIONS%
+	echo Patch selection !patch_sel!
+	echo Options !OPTIONS!
+	echo Keystore Path %KEYSTORE%
+	echo Keystore Password %KEY_PW%
+)
 set "inputString=%~1"
 set "keyString=!inputString:.apk=!"
 if "!inputString!"=="Relay.apk" (
