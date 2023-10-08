@@ -8,6 +8,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - name: Configure Git
+        run: git config --global core.autocrlf false
       - name: Checkout branch
         uses: actions/checkout@v4
       - name: Check if on dev
