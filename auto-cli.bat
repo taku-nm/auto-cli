@@ -58,7 +58,7 @@ if exist "%localappdata%\revanced-cli\input.json" (
 )
 
 REM script version check
-set batVersion=2.1
+set batVersion=2.0
 for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
@@ -164,7 +164,9 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 set "KEYSTORE=%localappdata%\revanced-cli\keystore"
 set "k=0"
 echo.
-if "!MODE!" == "dev" echo [93m You are currently in developer mode. Do you know what you are doing? [0m
+if "!MODE!" == "dev" (
+	echo [93m You are currently in developer mode. Do you know what you are doing? [0m
+)
 echo.
 
 REM generate app list
