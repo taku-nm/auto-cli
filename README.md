@@ -1,6 +1,6 @@
 # ReVanced CLI Automation
 
-### [**Just download (on PC) and double click.**](https://github.com/taku-nm/auto-cli/releases/download/v2.1/auto-cli-v2.1.bat) It is *that* simple.
+### [**Just download (on PC) and double click.**](https://github.com/taku-nm/auto-cli/releases/download/v2.0/auto-cli-v2.0.bat) It is *that* simple.
 
 (You might have to click on "More info" and then "Run anyways")
 
