@@ -36,12 +36,12 @@ set "MODE=main"
 
 REM refresh input json 
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/!MODE!/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/!MODE!/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 if exist "%localappdata%\revanced-cli\input.json" (
    set "inputJson=!PSlocalData!\revanced-cli\input.json"
 ) else (
 	echo  [93m Input.json download failed... Attempting to circumvent geo-blocking... [0m
-	powershell -command "Invoke-WebRequest 'http://user737.bplaced.net/downloads/revanced/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+	powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest 'http://user737.bplaced.net/downloads/revanced/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 	if exist "%localappdata%\revanced-cli\input.json" (
        set "inputJson=!PSlocalData!\revanced-cli\input.json"
    ) else (
@@ -59,7 +59,7 @@ if exist "%localappdata%\revanced-cli\input.json" (
 
 REM script version check
 set batVersion=2.1
-for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
+for /f %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
 ) else (
@@ -73,8 +73,8 @@ if exist "%localappdata%\revanced-cli\revanced-curl\" (
    echo  [92m cURL found! [0m
 ) else (
    echo  [93m No cURL found... Downloading... [0m
-   powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '!PSlocalData!\revanced-cli\curl.zip'"
-	powershell -command "Expand-Archive '!PSlocalData!\revanced-cli\curl.zip' -DestinationPath '!PSlocalData!\revanced-cli\'"
+   powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '!PSlocalData!\revanced-cli\curl.zip'"
+	powershell -NoProfile -NonInteractive -Command "Expand-Archive '!PSlocalData!\revanced-cli\curl.zip' -DestinationPath '!PSlocalData!\revanced-cli\'"
 	mkdir "%localappdata%\revanced-cli\revanced-curl\" > nul 2> nul
 	copy /y "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\bin\*.*" "%localappdata%\revanced-cli\revanced-curl\*.*"  > nul 2> nul
 	rmdir /s /q "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\"  > nul 2> nul
@@ -82,7 +82,7 @@ if exist "%localappdata%\revanced-cli\revanced-curl\" (
 )
 set "CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe"
 set "CURL_ps=!PSlocalData!\revanced-cli\revanced-curl\curl.exe"
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%CURL_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '%CURL_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
 if /i "%CURL_h%" == "7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599290D1 " (
 	echo  [92m cURL integrity validated! [0m
 ) else (
@@ -104,13 +104,13 @@ if exist "%localappdata%\revanced-cli\revanced-jdk\" (
 	echo  [93m No JDK found... Downloading... [0m
 	echo.
 	call :downloadWithFallback "%localappdata%\revanced-cli\jdk.zip" "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip" "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
-	powershell -command "Expand-Archive '!PSlocalData!\revanced-cli\jdk.zip' -DestinationPath '!PSlocalData!\revanced-cli'"
+	powershell -NoProfile -NonInteractive -Command "Expand-Archive '!PSlocalData!\revanced-cli\jdk.zip' -DestinationPath '!PSlocalData!\revanced-cli'"
 	del "%localappdata%\revanced-cli\jdk.zip"
 )
 set "JDK=%localappdata%\revanced-cli\revanced-jdk\bin\java.exe"
 set "KEYTOOL=%localappdata%\revanced-cli\revanced-jdk\bin\keytool.exe"
 set "JDK_ps=!PSlocalData!\revanced-cli\revanced-jdk\bin\java.exe"
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%JDK_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '%JDK_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
 if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A720B " (
 	echo  [92m JDK integrity validated! [0m
 ) else (
@@ -170,9 +170,9 @@ if "!MODE!" == "dev" (
 echo.
 
 REM generate app list
-for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
+for /f "tokens=*" %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
 	set /a "k=k+1"
-	for /f "tokens=*" %%j in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
+	for /f "tokens=*" %%j in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
         echo  [0m !k!. %%j 
     )
 )
@@ -339,7 +339,7 @@ set fname=
 set link=
 set hash=
 set tpc=0
-for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.hash"') do (
+for /f %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.hash"') do (
     if !tpc!==0 (
         set "fname=%%i"
     ) else if !tpc!==1 (
@@ -378,7 +378,7 @@ set patch_sel=
 set uri=
 set tool_mod=
 set apc=0
-for /f "tokens=* " %%i in ('powershell -command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod"') do (
+for /f "tokens=* " %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod"') do (
 	if !apc!==0 (
         set "fname=%%i"
     ) else if !apc!==1 (
@@ -424,7 +424,7 @@ set ram_h=
 set "ram_path=%~1"
 set "ram_path=!ram_path:'=''!"
 if "!MODE!" == "dev" echo !ram_path!
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "%~3 " (
 	echo  [92m Integrity validated !ram_path! [0m
 ) else (
@@ -432,7 +432,7 @@ if /i "%ram_h%" == "%~3 " (
 	set second_check=1
 	echo  [93m File integrity damaged... Something must've become corrupted during the download or curl had some issue... [0m
 	echo  Falling back to Invoke WebRequest... This might take a bit longer and doesn't give a nice status indication for the download.
-	powershell -command "Invoke-WebRequest '%~2' -OutFile '!ram_path!'"
+	powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest '%~2' -OutFile '!ram_path!'"
 	goto fallback_2
 )
 EXIT /B 0
@@ -450,7 +450,7 @@ EXIT
 
 :checkTool
 call :fetchToolsJson "%inputJson%" %~1
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '!PSlocalData!\revanced-cli\revanced-tools\!fname!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!PSlocalData!\revanced-cli\revanced-tools\!fname!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "!hash! " (
 	echo  [92m !fname! validated [0m
 ) else (

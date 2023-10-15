@@ -95,15 +95,6 @@
                 "uri" : " ",
                 "toolMod" : " "
             },
-			{
-                "fname": "Boost.apk",
-                "dname": "Boost for Reddit (1.12.12)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154220795447488552/com.rubenmayayo.reddit_1.12.12-210011212.apk",
-                "hash": "a68c22d632a5dd1f446c3759a171c7dbb9edab2afc3c2f87e39323f198606742",
-                "patches": " ",
-                "uri" : "http://rubenmayayo.com",
-                "toolMod" : " "
-            },
             {
                 "fname": "Sync.apk",
                 "dname": "Sync for Reddit (23.06.30-13:39)",
