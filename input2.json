@@ -161,7 +161,7 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : "!CLI! patch %~1 -b !PATCHES! -m !INTEGRATIONS! !patch_sel! !OPTIONS! --keystore \"%KEYSTORE%\\PATCHED_!keyString!.secure_keystore\" --alias=\"alias\" --keystore-password=\"%KEY_PW%\" --keystore-entry-password=\"ReVanced\" -o PATCHED_%~1 "
+                "cmdMod" : "\"!CLI!\" patch %~1 -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! --keystore \"!KEYSTORE!\\PATCHED_!keyString!.secure_keystore\" --alias=\"alias\" --keystore-password=\"!KEY_PW!\" --keystore-entry-password=\"ReVanced\" -o PATCHED_%~1 "
             }
         ]
     }
