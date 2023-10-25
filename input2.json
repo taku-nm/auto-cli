@@ -30,7 +30,8 @@
                 "hash": "87b552a02da71b96421df31277e16c07718d14d158104763fabfcf08b04e72e2",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "YouTube.apk",
@@ -39,7 +40,8 @@
                 "hash": "87b552a02da71b96421df31277e16c07718d14d158104763fabfcf08b04e72e2",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "YouTube_Music.apk",
@@ -48,7 +50,8 @@
                 "hash": "ff4218e2b342615b46364357025697d96f8dc258d38305e5eab99adbfc7fd8f8",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "YouTube_Music.apk",
@@ -57,7 +60,8 @@
                 "hash": "29d76414ec0272fe9991d2fc3dab278b6ddf1ee396bac2249caa437598749ae1",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "TikTok.apk",
@@ -66,7 +70,8 @@
                 "hash": "f0b5834a56d3e8a3f2fd005f9a2d7d6da4cd8b8ff558258467296a8666c83144",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "Twitch.apk",
@@ -75,7 +80,8 @@
                 "hash": "f4610c8c8688c9dbf74de4facf5d310e10b7b54ecccf051d04533999bf011a45",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "Twitter.apk",
@@ -84,7 +90,8 @@
                 "hash": "ba8b2784dd5fed3e6f9ccec988d9c025f40cc5e3b795c497191a1dbe7644c069",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "Instagram.apk",
@@ -93,7 +100,8 @@
                 "hash": "8957feb085f5a6acd20b284853c23f8b6c9c2e554262bdbee76d75a6e5e7fa4b",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "Sync.apk",
@@ -102,7 +110,8 @@
                 "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "Infinity.apk",
@@ -111,7 +120,8 @@
                 "hash": "127294657c753e4ec7e5a228bb647ef6004e896972e048ab7de004c86f74c0c2",
                 "patches": " ",
                 "uri" : "infinity://localhost",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "Relay.apk",
@@ -120,7 +130,8 @@
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "RiF.apk",
@@ -129,7 +140,8 @@
                 "hash": "88d39f859c850f51542c6a12d8bd3c79706debe0f1dff061ed0fe32b3dc688e1",
                 "patches": " ",
                 "uri" : "redditisfun://auth",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "Reddit.apk",
@@ -138,7 +150,8 @@
                 "hash": "407020611b48ea70e50f7f947baf7ed6fc8232e9574ae3cab93a471df4637ec3",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             }
         ]
     }

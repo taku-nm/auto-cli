@@ -205,7 +205,7 @@ if defined uri call :redditOptions
 REM patch app
 call :fetchAppJson "%inputJson%" %choice%
 echo Patching !fname!
-if defined tool_mod call :safePatch !fname! && goto end
+if defined cmd_mod call :modifiedPatch !fname! && goto end
 call :patchApp !fname!
 goto end
 
@@ -378,7 +378,7 @@ set patch_sel=
 set uri=
 set tool_mod=
 set apc=0
-for /f "tokens=* " %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod"') do (
+for /f "tokens=* " %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].cmdMod"') do (
 	if !apc!==0 (
         set "fname=%%i"
     ) else if !apc!==1 (
@@ -391,6 +391,8 @@ for /f "tokens=* " %%i in ('powershell -NoProfile -NonInteractive -Command "(Get
 		  set "uri=%%i"
 	 ) else if !apc!==5 (
 		  set "tool_mod=%%i"
+	 ) else if !apc!==6 (
+		  set "cmd_mod=%%i"
 	 )
 	set /a "apc=!apc!+1"
 )
@@ -402,6 +404,7 @@ if "!MODE!" == "dev" (
 	echo Patch selection !patch_sel!
 	echo URI !uri!
 	echo Tool modifier !tool_mod!
+	echo Command modifier !cmd_mod!
 )
 EXIT /B 0
 
@@ -531,6 +534,6 @@ for %%i in (%~1, %~2, %~3) do (
 	)
 EXIT /B 0
 
-:safePatch
-"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! -o PATCHED_%~1
+:modifiedPatch
+"%JDK%" -jar !cmd_mod!
 EXIT /B 0
