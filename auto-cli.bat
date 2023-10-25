@@ -205,7 +205,7 @@ if defined uri call :redditOptions
 REM patch app
 call :fetchAppJson "%inputJson%" %choice%
 echo Patching !fname!
-if defined cmd_mod call :modifiedPatch !fname! && goto end
+if defined cmd_mod call :modifiedPatch && goto end
 call :patchApp !fname!
 goto end
 
@@ -535,5 +535,8 @@ for %%i in (%~1, %~2, %~3) do (
 EXIT /B 0
 
 :modifiedPatch
+set "inputString=!fname!"
+set "keyString=!inputString:.apk=!"
+set "cmd_mod=!cmd_mod:keyString=%keyString%!"
 "%JDK%" -jar !cmd_mod!
 EXIT /B 0
