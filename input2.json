@@ -155,13 +155,13 @@
             },
             {
                 "fname": "YouTube_Music.apk",
-                "dname": "TEST YTM",
+                "dname": "TEST YTM 2",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159600461989556254/com.google.android.apps.youtube.music_6.22.51-62251240_v8a.apk",
                 "hash": "ff4218e2b342615b46364357025697d96f8dc258d38305e5eab99adbfc7fd8f8",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : "\"%CLI%\" patch %~1 -b \"%PATCHES%\" -m \"%INTEGRATIONS%\" !patch_sel! !OPTIONS! --keystore \"%KEYSTORE%\\PATCHED_!keyString!.secure_keystore\" --alias=\"alias\" --keystore-password=\"%KEY_PW%\" --keystore-entry-password=\"ReVanced\" -o PATCHED_%~1 "
+                "cmdMod" : "!CLI! patch %~1 -b !PATCHES! -m !INTEGRATIONS! !patch_sel! !OPTIONS! --keystore \"%KEYSTORE%\\PATCHED_!keyString!.secure_keystore\" --alias=\"alias\" --keystore-password=\"%KEY_PW%\" --keystore-entry-password=\"ReVanced\" -o PATCHED_%~1 "
             }
         ]
     }
