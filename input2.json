@@ -19,6 +19,23 @@
                 "hash": "fe4eb9498b677030e180c7e93740a66ab6156e33fc0e7b40503f97f8965d79d9"
             }
         },
+        "YT-android-5": {
+            "cli": {
+                "fname": "revanced-cli-3.1.1-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.1/revanced-cli-3.1.1-all.jar",
+                "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
+            },
+            "patches": {
+                "fname": "revanced-patches-2.160.9.jar",
+                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.160.9/revanced-patches-2.160.9.jar",
+                "hash": "aa3f11e1c050dd97e2898fe9e1f72ece11e4ed1d8aeebe57026e81500f27c117"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-0.96.6.apk",
+                "link": "https://github.com/d4n3436/revanced-integrations/releases/download/v0.96.6/revanced-integrations-0.96.6.apk",
+                "hash": "4f5f747059b73e0d4ddffd507445f53dfe6958e47520361dcb5da80ee371cf9d"
+            }
+        },
         "apps": [
 	        {
                 "fname": null
@@ -151,6 +168,16 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
+                "cmdMod" : " "
+            },
+            {
+                "fname": "YouTube.apk",
+                "dname": "YouTube Android 5 (16.40.36)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk",
+                "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
+                "patches": "-i microg-support -i spoof-player-parameters -i client-spoof -i hide-video-ads -i enable-minimized-playback -i disable-update-screen --exclusive",
+                "uri" : " ",
+                "toolMod" : "YT-android-5",
                 "cmdMod" : " "
             }
         ]
