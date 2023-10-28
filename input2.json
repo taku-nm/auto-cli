@@ -36,6 +36,23 @@
                 "hash": "4f5f747059b73e0d4ddffd507445f53dfe6958e47520361dcb5da80ee371cf9d"
             }
         },
+        "YT_android_6_7_tools": {
+            "cli": {
+                "fname": "revanced-cli-3.1.1-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.1/revanced-cli-3.1.1-all.jar",
+                "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
+            },
+            "patches": {
+                "fname": "revanced-patches-2.160.7.jar",
+                "link": "https://github.com/kitadai31/revanced-patches-android6-7/releases/download/v2.160.7/revanced-patches-2.160.7.jar",
+                "hash": "6d37e47165098108b95a6e54e98051f35bd5e16757d0f154b64b257c6938d017"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-0.96.2.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.96.2/revanced-integrations-0.96.2.apk",
+                "hash": "b073a15791fc2da7377c1020e9b45882eb587d46aae78f27f0cb2d4f76f2fc6f"
+            }
+        },
         "apps": [
 	        {
                 "fname": null
@@ -178,6 +195,16 @@
                 "patches": "-i microg-support -i spoof-player-parameters -i client-spoof -i hide-video-ads -i enable-minimized-playback -i disable-update-screen --exclusive",
                 "uri" : " ",
                 "toolMod" : "YT_android_5_",
+                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! "
+            },
+            {
+                "fname": "YouTube.apk",
+                "dname": "YouTube Android 6 / 7 (17.34.36)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk",
+                "hash": "9c71f516434858b87663810f25b88716c71fb75a72f5e6875937e6b0009e0bf6",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : "YT_android_6_7_",
                 "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! "
             }
         ]
