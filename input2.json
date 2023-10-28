@@ -188,6 +188,16 @@
                 "cmdMod" : " "
             },
             {
+                "fname": "Lightroom.apk",
+                "dname": "Lightroom (9.0.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167969793870135356/com.adobe.lrmobile_9.0.0-609000000.apk",
+                "hash": "74ea42ec0a1b62420d23d973b1e7c1b73d75e8350cf8304a42db9244dc531bb3",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : " ",
+                "cmdMod" : " "
+            },
+            {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 5 (16.40.36)",
                 "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk",
