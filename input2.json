@@ -19,7 +19,7 @@
                 "hash": "fe4eb9498b677030e180c7e93740a66ab6156e33fc0e7b40503f97f8965d79d9"
             }
         },
-        "YT-android-5tools": {
+        "YTandroid5tools": {
             "cli": {
                 "fname": "revanced-cli-3.1.1-all.jar",
                 "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.1/revanced-cli-3.1.1-all.jar",
@@ -177,7 +177,7 @@
                 "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
                 "patches": "-i microg-support -i spoof-player-parameters -i client-spoof -i hide-video-ads -i enable-minimized-playback -i disable-update-screen --exclusive",
                 "uri" : " ",
-                "toolMod" : "YT-android-5",
+                "toolMod" : "YTandroid5",
                 "cmdMod" : " "
             }
         ]
