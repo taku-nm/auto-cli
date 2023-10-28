@@ -178,7 +178,7 @@
                 "patches": "-i microg-support -i spoof-player-parameters -i client-spoof -i hide-video-ads -i enable-minimized-playback -i disable-update-screen --exclusive",
                 "uri" : " ",
                 "toolMod" : "YTandroid5",
-                "cmdMod" : " "
+                "cmdMod" : "\"!CLI!\" patch \"!fname\"! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_\"!fname\"! "
             }
         ]
     }
