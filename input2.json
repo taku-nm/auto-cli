@@ -53,6 +53,23 @@
                 "hash": "812cf83d7e7971fa3122c94f2b77effae0817380d4e9d1fb053e84ad5f0df9f8"
             }
         },
+        "YT_extended_tools": {
+            "cli": {
+                "fname": "revanced-cli-3.1.1-all.jar",
+                "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.0.4/revanced-cli-4.0.4-all.jar",
+                "hash": "8e5047ca81a50e96fb114383b083213b018f63cce34fe9bcdab0c7a67dea0400"
+            },
+            "patches": {
+                "fname": "revanced-patches-2.195.6.jar",
+                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.195.6/revanced-patches-2.195.6.jar",
+                "hash": "d59a2f86eced69a870fe620356193b5b146048ebb371b315dfd1181673bea4b5"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-0.120.6.apk",
+                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.120.6/revanced-integrations-0.120.6.apk",
+                "hash": "8f8fbea1881515ba3f14b963eccbb8589e1a396ea6f1f68ed73fc92c53f9e12c"
+            }
+        },
         "apps": [
 	        {
                 "fname": null
@@ -216,6 +233,16 @@
                 "uri" : " ",
                 "toolMod" : "YT_android_6_7_",
                 "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! "
+            },
+            {
+                "fname": "YouTube.apk",
+                "dname": "YouTube ReVanced Extended (18.41.39)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168195694943813642/com.google.android.youtube_18.41.39-1540619712.apk",
+                "hash": "7be5491b2b30d7dd1155e83da64a96513f383351cd8990179d4926ac57182dc8",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : "YT_extended_",
+                "cmdMod" : " "
             }
         ]
     }
