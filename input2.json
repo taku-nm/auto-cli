@@ -9,9 +9,9 @@
                 "hash": "c69c86de113c6d9275ccadb028ef768f01700206df61f087e4d920bc1b75ea06"
             },
             "patches": {
-                "fname": "revanced-patches-2.196.0-dev.9.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.196.0-dev.9/revanced-patches-2.196.0-dev.9.jar",
-                "hash": "152a6307afa7ca043f2942dd3540fa35a70f05cf2a5489b9f13d8cbfbce6867a"
+                "fname": "revanced-patches-2.196.0-dev.11.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.196.0-dev.11/revanced-patches-2.196.0-dev.11.jar",
+                "hash": "063e9345b6f8c3b89177cbb52bf9c6709936389d1d44a0ba8b3655fd8a2709bf"
             },
             "integrations": {
                 "fname": "revanced-integrations-0.121.0-dev.6.apk",
