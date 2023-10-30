@@ -151,7 +151,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	   call :checkTool %%i
 	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!" > nul 2> nul
 	)
-	if !update! == 1 echo [93m Your ReVanced Tools are out of date or damaged... Re-downloading... [0m && rmdir /s /q "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul && goto update_jump
+	if !update! == 1 echo [93m Your ReVanced Tools are out of date or damaged... Re-downloading... [0m && goto update_jump
 	if !update! == 0 goto start
 ) else (
 	echo  [93m No ReVanced Tools found... Downloading... [0m
