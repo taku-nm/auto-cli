@@ -55,7 +55,7 @@
         },
         "YT_extended_tools": {
             "cli": {
-                "fname": "revanced-cli-3.1.1-all.jar",
+                "fname": "revanced-cli-4.0.4-all.jar",
                 "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.0.4/revanced-cli-4.0.4-all.jar",
                 "hash": "8e5047ca81a50e96fb114383b083213b018f63cce34fe9bcdab0c7a67dea0400"
             },
