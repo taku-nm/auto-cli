@@ -309,7 +309,7 @@ echo.
 set /p OUTPUT=
 if '%OUTPUT%'=='' echo  [91m Nu-uh! Provide a name. [0m && goto filename
 echo.
-"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\%OUTPUT%.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%OUTPUT%.apk
+"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\PATCHED_%OUTPUT%.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%OUTPUT%.apk
 goto end
 
 :end
