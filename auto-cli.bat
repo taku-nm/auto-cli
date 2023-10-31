@@ -426,7 +426,11 @@ set second_check=0
 set ram_h=
 set "ram_path=%~1"
 set "ram_path=!ram_path:'=''!"
-if "!MODE!" == "dev" echo !ram_path!
+if "!MODE!" == "dev" (
+	echo ram_path !ram_path!
+	echo passed_value_1 %~1
+	echo passed_value_2 %~2
+) 
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "%~3 " (
 	echo  [92m Integrity validated !ram_path! [0m
