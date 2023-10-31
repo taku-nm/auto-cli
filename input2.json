@@ -236,9 +236,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube ReVanced Extended (18.41.39)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168195694943813642/com.google.android.youtube_18.41.39-1540619712.apk",
-                "hash": "7be5491b2b30d7dd1155e83da64a96513f383351cd8990179d4926ac57182dc8",
+                "dname": "YouTube ReVanced Extended (18.40.34)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894435648610324/com.google.android.youtube_18.40.34-1540478400.apk",
+                "hash": "935586568f5b263910a879c53e2538050c82b4f916532266f5845a0e614fd555",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_extended_",
