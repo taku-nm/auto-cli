@@ -246,7 +246,7 @@ if exist ..\revanced-cli-input\input.apk (
 )
 if exist ..\revanced-cli-input\cli.jar (
 	echo [92m cli.jar found! [0m
-	set CLI=..\revanced-cli-input\patches.jar
+	set CLI=..\revanced-cli-input\cli.jar
 ) else (
 	echo  No cli.jar found... Continuing using official ReVanced CLI
 )
