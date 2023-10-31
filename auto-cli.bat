@@ -228,11 +228,12 @@ if %c_choice% geq 1 if %c_choice% leq %k% (
  )
 
 :custom_missing
-echo [93m Ensure that the ONLY files in revanced-cli-input are the app, patches and integrations that you would want to use. [0m
+echo [93m Ensure that the ONLY files in revanced-cli-input are the app, cli, patches and integrations that you would want to use. [0m
 echo  The app [93mMUST[0m be called 'input.apk' 
+echo  The CLI [93mMUST[0m be called 'cli.jar' 
 echo  The patches [93mMUST[0m be called 'patches.jar'.
 echo  The integrations [93mMUST[0m be called 'integrations.apk'
-echo [93m Patches and integrations are optional. Not providing them will cause the script to use official ReVanced sources. [0m
+echo [93m CLI, Patches and integrations are optional. Not providing them will cause the script to use official ReVanced tools. [0m
 echo Once you're ready, press any key to continue...
 pause > nul 2> nul
 echo.
@@ -242,6 +243,12 @@ if exist ..\revanced-cli-input\input.apk (
 	echo [91m input.apk missing! [0m
 	echo.
 	goto custom_missing
+)
+if exist ..\revanced-cli-input\cli.jar (
+	echo [92m cli.jar found! [0m
+	set CLI=..\revanced-cli-input\patches.jar
+) else (
+	echo  No cli.jar found... Continuing using official ReVanced CLI
 )
 if exist ..\revanced-cli-input\patches.jar (
 	echo [92m patches.jar found! [0m
