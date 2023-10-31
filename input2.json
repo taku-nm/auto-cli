@@ -243,6 +243,16 @@
                 "uri" : " ",
                 "toolMod" : "YT_extended_",
                 "cmdMod" : " "
+            },
+            {
+                "fname": "YouTube_Music.apk",
+                "dname": "YouTube Music ReVanced Extended (6.25.53)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894755497853068/com.google.android.apps.youtube.music_6.25.53-62553230.apk",
+                "hash": "c5255ae82b2365dc7843ce4dccf32e7219c3c8609e297b23469edb3183f26ab4",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : "YT_extended_",
+                "cmdMod" : " "
             }
         ]
     }
