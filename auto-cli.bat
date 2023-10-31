@@ -290,7 +290,8 @@ echo Close notepad once you're ready. Don't forget to save within notepad.
 echo.
 pause > nul 2> nul
 START "" /wait notepad "%localappdata%\revanced-cli\options.json"
-set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
+set "optionsJson=%localappdata%\revanced-cli\options.json"
+set "OPTIONS=--options="!optionsJson!""
 :filename
 echo.
 echo  Final question: What app are you patching? This will be your output file.[93m No spaces. No file extensions.[0m
