@@ -304,7 +304,6 @@ del !fname! > nul 2> nul
 if exist PATCHED_*.apk (
     copy /y "PATCHED_*.apk" "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
     ren "%localappdata%\revanced-cli\apk_backups\PATCHED_*.apk"  "PATCHED_* %time:~0,2%%time:~3,2%-%DATE:/=%.backup" > nul 2> nul
-	 :custom_jump
     echo.
     echo  [92m DONE! [0m
     echo  [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
@@ -319,12 +318,14 @@ if exist PATCHED_*.apk (
     echo  Pressing any key will close this window.
     pause > nul 2> nul
     EXIT
-) else if '%choice%' == 'A' (
-	 goto custom_jump
 ) else (
 	 echo.
     echo  [91m FATAL [0m
 	 echo  [91m Something must've gone wrong during patching. Contact taku on ReVanced discord or open an issue on GitHub. [0m
+	 if '%choice%' == 'A' (
+		echo  Since you've used the custom option, it is likely that your chosen CLI version and patches don't work with each other.
+		echo  Make sure to include the versions of what you've been using with your help request.
+	 )
 	 echo  Include a screenshot of the entire terminal.
 	 echo  bat Version %batVersion%
 	 echo.
