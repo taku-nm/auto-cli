@@ -302,12 +302,13 @@ if exist .\options.json (
 echo.
 echo  Final question: What app are you patching? This will be your output file.[93m No spaces. No file extensions.[0m
 echo  Giving it the same name as the last time you patched ensures that the same keystore is used, which allows for updates without needing to uninstall first.
-echo  [92m Example: PATCHED_WhatsApp [0m
+echo  Unlike previous versions, [93mDO NOT[0m add the PATCHED_ in the beginning.
+echo  [92m Example: WhatsApp [0m
 echo.
 set /p OUTPUT=
 if '%OUTPUT%'=='' echo  [91m Nu-uh! Provide a name. [0m && goto filename
 echo.
-"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\%OUTPUT%.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o %OUTPUT%.apk
+"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\%OUTPUT%.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%OUTPUT%.apk
 goto end
 
 :end
