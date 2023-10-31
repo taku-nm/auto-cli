@@ -278,20 +278,26 @@ echo  [92m -i "name of a patch to include" -e "name of a patch to exclude" -i "
 echo  Type your options now. Leave empty to apply default patches. Hit enter once you're done.
 echo.
 set /p SELECTION=
-if exist "%localappdata%\revanced-cli\options.json" (
-	echo  [92m option.json found! [0m
+del "%localappdata%\revanced-cli\options.json" > nul 2> nul
+"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
+if exist .\options.json (
+    move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
+    echo  An options.json as been created.
+    echo  Pressing any key will open notepad for you to customize your install.
+	 echo  Don't be confused at default values that dont apply to the app you are patching.
+	 echo  If the patch isn't selected, it will not use those values.
+    echo  Close notepad once you're ready. Don't forget to save within notepad.
+    pause > nul 2> nul
+    START "" /wait notepad "%localappdata%\revanced-cli\options.json"
+    set "optionsJson=%localappdata%\revanced-cli\options.json"
+    set "OPTIONS=--options="!optionsJson!""
 ) else (
-	"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
-	move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
-	echo An options.json as been created.
+    echo  The options.json could not be created. Likely because the chosen CLI and patches are not compatible with each other.
+	 echo  If you want, you can press any key to continue despite this.
+	 pause > nul 2> nul
+	 set OPTIONS=
 )
-echo Pressing any key will open notepad for you to customize your install.
-echo Close notepad once you're ready. Don't forget to save within notepad.
-echo.
-pause > nul 2> nul
-START "" /wait notepad "%localappdata%\revanced-cli\options.json"
-set "optionsJson=%localappdata%\revanced-cli\options.json"
-set "OPTIONS=--options="!optionsJson!""
+
 :filename
 echo.
 echo  Final question: What app are you patching? This will be your output file.[93m No spaces. No file extensions.[0m
