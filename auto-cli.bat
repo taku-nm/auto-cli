@@ -292,7 +292,8 @@ if exist .\options.json (
     set "optionsJson=%localappdata%\revanced-cli\options.json"
     set "OPTIONS=--options="!optionsJson!""
 ) else (
-    echo  The options.json could not be created. Likely because the chosen CLI and patches are not compatible with each other.
+	 echo.
+    echo  [93mThe options.json could not be created.[0m Likely because the chosen CLI and patches are not compatible with each other.
 	 echo  If you want, you can press any key to continue despite this.
 	 pause > nul 2> nul
 	 set OPTIONS=
