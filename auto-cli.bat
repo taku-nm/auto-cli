@@ -103,7 +103,7 @@ if exist "%localappdata%\revanced-cli\revanced-jdk\" (
 ) else (
 	echo  [93m No JDK found... Downloading... [0m
 	echo.
-	call :fetchToolsJson JDK
+	call :fetchToolsJson "%inputJson%" JDK
 	call :downloadWithFallback "%localappdata%\revanced-cli\!fname!" "!link!" "!hash!"
 	powershell -NoProfile -NonInteractive -Command "Expand-Archive '!PSlocalData!\revanced-cli\!fname!' -DestinationPath '!PSlocalData!\revanced-cli'"
 	del "%localappdata%\revanced-cli\!fname!"
@@ -132,7 +132,7 @@ if exist "%localappdata%\revanced-cli\keystore\keystore_password_do_not_share.tx
 REM check for and transform old keystores
 if exist "%localappdata%\revanced-cli\keystore\*.keystore" (
 	echo  [93m Old keystores found [0m
-	call :fetchToolsJson BCS
+	call :fetchToolsJson "%inputJson%" BCS
 	call :downloadWithFallback "%localappdata%\revanced-cli\!fname!" "!link!" "!hash!"
 	for %%i in ("%localappdata%\revanced-cli\keystore\*.keystore") DO (
 		if "%%i"=="%localappdata%\revanced-cli\keystore\PATCHED_Sync.keystore" (
