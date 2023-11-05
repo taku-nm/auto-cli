@@ -20,7 +20,7 @@ jobs:
     - name: Run Bash script
       id: script-output
       run: |
-        output=$(./main.sh "${{ secrets.BOT_TOKEN }}" "input2.json")
+        output=$(./main.sh "${{ secrets.BOT_TOKEN }}" "input3.json")
         echo "CRON=$output" >> $GITHUB_OUTPUT
 
     - name: Set cron schedule
@@ -30,7 +30,7 @@ jobs:
     - name: Commit inputFile
       uses: EndBug/add-and-commit@v9
       with:
-        add: 'input2.json' 
+        add: 'input3.json' 
         message: 'chore: update Link'
         push: true
 
