@@ -16,6 +16,11 @@
                 "fname": "revanced-integrations-0.119.0.apk",
                 "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.119.0/revanced-integrations-0.119.0.apk",
                 "hash": "fe4eb9498b677030e180c7e93740a66ab6156e33fc0e7b40503f97f8965d79d9"
+            },
+            "JDK": {
+                "fname": "jdk.zip",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip",
+                "hash": "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
             }
         },
         "YT_android_5_tools": {
