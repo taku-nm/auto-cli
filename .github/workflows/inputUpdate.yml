@@ -31,12 +31,12 @@ jobs:
       uses: EndBug/add-and-commit@v9
       with:
         add: 'input2.json' 
-        message: 'update Link'
+        message: 'chore: update Link'
         push: true
 
     - name: Commit workflow
       uses: EndBug/add-and-commit@v9
       with:
         add: '.github/workflows/inputUpdate.yml' 
-        message: 'set new runtime'
+        message: 'chore: set new runtime'
         push: true
