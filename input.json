@@ -21,7 +21,7 @@
         },
         "apps": [
 	        {
-                "fname": null
+                "fname": "This script is deprecated. Use a newer version."
             } 
         ]
     }
