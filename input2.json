@@ -1,5 +1,4 @@
 {
-
     "batVersion": "2.4",
     "downloads": {
         "tools": {
@@ -71,13 +70,13 @@
             }
         },
         "apps": [
-            {
+	        {
                 "fname": null
             },
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube (Stock logo) (18.38.44)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1160415681360167023/com.google.android.youtube_18.38.44-1540236736.apk?ex=655043d1&is=653dced1&hm=365490482185a42a7b062364f1a393afa05659af3c69b5c219563ef8bae89489&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1160415681360167023/com.google.android.youtube_18.38.44-1540236736.apk",
                 "hash": "87b552a02da71b96421df31277e16c07718d14d158104763fabfcf08b04e72e2",
                 "patches": " ",
                 "uri" : " ",
@@ -87,67 +86,67 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube (ReVanced logo) (18.38.44)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1160415681360167023/com.google.android.youtube_18.38.44-1540236736.apk?ex=655043d1&is=653dced1&hm=365490482185a42a7b062364f1a393afa05659af3c69b5c219563ef8bae89489&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1160415681360167023/com.google.android.youtube_18.38.44-1540236736.apk",
                 "hash": "87b552a02da71b96421df31277e16c07718d14d158104763fabfcf08b04e72e2",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
                 "toolMod" : " ",
                 "cmdMod" : " "
             },
-            {
+			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (Google Pixel) (6.22.51)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159600461989556254/com.google.android.apps.youtube.music_6.22.51-62251240_v8a.apk?ex=65568716&is=65441216&hm=178f594e3c76194b937e67841e51bcc44a56cfeea5b2dd4d8595a18d6cfb6253&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159600461989556254/com.google.android.apps.youtube.music_6.22.51-62251240_v8a.apk",
                 "hash": "ff4218e2b342615b46364357025697d96f8dc258d38305e5eab99adbfc7fd8f8",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
                 "cmdMod" : " "
             },
-            {
+			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (other devices) (6.22.51)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159600415244025926/com.google.android.apps.youtube.music_6.22.51-62251230_v7a.apk?ex=6556870b&is=6544120b&hm=f004e1df77d78c3cd89c987e88a86da8f5c9186a8d06de845e2e4fd2c0a4204e&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159600415244025926/com.google.android.apps.youtube.music_6.22.51-62251230_v7a.apk",
                 "hash": "29d76414ec0272fe9991d2fc3dab278b6ddf1ee396bac2249caa437598749ae1",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
                 "cmdMod" : " "
             },
-            {
+			{
                 "fname": "TikTok.apk",
                 "dname": "TikTok (30.8.4)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149348108535353484/com.zhiliaoapp.musically_30.8.4-2023008040.apk?ex=655624d6&is=6543afd6&hm=612253b1f62066cf5cc7eb602adc1a4f44d3570c81d3d5b22de303808bb85f25&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149348108535353484/com.zhiliaoapp.musically_30.8.4-2023008040.apk",
                 "hash": "f0b5834a56d3e8a3f2fd005f9a2d7d6da4cd8b8ff558258467296a8666c83144",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
                 "toolMod" : " ",
                 "cmdMod" : " "
             },
-            {
+			{
                 "fname": "Twitch.apk",
                 "dname": "Twitch (16.1.0)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159601275801968690/tv.twitch.android.app_16.1.0-1601000.apk?ex=655687d8&is=654412d8&hm=4107638f8b60ddcfa9243a7f47a10b2b1a9ddab0b31db92e3847532a590191fa&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159601275801968690/tv.twitch.android.app_16.1.0-1601000.apk",
                 "hash": "f4610c8c8688c9dbf74de4facf5d310e10b7b54ecccf051d04533999bf011a45",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
                 "cmdMod" : " "
             },
-            {
+			{
                 "fname": "Twitter.apk",
                 "dname": "Twitter (10.10.0)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159602101052248074/com.twitter.android_10.10.0-release.0-310100000.apk?ex=6556889d&is=6544139d&hm=e1a1a9c5949fa2f0af92353ce9c16d043c183eada03defcb768af0a692e6f64a&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159602101052248074/com.twitter.android_10.10.0-release.0-310100000.apk",
                 "hash": "ba8b2784dd5fed3e6f9ccec988d9c025f40cc5e3b795c497191a1dbe7644c069",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
                 "cmdMod" : " "
             },
-            {
+			{
                 "fname": "Instagram.apk",
                 "dname": "Instagram (275.0.0.27.98)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk?ex=65552b51&is=6542b651&hm=70482d6987f5785d9ac34d4bf4784432ed50311f2e0c980410d7d205dc3f09b0&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk",
                 "hash": "8957feb085f5a6acd20b284853c23f8b6c9c2e554262bdbee76d75a6e5e7fa4b",
                 "patches": " ",
                 "uri" : " ",
@@ -157,7 +156,7 @@
             {
                 "fname": "Sync.apk",
                 "dname": "Sync for Reddit (23.06.30-13:39)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk?ex=65552b51&is=6542b651&hm=70482d6987f5785d9ac34d4bf4784432ed50311f2e0c980410d7d205dc3f09b0&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155165102341898292/com.laurencedawson.reddit_sync_v23.06.30-13_39-23033.apk",
                 "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
@@ -167,7 +166,7 @@
             {
                 "fname": "Infinity.apk",
                 "dname": "Infinity for Reddit (6.1.1)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk?ex=65552b51&is=6542b651&hm=70482d6987f5785d9ac34d4bf4784432ed50311f2e0c980410d7d205dc3f09b0&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155640928896294982/ml.docilealligator.infinityforreddit_6.1.1-127.apk",
                 "hash": "127294657c753e4ec7e5a228bb647ef6004e896972e048ab7de004c86f74c0c2",
                 "patches": " ",
                 "uri" : "infinity://localhost",
@@ -177,7 +176,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk?ex=65552b51&is=6542b651&hm=70482d6987f5785d9ac34d4bf4784432ed50311f2e0c980410d7d205dc3f09b0&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
@@ -187,7 +186,7 @@
             {
                 "fname": "RiF.apk",
                 "dname": "Rif for Reddit (5.6.22)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk?ex=655613f2&is=65439ef2&hm=17ce25733928607ceeab328f9b94145e65039e38ce7c8b090831752c8908c3b2&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk",
                 "hash": "88d39f859c850f51542c6a12d8bd3c79706debe0f1dff061ed0fe32b3dc688e1",
                 "patches": " ",
                 "uri" : "redditisfun://auth",
@@ -197,7 +196,7 @@
             {
                 "fname": "Reddit.apk",
                 "dname": "Reddit (2023.39.0)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk?ex=655613f2&is=65439ef2&hm=17ce25733928607ceeab328f9b94145e65039e38ce7c8b090831752c8908c3b2&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159604227497271346/com.reddit.frontpage_2023.39.0-1211607.apk",
                 "hash": "407020611b48ea70e50f7f947baf7ed6fc8232e9574ae3cab93a471df4637ec3",
                 "patches": " ",
                 "uri" : " ",
@@ -207,7 +206,7 @@
             {
                 "fname": "Lightroom.apk",
                 "dname": "Lightroom (9.0.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167969793870135356/com.adobe.lrmobile_9.0.0-609000000.apk?ex=65594a22&is=6546d522&hm=fd60f20f90f337a0711717a93e9145b4d7739365ea3816f91ffd31130396eb0e&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167969793870135356/com.adobe.lrmobile_9.0.0-609000000.apk",
                 "hash": "74ea42ec0a1b62420d23d973b1e7c1b73d75e8350cf8304a42db9244dc531bb3",
                 "patches": " ",
                 "uri" : " ",
@@ -217,7 +216,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 5 (16.40.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=6558f465&is=65467f65&hm=fc59f574898edb0cd35d1f4c65873c39069722fc03be6a7f7501a8ad722a7b17&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk",
                 "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
                 "patches": "-i microg-support -i spoof-player-parameters -i client-spoof -i hide-video-ads -i enable-minimized-playback -i disable-update-screen --exclusive",
                 "uri" : " ",
@@ -227,7 +226,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 6 / 7 (17.34.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=65593fe4&is=6546cae4&hm=e4ff7e556990c58591c834f879120b94143064a2cb2e89c1da59494988728555&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk",
                 "hash": "9c71f516434858b87663810f25b88716c71fb75a72f5e6875937e6b0009e0bf6",
                 "patches": " ",
                 "uri" : " ",
@@ -237,7 +236,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube ReVanced Extended (18.40.34)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894435648610324/com.google.android.youtube_18.40.34-1540478400.apk?ex=65536cc6&is=6540f7c6&hm=68adc4ef7ce655531f04412dee9406e4e6d45b75765dc9e398b51a9aed9fd650&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894435648610324/com.google.android.youtube_18.40.34-1540478400.apk",
                 "hash": "935586568f5b263910a879c53e2538050c82b4f916532266f5845a0e614fd555",
                 "patches": " ",
                 "uri" : " ",
@@ -247,7 +246,7 @@
             {
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music ReVanced Extended (6.25.53)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894755497853068/com.google.android.apps.youtube.music_6.25.53-62553230.apk?ex=65536d12&is=6540f812&hm=b35235fb77cd9fba8ed566b6760d00afe7ef3c8d7da906d6707567a3f2d23793&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894755497853068/com.google.android.apps.youtube.music_6.25.53-62553230.apk",
                 "hash": "c5255ae82b2365dc7843ce4dccf32e7219c3c8609e297b23469edb3183f26ab4",
                 "patches": " ",
                 "uri" : " ",
