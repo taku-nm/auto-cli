@@ -253,6 +253,13 @@
                 "toolMod" : "YT_extended_",
                 "cmdMod" : " "
             }
-        ]
+        ],
+        "extras": {
+            "microG": {
+                "fname": "vanced_microG.apk",
+                "link": "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk",
+                "hash": "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
+            }
+        }
     }
 }
