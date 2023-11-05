@@ -157,7 +157,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	echo  [93m No ReVanced Tools found... Downloading... [0m
 	:update_jump
 	mkdir "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul
-	call :getTools cli patches integrations
+	call :getTools "cli, patches, integrations"
 )
 
 :start
@@ -199,7 +199,7 @@ echo Downloading !fname!
 call :downloadWithFallback "!fname!" "!link!" "!hash!"
 
 REM account for special cases such as tool modifiers and third party reddit clients
-if defined tool_mod echo [93m Your selected app requires specific tools... They will now be loaded [0m && call :getTools cli patches integrations !tool_mod!
+if defined tool_mod echo [93m Your selected app requires specific tools... They will now be loaded [0m && call :getTools "cli, patches, integrations" !tool_mod!
 if defined uri call :redditOptions
 
 REM patch app
@@ -618,11 +618,13 @@ if !eC_lastChar! geq 1 if !eC_lastChar! leq 9 (
 EXIT /B 0
 
 :getTools
-for %%i in (%~1, %~2, %~3) do (
-	   call :fetchToolsJson "%inputJson%" %%i %~4
+for /f "tokens=*" %%a in ("%~1") do (
+    for %%b in (%%a) do (
+	   call :fetchToolsJson "%inputJson%" %%b %~2
 	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
-	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!"
-	)
+	   set "%%b=%localappdata%\revanced-cli\revanced-tools\!fname!" 
+    )
+)
 EXIT /B 0
 
 :modifiedPatch
