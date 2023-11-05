@@ -31,16 +31,3 @@ jobs:
       run: |
         sed -i '0,/cron: ".*"/s/cron: ".*"/cron: "${{ steps.script-output.outputs.script_output }}"/' .github/workflows/inputUpdate.yml
 
-    - name: Commit inputFile
-      uses: EndBug/add-and-commit@v9
-      with:
-        add: 'input2.json' 
-        message: 'chore: update Link'
-        push: true
-
-    - name: Commit workflow
-      uses: EndBug/add-and-commit@v9
-      with:
-        add: '.github/workflows/inputUpdate.yml' 
-        message: 'set new runtime'
-        push: true
