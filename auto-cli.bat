@@ -1,4 +1,4 @@
-@echo off
+@echo on
 setlocal enabledelayedexpansion
 echo The source APKs are downloaded from discord cdn. They originate from apkmirror.
 echo The JDK in use is also downloaded from discord cdn. It originates from zulu JDK.
