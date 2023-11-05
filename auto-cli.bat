@@ -36,12 +36,12 @@ set "MODE=main"
 
 REM refresh input json 
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/!MODE!/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/!MODE!/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 if exist "%localappdata%\revanced-cli\input.json" (
    set "inputJson=!PSlocalData!\revanced-cli\input.json"
 ) else (
 	echo  [93m Input.json download failed... Attempting to circumvent geo-blocking... [0m
-	powershell -command "Invoke-WebRequest 'http://user737.bplaced.net/downloads/revanced/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
+	powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest 'http://user737.bplaced.net/downloads/revanced/input2.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 	if exist "%localappdata%\revanced-cli\input.json" (
        set "inputJson=!PSlocalData!\revanced-cli\input.json"
    ) else (
@@ -58,8 +58,8 @@ if exist "%localappdata%\revanced-cli\input.json" (
 )
 
 REM script version check
-set batVersion=2.1
-for /f %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
+set batVersion=2.4
+for /f %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
 ) else (
@@ -73,8 +73,8 @@ if exist "%localappdata%\revanced-cli\revanced-curl\" (
    echo  [92m cURL found! [0m
 ) else (
    echo  [93m No cURL found... Downloading... [0m
-   powershell -command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '!PSlocalData!\revanced-cli\curl.zip'"
-	powershell -command "Expand-Archive '!PSlocalData!\revanced-cli\curl.zip' -DestinationPath '!PSlocalData!\revanced-cli\'"
+   powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest 'https://curl.se/windows/dl-8.2.1_11/curl-8.2.1_11-win64-mingw.zip' -OutFile '!PSlocalData!\revanced-cli\curl.zip'"
+	powershell -NoProfile -NonInteractive -Command "Expand-Archive '!PSlocalData!\revanced-cli\curl.zip' -DestinationPath '!PSlocalData!\revanced-cli\'"
 	mkdir "%localappdata%\revanced-cli\revanced-curl\" > nul 2> nul
 	copy /y "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\bin\*.*" "%localappdata%\revanced-cli\revanced-curl\*.*"  > nul 2> nul
 	rmdir /s /q "%localappdata%\revanced-cli\curl-8.2.1_11-win64-mingw\"  > nul 2> nul
@@ -82,7 +82,7 @@ if exist "%localappdata%\revanced-cli\revanced-curl\" (
 )
 set "CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe"
 set "CURL_ps=!PSlocalData!\revanced-cli\revanced-curl\curl.exe"
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%CURL_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '%CURL_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
 if /i "%CURL_h%" == "7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599290D1 " (
 	echo  [92m cURL integrity validated! [0m
 ) else (
@@ -104,13 +104,13 @@ if exist "%localappdata%\revanced-cli\revanced-jdk\" (
 	echo  [93m No JDK found... Downloading... [0m
 	echo.
 	call :downloadWithFallback "%localappdata%\revanced-cli\jdk.zip" "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip" "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
-	powershell -command "Expand-Archive '!PSlocalData!\revanced-cli\jdk.zip' -DestinationPath '!PSlocalData!\revanced-cli'"
+	powershell -NoProfile -NonInteractive -Command "Expand-Archive '!PSlocalData!\revanced-cli\jdk.zip' -DestinationPath '!PSlocalData!\revanced-cli'"
 	del "%localappdata%\revanced-cli\jdk.zip"
 )
 set "JDK=%localappdata%\revanced-cli\revanced-jdk\bin\java.exe"
 set "KEYTOOL=%localappdata%\revanced-cli\revanced-jdk\bin\keytool.exe"
 set "JDK_ps=!PSlocalData!\revanced-cli\revanced-jdk\bin\java.exe"
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '%JDK_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '%JDK_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET JDK_h=%%F )
 if /i "%JDK_h%" == "6BB6621B7783778184D62D1D9C2D761F361622DD993B0563441AF2364C8A720B " (
 	echo  [92m JDK integrity validated! [0m
 ) else (
@@ -151,7 +151,7 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 	   call :checkTool %%i
 	   set "%%i=%localappdata%\revanced-cli\revanced-tools\!fname!" > nul 2> nul
 	)
-	if !update! == 1 echo [93m Your ReVanced Tools are out of date or damaged... Re-downloading... [0m && rmdir /s /q "%localappdata%\revanced-cli\revanced-tools\" > nul 2> nul && goto update_jump
+	if !update! == 1 echo [93m Your ReVanced Tools are out of date or damaged... Re-downloading... [0m && goto update_jump
 	if !update! == 0 goto start
 ) else (
 	echo  [93m No ReVanced Tools found... Downloading... [0m
@@ -164,13 +164,15 @@ if exist "%localappdata%\revanced-cli\revanced-tools\" (
 set "KEYSTORE=%localappdata%\revanced-cli\keystore"
 set "k=0"
 echo.
-if "!MODE!" == "dev" echo [93m You are currently in developer mode. Do you know what you are doing? [0m
+if "!MODE!" == "dev" (
+	echo [93m You are currently in developer mode. Do you know what you are doing? [0m
+)
 echo.
 
 REM generate app list
-for /f "tokens=*" %%i in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
+for /f "tokens=*" %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
 	set /a "k=k+1"
-	for /f "tokens=*" %%j in ('powershell -command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
+	for /f "tokens=*" %%j in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
         echo  [0m !k!. %%j 
     )
 )
@@ -203,7 +205,7 @@ if defined uri call :redditOptions
 REM patch app
 call :fetchAppJson "%inputJson%" %choice%
 echo Patching !fname!
-if defined tool_mod call :safePatch !fname! && goto end
+if defined cmd_mod call :modifiedPatch && goto end
 call :patchApp !fname!
 goto end
 
@@ -226,11 +228,12 @@ if %c_choice% geq 1 if %c_choice% leq %k% (
  )
 
 :custom_missing
-echo [93m Ensure that the ONLY files in revanced-cli-input are the app, patches and integrations that you would want to use. [0m
+echo [93m Ensure that the ONLY files in revanced-cli-input are the app, cli, patches and integrations that you would want to use. [0m
 echo  The app [93mMUST[0m be called 'input.apk' 
+echo  The CLI [93mMUST[0m be called 'cli.jar' 
 echo  The patches [93mMUST[0m be called 'patches.jar'.
 echo  The integrations [93mMUST[0m be called 'integrations.apk'
-echo [93m Patches and integrations are optional. Not providing them will cause the script to use official ReVanced sources. [0m
+echo [93m CLI, Patches and integrations are optional. Not providing them will cause the script to use official ReVanced tools. [0m
 echo Once you're ready, press any key to continue...
 pause > nul 2> nul
 echo.
@@ -240,6 +243,12 @@ if exist ..\revanced-cli-input\input.apk (
 	echo [91m input.apk missing! [0m
 	echo.
 	goto custom_missing
+)
+if exist ..\revanced-cli-input\cli.jar (
+	echo [92m cli.jar found! [0m
+	set CLI=..\revanced-cli-input\cli.jar
+) else (
+	echo  No cli.jar found... Continuing using official ReVanced CLI
 )
 if exist ..\revanced-cli-input\patches.jar (
 	echo [92m patches.jar found! [0m
@@ -269,29 +278,38 @@ echo  [92m -i "name of a patch to include" -e "name of a patch to exclude" -i "
 echo  Type your options now. Leave empty to apply default patches. Hit enter once you're done.
 echo.
 set /p SELECTION=
-if exist "%localappdata%\revanced-cli\options.json" (
-	echo  [92m option.json found! [0m
+del "%localappdata%\revanced-cli\options.json" > nul 2> nul
+"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
+if exist .\options.json (
+    move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
+    echo  An options.json as been created.
+    echo  Pressing any key will open notepad for you to customize your install.
+	 echo  Don't be confused at default values that dont apply to the app you are patching.
+	 echo  If the patch isn't selected, it will not use those values.
+    echo  Close notepad once you're ready. Don't forget to save within notepad.
+    pause > nul 2> nul
+    START "" /wait notepad "%localappdata%\revanced-cli\options.json"
+    set "optionsJson=%localappdata%\revanced-cli\options.json"
+    set "OPTIONS=--options="!optionsJson!""
 ) else (
-	"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
-	move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
-	echo An options.json as been created.
+	 echo.
+    echo  [93mThe options.json could not be created.[0m Likely because the chosen CLI and patches are not compatible with each other.
+	 echo  If you want, you can press any key to continue despite this.
+	 pause > nul 2> nul
+	 set OPTIONS=
 )
-echo Pressing any key will open notepad for you to customize your install.
-echo Close notepad once you're ready. Don't forget to save within notepad.
-echo.
-pause > nul 2> nul
-START "" /wait notepad "%localappdata%\revanced-cli\options.json"
-set "OPTIONS=--options="%localappdata%\revanced-cli\options.json""
+
 :filename
 echo.
 echo  Final question: What app are you patching? This will be your output file.[93m No spaces. No file extensions.[0m
 echo  Giving it the same name as the last time you patched ensures that the same keystore is used, which allows for updates without needing to uninstall first.
-echo  [92m Example: PATCHED_WhatsApp [0m
+echo  Unlike previous versions, [93mDO NOT[0m add the PATCHED_ in the beginning.
+echo  [92m Example: WhatsApp [0m
 echo.
 set /p OUTPUT=
 if '%OUTPUT%'=='' echo  [91m Nu-uh! Provide a name. [0m && goto filename
 echo.
-"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\%OUTPUT%.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o %OUTPUT%.apk
+"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\PATCHED_%OUTPUT%.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%OUTPUT%.apk
 goto end
 
 :end
@@ -302,7 +320,6 @@ del !fname! > nul 2> nul
 if exist PATCHED_*.apk (
     copy /y "PATCHED_*.apk" "%localappdata%\revanced-cli\apk_backups" > nul 2> nul
     ren "%localappdata%\revanced-cli\apk_backups\PATCHED_*.apk"  "PATCHED_* %time:~0,2%%time:~3,2%-%DATE:/=%.backup" > nul 2> nul
-	 :custom_jump
     echo.
     echo  [92m DONE! [0m
     echo  [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
@@ -317,12 +334,14 @@ if exist PATCHED_*.apk (
     echo  Pressing any key will close this window.
     pause > nul 2> nul
     EXIT
-) else if '%choice%' == 'A' (
-	 goto custom_jump
 ) else (
 	 echo.
     echo  [91m FATAL [0m
 	 echo  [91m Something must've gone wrong during patching. Contact taku on ReVanced discord or open an issue on GitHub. [0m
+	 if '%choice%' == 'A' (
+		echo  Since you've used the custom option, it is likely that your chosen CLI version and patches don't work with each other.
+		echo  Make sure to include the versions of what you've been using with your help request.
+	 )
 	 echo  Include a screenshot of the entire terminal.
 	 echo  bat Version %batVersion%
 	 echo.
@@ -337,7 +356,7 @@ set fname=
 set link=
 set hash=
 set tpc=0
-for /f %%i in ('powershell -command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.hash"') do (
+for /f %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.%~3tools.%~2.hash"') do (
     if !tpc!==0 (
         set "fname=%%i"
     ) else if !tpc!==1 (
@@ -376,7 +395,7 @@ set patch_sel=
 set uri=
 set tool_mod=
 set apc=0
-for /f "tokens=* " %%i in ('powershell -command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod"') do (
+for /f "tokens=* " %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].cmdMod"') do (
 	if !apc!==0 (
         set "fname=%%i"
     ) else if !apc!==1 (
@@ -389,6 +408,8 @@ for /f "tokens=* " %%i in ('powershell -command "(Get-Content -Raw '!JSON!' | Co
 		  set "uri=%%i"
 	 ) else if !apc!==5 (
 		  set "tool_mod=%%i"
+	 ) else if !apc!==6 (
+		  set "cmd_mod=%%i"
 	 )
 	set /a "apc=!apc!+1"
 )
@@ -400,6 +421,7 @@ if "!MODE!" == "dev" (
 	echo Patch selection !patch_sel!
 	echo URI !uri!
 	echo Tool modifier !tool_mod!
+	echo Command modifier !cmd_mod!
 )
 EXIT /B 0
 
@@ -421,8 +443,12 @@ set second_check=0
 set ram_h=
 set "ram_path=%~1"
 set "ram_path=!ram_path:'=''!"
-if "!MODE!" == "dev" echo !ram_path!
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
+if "!MODE!" == "dev" (
+	echo ram_path !ram_path!
+	echo passed_value_1 %~1
+	echo passed_value_2 %~2
+) 
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "%~3 " (
 	echo  [92m Integrity validated !ram_path! [0m
 ) else (
@@ -430,7 +456,7 @@ if /i "%ram_h%" == "%~3 " (
 	set second_check=1
 	echo  [93m File integrity damaged... Something must've become corrupted during the download or curl had some issue... [0m
 	echo  Falling back to Invoke WebRequest... This might take a bit longer and doesn't give a nice status indication for the download.
-	powershell -command "Invoke-WebRequest '%~2' -OutFile '!ram_path!'"
+	powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest '%~2' -OutFile '!ram_path!'"
 	goto fallback_2
 )
 EXIT /B 0
@@ -448,7 +474,7 @@ EXIT
 
 :checkTool
 call :fetchToolsJson "%inputJson%" %~1
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -command "Get-FileHash -Algorithm SHA256 '!PSlocalData!\revanced-cli\revanced-tools\!fname!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!PSlocalData!\revanced-cli\revanced-tools\!fname!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "!hash! " (
 	echo  [92m !fname! validated [0m
 ) else (
@@ -529,6 +555,9 @@ for %%i in (%~1, %~2, %~3) do (
 	)
 EXIT /B 0
 
-:safePatch
-"%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! -o PATCHED_%~1
+:modifiedPatch
+set "inputString=!fname!"
+set "keyString=!inputString:.apk=!"
+set "cmd_mod=!cmd_mod:keyString=%keyString%!"
+"%JDK%" -jar !cmd_mod!
 EXIT /B 0

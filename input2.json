@@ -1,6 +1,5 @@
 {
-
-    "batVersion": "2.0",
+    "batVersion": "2.4",
     "downloads": {
         "tools": {
             "cli": {
@@ -19,6 +18,57 @@
                 "hash": "fe4eb9498b677030e180c7e93740a66ab6156e33fc0e7b40503f97f8965d79d9"
             }
         },
+        "YT_android_5_tools": {
+            "cli": {
+                "fname": "revanced-cli-3.1.1-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.1/revanced-cli-3.1.1-all.jar",
+                "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
+            },
+            "patches": {
+                "fname": "revanced-patches-2.160.9.jar",
+                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.160.9/revanced-patches-2.160.9.jar",
+                "hash": "aa3f11e1c050dd97e2898fe9e1f72ece11e4ed1d8aeebe57026e81500f27c117"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-0.96.6.apk",
+                "link": "https://github.com/d4n3436/revanced-integrations/releases/download/v0.96.6/revanced-integrations-0.96.6.apk",
+                "hash": "4f5f747059b73e0d4ddffd507445f53dfe6958e47520361dcb5da80ee371cf9d"
+            }
+        },
+        "YT_android_6_7_tools": {
+            "cli": {
+                "fname": "revanced-cli-3.1.1-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.1/revanced-cli-3.1.1-all.jar",
+                "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
+            },
+            "patches": {
+                "fname": "revanced-patches-2.160.7.jar",
+                "link": "https://github.com/kitadai31/revanced-patches-android6-7/releases/download/v2.160.7/revanced-patches-2.160.7.jar",
+                "hash": "6d37e47165098108b95a6e54e98051f35bd5e16757d0f154b64b257c6938d017"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-0.96.7.apk",
+                "link": "https://github.com/kitadai31/revanced-integrations/releases/download/v0.96.7/revanced-integrations-0.96.7.apk",
+                "hash": "812cf83d7e7971fa3122c94f2b77effae0817380d4e9d1fb053e84ad5f0df9f8"
+            }
+        },
+        "YT_extended_tools": {
+            "cli": {
+                "fname": "revanced-cli-4.0.4-all.jar",
+                "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.0.4/revanced-cli-4.0.4-all.jar",
+                "hash": "8e5047ca81a50e96fb114383b083213b018f63cce34fe9bcdab0c7a67dea0400"
+            },
+            "patches": {
+                "fname": "revanced-patches-2.195.12.jar",
+                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.195.12/revanced-patches-2.195.12.jar",
+                "hash": "4605e62fa9d9b2fec1689ae8d8cf0db3569e6cce63f258caa869df4ded20192f"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-0.120.12.apk",
+                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.120.12/revanced-integrations-0.120.12.apk",
+                "hash": "d1e0b13322fcf2322eebe265ce186a553c12ba02dab6d5878f2c8491cb97b988"
+            }
+        },
         "apps": [
 	        {
                 "fname": null
@@ -30,7 +80,8 @@
                 "hash": "87b552a02da71b96421df31277e16c07718d14d158104763fabfcf08b04e72e2",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "YouTube.apk",
@@ -39,7 +90,8 @@
                 "hash": "87b552a02da71b96421df31277e16c07718d14d158104763fabfcf08b04e72e2",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "YouTube_Music.apk",
@@ -48,7 +100,8 @@
                 "hash": "ff4218e2b342615b46364357025697d96f8dc258d38305e5eab99adbfc7fd8f8",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "YouTube_Music.apk",
@@ -57,7 +110,8 @@
                 "hash": "29d76414ec0272fe9991d2fc3dab278b6ddf1ee396bac2249caa437598749ae1",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "TikTok.apk",
@@ -66,7 +120,8 @@
                 "hash": "f0b5834a56d3e8a3f2fd005f9a2d7d6da4cd8b8ff558258467296a8666c83144",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "Twitch.apk",
@@ -75,7 +130,8 @@
                 "hash": "f4610c8c8688c9dbf74de4facf5d310e10b7b54ecccf051d04533999bf011a45",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "Twitter.apk",
@@ -84,7 +140,8 @@
                 "hash": "ba8b2784dd5fed3e6f9ccec988d9c025f40cc5e3b795c497191a1dbe7644c069",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
 			{
                 "fname": "Instagram.apk",
@@ -93,7 +150,8 @@
                 "hash": "8957feb085f5a6acd20b284853c23f8b6c9c2e554262bdbee76d75a6e5e7fa4b",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "Sync.apk",
@@ -102,7 +160,8 @@
                 "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "Infinity.apk",
@@ -111,7 +170,8 @@
                 "hash": "127294657c753e4ec7e5a228bb647ef6004e896972e048ab7de004c86f74c0c2",
                 "patches": " ",
                 "uri" : "infinity://localhost",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "Relay.apk",
@@ -120,7 +180,8 @@
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "RiF.apk",
@@ -129,7 +190,8 @@
                 "hash": "88d39f859c850f51542c6a12d8bd3c79706debe0f1dff061ed0fe32b3dc688e1",
                 "patches": " ",
                 "uri" : "redditisfun://auth",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
             },
             {
                 "fname": "Reddit.apk",
@@ -138,7 +200,58 @@
                 "hash": "407020611b48ea70e50f7f947baf7ed6fc8232e9574ae3cab93a471df4637ec3",
                 "patches": " ",
                 "uri" : " ",
-                "toolMod" : " "
+                "toolMod" : " ",
+                "cmdMod" : " "
+            },
+            {
+                "fname": "Lightroom.apk",
+                "dname": "Lightroom (9.0.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167969793870135356/com.adobe.lrmobile_9.0.0-609000000.apk",
+                "hash": "74ea42ec0a1b62420d23d973b1e7c1b73d75e8350cf8304a42db9244dc531bb3",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : " ",
+                "cmdMod" : " "
+            },
+            {
+                "fname": "YouTube.apk",
+                "dname": "YouTube Android 5 (16.40.36)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk",
+                "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
+                "patches": "-i microg-support -i spoof-player-parameters -i client-spoof -i hide-video-ads -i enable-minimized-playback -i disable-update-screen --exclusive",
+                "uri" : " ",
+                "toolMod" : "YT_android_5_",
+                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! "
+            },
+            {
+                "fname": "YouTube.apk",
+                "dname": "YouTube Android 6 / 7 (17.34.36)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk",
+                "hash": "9c71f516434858b87663810f25b88716c71fb75a72f5e6875937e6b0009e0bf6",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : "YT_android_6_7_",
+                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! "
+            },
+            {
+                "fname": "YouTube.apk",
+                "dname": "YouTube ReVanced Extended (18.40.34)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894435648610324/com.google.android.youtube_18.40.34-1540478400.apk",
+                "hash": "935586568f5b263910a879c53e2538050c82b4f916532266f5845a0e614fd555",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : "YT_extended_",
+                "cmdMod" : " "
+            },
+            {
+                "fname": "YouTube_Music.apk",
+                "dname": "YouTube Music ReVanced Extended (6.25.53)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894755497853068/com.google.android.apps.youtube.music_6.25.53-62553230.apk",
+                "hash": "c5255ae82b2365dc7843ce4dccf32e7219c3c8609e297b23469edb3183f26ab4",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : "YT_extended_",
+                "cmdMod" : " "
             }
         ]
     }
