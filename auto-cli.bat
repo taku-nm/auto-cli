@@ -103,9 +103,10 @@ if exist "%localappdata%\revanced-cli\revanced-jdk\" (
 ) else (
 	echo  [93m No JDK found... Downloading... [0m
 	echo.
-	call :downloadWithFallback "%localappdata%\revanced-cli\jdk.zip" "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip" "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
-	powershell -NoProfile -NonInteractive -Command "Expand-Archive '!PSlocalData!\revanced-cli\jdk.zip' -DestinationPath '!PSlocalData!\revanced-cli'"
-	del "%localappdata%\revanced-cli\jdk.zip"
+	call :fetchToolsJson JDK
+	call :downloadWithFallback "%localappdata%\revanced-cli\!fname!" "!link!" "!hash!"
+	powershell -NoProfile -NonInteractive -Command "Expand-Archive '!PSlocalData!\revanced-cli\!fname!' -DestinationPath '!PSlocalData!\revanced-cli'"
+	del "%localappdata%\revanced-cli\!fname!"
 )
 set "JDK=%localappdata%\revanced-cli\revanced-jdk\bin\java.exe"
 set "KEYTOOL=%localappdata%\revanced-cli\revanced-jdk\bin\keytool.exe"
