@@ -132,14 +132,15 @@ if exist "%localappdata%\revanced-cli\keystore\keystore_password_do_not_share.tx
 REM check for and transform old keystores
 if exist "%localappdata%\revanced-cli\keystore\*.keystore" (
 	echo  [93m Old keystores found [0m
-	call :downloadWithFallback "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar" "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
+	call :fetchToolsJson BCS
+	call :downloadWithFallback "%localappdata%\revanced-cli\!fname!" "!link!" "!hash!"
 	for %%i in ("%localappdata%\revanced-cli\keystore\*.keystore") DO (
 		if "%%i"=="%localappdata%\revanced-cli\keystore\PATCHED_Sync.keystore" (
 			move "%%i" "%%~dpi%%~ni.no_pw_keystore" > nul 2> nul
 		) else if "%%i"=="%localappdata%\revanced-cli\keystore\PATCHED_Relay.keystore" (
          move "%%i" "%%~dpi%%~ni.no_pw_keystore" > nul 2> nul
 		) else (
-	      "%KEYTOOL%" -storepasswd -storepass ReVanced -new !KEY_PW! -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath "%localappdata%\revanced-cli\bcprov-jdk18on-176.jar" -keystore "%%i" -alias alias
+	      "%KEYTOOL%" -storepasswd -storepass ReVanced -new !KEY_PW! -storetype bks -provider org.bouncycastle.jce.provider.BouncyCastleProvider -providerpath "%localappdata%\revanced-cli\!fname!" -keystore "%%i" -alias alias
          move "%%i" "%%~dpi%%~ni.secure_keystore" > nul 2> nul
 			echo  [92m Keystore %%~ni transformed [0m
 	   )
