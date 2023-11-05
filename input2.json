@@ -21,6 +21,11 @@
                 "fname": "jdk.zip",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip",
                 "hash": "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
+            },
+            "BCS": {
+                "fname": "bcprov-jdk18on-176.jar",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar",
+                "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
             }
         },
         "YT_android_5_tools": {
