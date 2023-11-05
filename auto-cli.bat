@@ -1,4 +1,4 @@
-@echo on
+@echo off
 setlocal enabledelayedexpansion
 echo The source APKs are downloaded from discord cdn. They originate from apkmirror.
 echo The JDK in use is also downloaded from discord cdn. It originates from zulu JDK.
@@ -196,7 +196,7 @@ goto start
 REM fetch config for app and download
 call :fetchAppJson "%inputJson%" %choice%
 echo Downloading !fname!
-call :downloadWithFallback !fname! !link! !hash!
+call :downloadWithFallback "!fname!" "!link!" "!hash!"
 
 REM account for special cases such as tool modifiers and third party reddit clients
 if defined tool_mod echo [93m Your selected app requires specific tools... They will now be loaded [0m && call :getTools cli patches integrations !tool_mod!
@@ -445,8 +445,8 @@ set "ram_path=%~1"
 set "ram_path=!ram_path:'=''!"
 if "!MODE!" == "dev" (
 	echo ram_path !ram_path!
-	echo passed_value_1 %~1
-	echo passed_value_2 %~2
+	echo passed_value_1 "%~1"
+	echo passed_value_2 "%~2"
 ) 
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "%~3 " (
