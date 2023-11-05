@@ -139,10 +139,6 @@
                     { 
                         "ename" : "microG",
                         "required" : true
-                    },
-                    { 
-                        "ename" : "seal",
-                        "required" : false
                     }
                 ]
             },
@@ -160,10 +156,6 @@
                     { 
                         "ename" : "microG",
                         "required" : true
-                    },
-                    { 
-                        "ename" : "seal",
-                        "required" : false
                     }
                 ]
             },
@@ -370,10 +362,6 @@
                     { 
                         "ename" : "microG",
                         "required" : true
-                    },
-                    { 
-                        "ename" : "seal",
-                        "required" : false
                     }
                 ]
             }
