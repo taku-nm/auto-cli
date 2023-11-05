@@ -323,8 +323,7 @@ if exist PATCHED_*.apk (
     echo.
     echo  [92m DONE! [0m
     echo  [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
-    if "!fname!" == "YouTube.apk" call :microG
-    if "!fname!" == "YouTube_Music.apk" call :microG
+    if /i "!extra!!" == "true" call :extras
     echo.
     echo  bat Version %batVersion%
     echo.
@@ -394,8 +393,10 @@ set hash=
 set patch_sel=
 set uri=
 set tool_mod=
+set cmd_mod=
+set extra=
 set apc=0
-for /f "tokens=* " %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].cmdMod"') do (
+for /f "tokens=* " %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].fname, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].link, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].hash, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].patches, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].uri, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].toolMod, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].cmdMod, (Get-Content -Raw '!JSON!' | ConvertFrom-Json).downloads.apps[!index!].extras[0].enabled"') do (
 	if !apc!==0 (
         set "fname=%%i"
     ) else if !apc!==1 (
@@ -410,6 +411,8 @@ for /f "tokens=* " %%i in ('powershell -NoProfile -NonInteractive -Command "(Get
 		  set "tool_mod=%%i"
 	 ) else if !apc!==6 (
 		  set "cmd_mod=%%i"
+	 ) else if !apc!==7 (
+		  set "extra=%%i"
 	 )
 	set /a "apc=!apc!+1"
 )
@@ -422,6 +425,7 @@ if "!MODE!" == "dev" (
 	echo URI !uri!
 	echo Tool modifier !tool_mod!
 	echo Command modifier !cmd_mod!
+	echo Extra enabled? !extra!
 )
 EXIT /B 0
 
@@ -429,6 +433,40 @@ EXIT /B 0
 echo.
 echo  [91m FATAL [0m
 echo  [91m Something has gone wrong when attempting to fetch app info. Contact taku on ReVanced discord or open an issue on GitHub. [0m
+echo  Include a screenshot of the entire terminal.
+echo  bat Version %batVersion%
+echo.
+echo  Pressing any key will close this window.
+pause > nul 2> nul
+EXIT
+
+:fetchExtraJson
+set fname=
+set link=
+set hash=
+set epc=0
+for /f %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.extras.%~2.fname, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.extras.%~2.link, (Get-Content -Raw '%~1' | ConvertFrom-Json).downloads.extras.%~2.hash"') do (
+    if !epc!==0 (
+        set "fname=%%i"
+    ) else if !epc!==1 (
+        set "link=%%i"
+    ) else if !epc!==2 (
+        set "hash=%%i"
+    )
+	set /a "epc=!epc!+1"
+)
+if not defined fname goto fetchExtraFail
+if "!MODE!" == "dev" (
+	echo Filename !fname!
+	echo Link !link!
+	echo Hash !hash!
+)
+EXIT /B 0
+
+:fetchExtraFail
+echo.
+echo  [91m FATAL [0m
+echo  [91m Something has gone wrong when attempting to fetch extras info. Contact taku on ReVanced discord or open an issue on GitHub. [0m
 echo  Include a screenshot of the entire terminal.
 echo  bat Version %batVersion%
 echo.
@@ -535,16 +573,48 @@ echo !NEW_jsonContent! > "%optionsJson%"
 set "OPTIONS=--options="!optionsJson!""
 EXIT /B 0
 
-:microG
-echo  [93m Keep in mind that you will need Vanced MicroG for YT and YT Music.[0m
-echo  Would you like to download Vanced MicroG from GitHub now?
+:extras
+set /a "m=0"
 echo.
-echo   1. Yes
-echo   2. No
+echo  Additional apps (Skip if already installed):
 echo.
-set vD=
-set /p vD=Type the number to select your answer and hit enter. 
-if '%vD%'=='1' call :downloadWithFallback vanced_microG.apk "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk" "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
+for /f "tokens=*" %%j in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!index!].extras.ename"') do (
+	set /a "m=m+1"
+	for /f "tokens=*" %%r in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!index!].extras[!m!].required"') do (
+       if /i "%%r" == "true" set "status=[93m(Required)[0m"
+		 if /i "%%r" == "false" set "status=(Optional)"
+   )
+	for /f "tokens=*" %%n in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.extras.%%j.dname"') do (
+       echo  [0m !m!. %%n   !status!
+   )
+)
+echo.
+echo  Download any of them now?
+echo [93m Format your answer like this: 1, 2  [0m etc... 
+echo.
+set eC=
+set /p eC=Leave empty to skip. Press enter to confirm. 
+if not defined eC EXIT /B 0
+set "eC_lastChar=!eC:~-1!"
+if "!eC_lastChar!"=="," echo [91m Invalid formatting. Remove the comma at the end. [0m && goto :extras
+if "!eC_lastChar!"==" " echo [91m Invalid formatting. Remove the space at the end. [0m && goto :extras
+if !eC_lastChar! geq 1 if !eC_lastChar! leq 9 (
+   for /f "tokens=*" %%a in ("!eC!") do (
+		 for %%b in (%%a) do (
+			 if %%b geq 1 if %%b leq !m! (
+             for /f "tokens=*" %%q in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!index!].extras[%%b].ename"') do (
+                call :fetchExtraJson "%inputJson%" "%%q"
+    	          call :downloadWithFallback "!fname!" "!link!" "!hash!"
+    	       )    
+			 ) else (
+				   echo  Selected App Nr. %%b is invalid. Skipping.
+			 )
+       )
+   )
+) else (
+    echo [91m Invalid answer. [0m 
+	 goto :extras
+)
 EXIT /B 0
 
 :getTools
