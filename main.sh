@@ -31,7 +31,7 @@ function main () {
 
 function getMessages () {
     messagesJson=$(mktemp)
-    curl -H "Authorization: Bot $bot_token" https://discord.com/api/v9/channels/$1/messages > "$messagesJson"
+    curl -H "Authorization: Bot $bot_token" https://discord.com/api/v9/channels/$1/messages?limit=100 > "$messagesJson"
     messagesJsonContent=$(cat "$messagesJson")
 }
 
@@ -73,26 +73,43 @@ function findOldestURL () {
 function updateURL () {
     # clean inputLink (grep regex_cdn_no_params)
     clean_input_URL=($(echo "$oldest_url" | grep -o -P "$regex_cdn_no_params"))
+    
+    old_channel_ID=$channel_ID
 
     # get channel id
     channel_ID=($(echo "$oldest_url" | grep -o -P "$regex_channel_ID"))
 
-    # get messagesJson
-    getMessages "$channel_ID"
+    if [[ "$channel_ID" != "$old_channel_ID" ]]; then
+        # get messagesJson
+        sleep 5
+        getMessages "$channel_ID"
+    fi
+
 
     # create messagesURL array
     messagesURLs=($(echo "$messagesJsonContent" | grep -o -P "$regex_cdn_url"))
+
+    # clear found state
+    found=false
 
     # find corresponding messageLink in array by comparing with substring match
     for messagesURL in "${messagesURLs[@]}"; do
         if [[ "${messagesURL,,}" == *"${clean_input_URL,,}"* ]]; then
             new_url="$messagesURL"
+            found=true
+            # sed replace full inputLink with full messageLink
+            sed -i "s|$(echo "$oldest_url" | sed 's/[\&/]/\\&/g')|$(echo "$new_url" | sed 's/[\&/]/\\&/g')|g" "$inputFile"
             break
         fi
     done
 
-    # sed replace full inputLink with full messageLink
-    sed -i "s|$(echo "$oldest_url" | sed 's/[\&/]/\\&/g')|$(echo "$new_url" | sed 's/[\&/]/\\&/g')|g" "$inputFile"
+    if [ "$found" = false ]; then
+        echo
+        echo "FATAL: Condition not met in the loop. No link found?"
+        echo Input URL: $clean_input_URL
+        echo
+        exit 404
+    fi
 }
 
 # getInputFile

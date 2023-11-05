@@ -1,9 +1,9 @@
-name: update URLs
+name: Update Links
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 03 12 11 0"
+    - cron: "10 * * * *"
 
 jobs:
   run-script:
@@ -21,13 +21,22 @@ jobs:
       id: script-output
       run: |
         output=$(./main.sh "${{ secrets.BOT_TOKEN }}" "input2.json")
-        echo "::set-output name=script_output::$output"
-
-    - name: Use the output
-      run: |
-        echo "The script output is: ${{ steps.script-output.outputs.script_output }}"
+        echo "CRON=$output" >> $GITHUB_OUTPUT
 
     - name: Set cron schedule
       run: |
-        sed -i '0,/cron: ".*"/s/cron: ".*"/cron: "${{ steps.script-output.outputs.script_output }}"/' .github/workflows/inputUpdate.yml
+        sed -i '0,/cron: ".*"/s/cron: ".*"/cron: "${{ steps.script-output.outputs.CRON }}"/' .github/workflows/inputUpdate.yml
 
+    - name: Commit inputFile
+      uses: EndBug/add-and-commit@v9
+      with:
+        add: 'input2.json' 
+        message: 'update Link'
+        push: true
+
+    - name: Commit workflow
+      uses: EndBug/add-and-commit@v9
+      with:
+        add: '.github/workflows/inputUpdate.yml' 
+        message: 'set new runtime'
+        push: true
