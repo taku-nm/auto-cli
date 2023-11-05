@@ -81,7 +81,18 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null },
+                    { 
+                        "ename" : "microG",
+                        "required" : true
+                    },
+                    { 
+                        "ename" : "seal",
+                        "required" : false
+                    }
+                ]
             },
             {
                 "fname": "YouTube.apk",
@@ -91,7 +102,18 @@
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null },
+                    { 
+                        "ename" : "microG",
+                        "required" : true
+                    },
+                    { 
+                        "ename" : "seal",
+                        "required" : false
+                    }
+                ]
             },
 			{
                 "fname": "YouTube_Music.apk",
@@ -101,7 +123,18 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null },
+                    { 
+                        "ename" : "microG",
+                        "required" : true
+                    },
+                    { 
+                        "ename" : "seal",
+                        "required" : false
+                    }
+                ]
             },
 			{
                 "fname": "YouTube_Music.apk",
@@ -111,7 +144,18 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null },
+                    { 
+                        "ename" : "microG",
+                        "required" : true
+                    },
+                    { 
+                        "ename" : "seal",
+                        "required" : false
+                    }
+                ]
             },
 			{
                 "fname": "TikTok.apk",
@@ -121,7 +165,10 @@
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
 			{
                 "fname": "Twitch.apk",
@@ -131,7 +178,10 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
 			{
                 "fname": "Twitter.apk",
@@ -141,7 +191,10 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
 			{
                 "fname": "Instagram.apk",
@@ -151,7 +204,10 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
             {
                 "fname": "Sync.apk",
@@ -161,7 +217,10 @@
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
             {
                 "fname": "Infinity.apk",
@@ -171,7 +230,10 @@
                 "patches": " ",
                 "uri" : "infinity://localhost",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
             {
                 "fname": "Relay.apk",
@@ -181,7 +243,10 @@
                 "patches": " ",
                 "uri" : "dbrady://relay",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
             {
                 "fname": "RiF.apk",
@@ -191,7 +256,10 @@
                 "patches": " ",
                 "uri" : "redditisfun://auth",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
             {
                 "fname": "Reddit.apk",
@@ -201,7 +269,10 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
             {
                 "fname": "Lightroom.apk",
@@ -211,7 +282,10 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null }
+                ]
             },
             {
                 "fname": "YouTube.apk",
@@ -221,7 +295,14 @@
                 "patches": "-i microg-support -i spoof-player-parameters -i client-spoof -i hide-video-ads -i enable-minimized-playback -i disable-update-screen --exclusive",
                 "uri" : " ",
                 "toolMod" : "YT_android_5_",
-                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! "
+                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! ",
+                "extras" : [
+                    { "ename": null },
+                    { 
+                        "ename" : "microG",
+                        "required" : true
+                    }
+                ]
             },
             {
                 "fname": "YouTube.apk",
@@ -231,7 +312,18 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_android_6_7_",
-                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! "
+                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! ",
+                "extras" : [
+                    { "ename": null },
+                    { 
+                        "ename" : "microG",
+                        "required" : true
+                    },
+                    { 
+                        "ename" : "seal",
+                        "required" : false
+                    }
+                ]
             },
             {
                 "fname": "YouTube.apk",
@@ -241,7 +333,18 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_extended_",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null },
+                    { 
+                        "ename" : "microG",
+                        "required" : true
+                    },
+                    { 
+                        "ename" : "seal",
+                        "required" : false
+                    }
+                ]
             },
             {
                 "fname": "YouTube_Music.apk",
@@ -251,12 +354,24 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_extended_",
-                "cmdMod" : " "
+                "cmdMod" : " ",
+                "extras" : [
+                    { "ename": null },
+                    { 
+                        "ename" : "microG",
+                        "required" : true
+                    },
+                    { 
+                        "ename" : "seal",
+                        "required" : false
+                    }
+                ]
             }
         ],
         "extras": {
             "microG": {
                 "fname": "vanced_microG.apk",
+                "dname": "Vanced MicroG",
                 "link": "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk",
                 "hash": "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
             }
