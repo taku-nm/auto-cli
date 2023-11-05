@@ -525,14 +525,14 @@ EXIT /B 0
 :patchApp
 if "!MODE!" == "dev" (
 	echo Patch current Filename !fname!
-	echo JDK %JDK%
-	echo CLI %CLI%
-	echo Patches %PATCHES%
-	echo Integrations %INTEGRATIONS%
+	echo JDK "%JDK%"
+	echo CLI "%CLI%"
+	echo Patches "%PATCHES%"
+	echo Integrations "%INTEGRATIONS%"
 	echo Patch selection !patch_sel!
 	echo Options !OPTIONS!
-	echo Keystore Path %KEYSTORE%
-	echo Keystore Password %KEY_PW%
+	echo Keystore Path "%KEYSTORE%"
+	echo Keystore Password "%KEY_PW%"
 )
 set "inputString=%~1"
 set "keyString=!inputString:.apk=!"
