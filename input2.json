@@ -83,7 +83,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null },
+                    { "enabled": true },
                     { 
                         "ename" : "microG",
                         "required" : true
@@ -104,7 +104,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null },
+                    { "enabled": true },
                     { 
                         "ename" : "microG",
                         "required" : true
@@ -125,7 +125,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null },
+                    { "enabled": true },
                     { 
                         "ename" : "microG",
                         "required" : true
@@ -146,7 +146,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null },
+                    { "enabled": true },
                     { 
                         "ename" : "microG",
                         "required" : true
@@ -167,7 +167,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
 			{
@@ -180,7 +180,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
 			{
@@ -193,7 +193,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
 			{
@@ -206,7 +206,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
             {
@@ -219,7 +219,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
             {
@@ -232,7 +232,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
             {
@@ -245,7 +245,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
             {
@@ -258,7 +258,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
             {
@@ -271,7 +271,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
             {
@@ -284,7 +284,7 @@
                 "toolMod" : " ",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null }
+                    { "enabled": false }
                 ]
             },
             {
@@ -297,7 +297,7 @@
                 "toolMod" : "YT_android_5_",
                 "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! ",
                 "extras" : [
-                    { "ename": null },
+                    { "enabled": true },
                     { 
                         "ename" : "microG",
                         "required" : true
@@ -314,7 +314,7 @@
                 "toolMod" : "YT_android_6_7_",
                 "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! ",
                 "extras" : [
-                    { "ename": null },
+                    { "enabled": true },
                     { 
                         "ename" : "microG",
                         "required" : true
@@ -335,7 +335,7 @@
                 "toolMod" : "YT_extended_",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null },
+                    { "enabled": true },
                     { 
                         "ename" : "microG",
                         "required" : true
@@ -356,7 +356,7 @@
                 "toolMod" : "YT_extended_",
                 "cmdMod" : " ",
                 "extras" : [
-                    { "ename": null },
+                    { "enabled": true },
                     { 
                         "ename" : "microG",
                         "required" : true
