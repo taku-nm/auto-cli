@@ -362,6 +362,10 @@
                     { 
                         "ename" : "microG",
                         "required" : true
+                    },
+                    { 
+                        "ename" : "seal",
+                        "required" : false
                     }
                 ]
             }
