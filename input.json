@@ -1,28 +1,33 @@
 {
-
     "batVersion": "3.0",
     "downloads": {
         "tools": {
             "cli": {
-                "fname": "revanced-cli-4.0.0-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.0.0/revanced-cli-4.0.0-all.jar",
-                "hash": "b5854a41016c2642adb7b1d05e9f8315a3ddf5a4d04194546d41759f3d102e23"
+                "fname": "revanced-cli-4.0.1-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.0.1/revanced-cli-4.0.1-all.jar",
+                "hash": "48ad04fcf3c7cdf7fddd3e52e3fc35fae9c4b6b7948e990cbb5d79154d181006"
             },
             "patches": {
-                "fname": "revanced-patches-2.192.0.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.192.0/revanced-patches-2.192.0.jar",
-                "hash": "f473de63dd6ecb79c294b10a6aa78d876f324044ae9038a265d992409a7e6331"
+                "fname": "revanced-patches-2.193.0.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.193.0/revanced-patches-2.193.0.jar",
+                "hash": "101f682361438a4af5d56c01dbd2020da5e59bc6a79c55648db22981575e1e84"
             },
             "integrations": {
-                "fname": "revanced-integrations-0.118.0.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.118.0/revanced-integrations-0.118.0.apk",
-                "hash": "a23b888eafa08f03bebefba939324f3ce038c17f010b785fe9e3d99fd0d10798"
+                "fname": "revanced-integrations-0.119.0.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.119.0/revanced-integrations-0.119.0.apk",
+                "hash": "fe4eb9498b677030e180c7e93740a66ab6156e33fc0e7b40503f97f8965d79d9"
             }
         },
         "apps": [
+            {
+                "fname": null
+            },
 	        {
-                "fname": "This script is deprecated. Use a newer version."
-            } 
-        ]
+                "fname": "debug",
+                "dname": "This script is deprecated. Use a newer version."
+            }
+        ],
+        "extras": {
+        }
     }
 }

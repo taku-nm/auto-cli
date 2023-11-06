@@ -19,8 +19,11 @@
             }
         },
         "apps": [
+            {
+                "fname": null
+            },
 	        {
-                "fname": null,
+                "fname": "debug",
                 "dname": "This script is deprecated. Use a newer version."
             }
         ],
