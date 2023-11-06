@@ -3,7 +3,7 @@ name: Update Links
 on:
   workflow_dispatch:
   schedule:
-    - cron: "04 23 12 11 0"
+    - cron: "49 12 14 11 2"
 
 jobs:
   run-script:
