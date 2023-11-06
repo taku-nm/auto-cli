@@ -7,7 +7,15 @@ jobs:
         steps:
         - name: Get latest input json
           uses: actions/checkout@v4
+          
+        - name: Check if commit message includes "clone"
+          id: check-commit-message
+          run: |
+            output=$(if [[ $(git log --format=%B -n 1 ${{ github.sha }}) == *"(clone)"* ]]; then echo true; else echo false; fi)
+            echo "contains-clone=$output" >> $GITHUB_OUTPUT
+
         - name: 📂 Sync files
+          if: steps.check-commit-message.outputs.contains-clone == 'true'
           uses: SamKirkland/FTP-Deploy-Action@v4.3.4
           with:
             server: user737.bplaced.net
