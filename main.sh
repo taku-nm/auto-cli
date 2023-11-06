@@ -14,15 +14,15 @@ function main () {
     # find link with oldest expire timestamp
     findOldestURL "$inputFileContent"
 
+    # if link expired, replace it
     current_timestamp=$(date +%s)
-
     if [ "$oldestTimestamp" -lt "$current_timestamp" ]; then
         updateURL
         main
     fi
 
+    # if link expires within 500 seconds, wait and then replace
     timeDifference=$(($oldestTimestamp - $current_timestamp))
-
     if [ "$timeDifference" -le "500" ]; then
         sleep $timeDifference
         sleep 10
@@ -30,8 +30,10 @@ function main () {
         main
     fi
 
+    # if above two conditions aren't met, set schedule 2 minutes before link expires
     if [ "$timeDifference" -gt "500" ]; then
-        cron_date=$(date -d "@$oldestTimestamp" "+%M %H %d %m %w")
+        targetTimestamp=$(($oldestTimestamp - 120))
+        cron_date=$(date -d "@$targetTimestamp" "+%M %H %d %m")
     fi
 }
 
@@ -87,7 +89,7 @@ function updateURL () {
 
     if [[ "$channel_ID" != "$old_channel_ID" ]]; then
         # get messagesJson
-        sleep 5
+        sleep 10
         getMessages "$channel_ID"
     fi
 
@@ -122,4 +124,4 @@ function updateURL () {
 }
 
 main
-echo $cron_date
+echo "$cron_date *"
