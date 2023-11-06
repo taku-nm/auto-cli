@@ -16,87 +16,15 @@
                 "fname": "revanced-integrations-0.119.0.apk",
                 "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.119.0/revanced-integrations-0.119.0.apk",
                 "hash": "fe4eb9498b677030e180c7e93740a66ab6156e33fc0e7b40503f97f8965d79d9"
-            },
-            "JDK": {
-                "fname": "jdk.zip",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip",
-                "hash": "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
-            },
-            "BCS": {
-                "fname": "bcprov-jdk18on-176.jar",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar",
-                "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
-            }
-        },
-        "YT_android_5_tools": {
-            "cli": {
-                "fname": "revanced-cli-3.1.1-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.1/revanced-cli-3.1.1-all.jar",
-                "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
-            },
-            "patches": {
-                "fname": "revanced-patches-2.160.9.jar",
-                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.160.9/revanced-patches-2.160.9.jar",
-                "hash": "aa3f11e1c050dd97e2898fe9e1f72ece11e4ed1d8aeebe57026e81500f27c117"
-            },
-            "integrations": {
-                "fname": "revanced-integrations-0.96.6.apk",
-                "link": "https://github.com/d4n3436/revanced-integrations/releases/download/v0.96.6/revanced-integrations-0.96.6.apk",
-                "hash": "4f5f747059b73e0d4ddffd507445f53dfe6958e47520361dcb5da80ee371cf9d"
-            }
-        },
-        "YT_android_6_7_tools": {
-            "cli": {
-                "fname": "revanced-cli-3.1.1-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.1/revanced-cli-3.1.1-all.jar",
-                "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
-            },
-            "patches": {
-                "fname": "revanced-patches-2.160.7.jar",
-                "link": "https://github.com/kitadai31/revanced-patches-android6-7/releases/download/v2.160.7/revanced-patches-2.160.7.jar",
-                "hash": "6d37e47165098108b95a6e54e98051f35bd5e16757d0f154b64b257c6938d017"
-            },
-            "integrations": {
-                "fname": "revanced-integrations-0.96.7.apk",
-                "link": "https://github.com/kitadai31/revanced-integrations/releases/download/v0.96.7/revanced-integrations-0.96.7.apk",
-                "hash": "812cf83d7e7971fa3122c94f2b77effae0817380d4e9d1fb053e84ad5f0df9f8"
-            }
-        },
-        "YT_extended_tools": {
-            "cli": {
-                "fname": "revanced-cli-4.0.4-all.jar",
-                "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.0.4/revanced-cli-4.0.4-all.jar",
-                "hash": "8e5047ca81a50e96fb114383b083213b018f63cce34fe9bcdab0c7a67dea0400"
-            },
-            "patches": {
-                "fname": "revanced-patches-2.195.12.jar",
-                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.195.12/revanced-patches-2.195.12.jar",
-                "hash": "4605e62fa9d9b2fec1689ae8d8cf0db3569e6cce63f258caa869df4ded20192f"
-            },
-            "integrations": {
-                "fname": "revanced-integrations-0.120.12.apk",
-                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.120.12/revanced-integrations-0.120.12.apk",
-                "hash": "d1e0b13322fcf2322eebe265ce186a553c12ba02dab6d5878f2c8491cb97b988"
             }
         },
         "apps": [
 	        {
-                "fname": "This script is deprecated. Use a newer version."
+                "fname": null,
+                "dname": "This script is deprecated. Use a newer version."
             }
         ],
         "extras": {
-            "microG": {
-                "fname": "vanced_microG.apk",
-                "dname": "Vanced MicroG",
-                "link": "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk",
-                "hash": "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
-            },
-            "seal": {
-                "fname": "seal.apk",
-                "dname": "Seal (external downloader)",
-                "link": "https://github.com/JunkFood02/Seal/releases/download/v1.10.0/Seal-1.10.0-armeabi-v7a-release.apk",
-                "hash": "8565855d90e1dce3789bacd6b0df79432c138675deec78f31cbd7224c03a6551"
-            }
         }
     }
 }
