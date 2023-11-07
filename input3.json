@@ -301,7 +301,7 @@
                 "extras" : [
                     { "enabled": true },
                     { 
-                        "ename" : "microG",
+                        "ename" : "microG_A_5",
                         "required" : true
                     },
                     {
@@ -376,9 +376,15 @@
         ],
         "extras": {
             "microG": {
-                "fname": "vanced_microG.apk",
+                "fname": "Vanced_MicroG_v0.2.24.220220.apk",
                 "dname": "Vanced MicroG",
                 "link": "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk",
+                "hash": "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
+            },
+            "microG_A_5": {
+                "fname": "Vanced_MicroG_v0.2.22.212658.apk",
+                "dname": "Vanced MicroG",
+                "link": "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.22.212658-212658001/microg.apk",
                 "hash": "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
             },
             "seal": {
