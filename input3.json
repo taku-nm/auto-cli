@@ -35,14 +35,14 @@
                 "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
             },
             "patches": {
-                "fname": "revanced-patches-2.160.9.jar",
-                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.160.9/revanced-patches-2.160.9.jar",
-                "hash": "aa3f11e1c050dd97e2898fe9e1f72ece11e4ed1d8aeebe57026e81500f27c117"
+                "fname": "revanced-patches-2.161.1.jar",
+                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.161.1/revanced-patches-2.161.1.jar",
+                "hash": "a6ef748281d7b3531567d426d65ce7c583dbff4de277b69c1fd8e435be401a20"
             },
             "integrations": {
-                "fname": "revanced-integrations-0.96.6.apk",
-                "link": "https://github.com/d4n3436/revanced-integrations/releases/download/v0.96.6/revanced-integrations-0.96.6.apk",
-                "hash": "4f5f747059b73e0d4ddffd507445f53dfe6958e47520361dcb5da80ee371cf9d"
+                "fname": "revanced-integrations-0.96.9.apk",
+                "link": "https://github.com/d4n3436/revanced-integrations/releases/download/v0.96.9/revanced-integrations-0.96.9.apk",
+                "hash": "ac6bae646d00e115a386222855a3a8ef583802cff85a9d19d60a54ff852b2eb4"
             }
         },
         "YT_android_6_7_tools": {
@@ -294,7 +294,7 @@
                 "dname": "YouTube Android 5 (16.40.36)",
                 "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=6558f465&is=65467f65&hm=fc59f574898edb0cd35d1f4c65873c39069722fc03be6a7f7501a8ad722a7b17&",
                 "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
-                "patches": "-i microg-support -i spoof-player-parameters -i client-spoof -i hide-video-ads -i enable-minimized-playback -i disable-update-screen --exclusive",
+                "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_android_5_",
                 "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! ",
@@ -303,6 +303,10 @@
                     { 
                         "ename" : "microG",
                         "required" : true
+                    },
+                    {
+                        "ename" : "seal",
+                        "required" : false
                     }
                 ]
             },
