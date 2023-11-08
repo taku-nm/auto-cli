@@ -22,6 +22,7 @@ function main () {
     fi
 
     # if link expires within 500 seconds, wait and then replace
+    # this avoids too tight scheduling and also catches the case of the runner being on time
     timeDifference=$(($oldestTimestamp - $current_timestamp))
     if [ "$timeDifference" -le "500" ]; then
         sleep $timeDifference
@@ -30,9 +31,10 @@ function main () {
         main
     fi
 
-    # if above two conditions aren't met, set schedule 2 minutes before link expires
+    # if above two conditions aren't met, set schedule 5 minutes before link expires
+    # this is to compensate for github schedule delays
     if [ "$timeDifference" -gt "500" ]; then
-        targetTimestamp=$(($oldestTimestamp - 120))
+        targetTimestamp=$(($oldestTimestamp - 300))
         cron_date=$(date -d "@$targetTimestamp" "+%M %H %d %m")
     fi
 }
