@@ -281,7 +281,7 @@ echo  Type your options now. Leave empty to apply default patches. Hit enter onc
 echo.
 set /p SELECTION=
 del "%localappdata%\revanced-cli\options.json" > nul 2> nul
-"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
+"%JDK%" -jar "%CLI%" options -o "%PATCHES%" > nul 2> nul
 if exist .\options.json (
     move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
     echo  An options.json as been created.
@@ -564,7 +564,7 @@ echo.
 set /p client_id=
 if not defined client_id echo [91m Provide a client ID [0m && goto redditOptions 
 del "%localappdata%\revanced-cli\options.json" > nul 2> nul
-"%JDK%" -jar "%CLI%" options -o "%PATCHES%"
+"%JDK%" -jar "%CLI%" options -o "%PATCHES%" > nul 2> nul
 move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
 set "optionsJson=%localappdata%\revanced-cli\options.json"
 for /f "usebackq delims=" %%a in ("%optionsJson%") do (
