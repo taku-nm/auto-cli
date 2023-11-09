@@ -278,9 +278,9 @@
             },
             {
                 "fname": "Lightroom.apk",
-                "dname": "Lightroom (9.0.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167969793870135356/com.adobe.lrmobile_9.0.0-609000000.apk?ex=65594a22&is=6546d522&hm=fd60f20f90f337a0711717a93e9145b4d7739365ea3816f91ffd31130396eb0e&",
-                "hash": "74ea42ec0a1b62420d23d973b1e7c1b73d75e8350cf8304a42db9244dc531bb3",
+                "dname": "Lightroom (9.0.1)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1172175597955465216/com.adobe.lrmobile_9.0.1-709001001.apk?ex=655f5c98&is=654ce798&hm=9af7ca70d8f1188383d49ca824b9a4f99c399cf7ef0c59571530d798af9e2eb5&",
+                "hash": "5226644711b6e4f1fe809eb432c7d9a163ba88619b5393a0243486e37f153462",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
