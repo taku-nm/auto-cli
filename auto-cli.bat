@@ -6,13 +6,29 @@ echo Every file's integrity can be checked using checksums.
 echo If you wish to abort, close this window.
 echo.
 pause
+
+REM set script location to working dir
+pushd "%~dp0"
+
+REM check if current directory contains non-ASCII characters
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "'%cd%' -match '[^\x00-\x7F]'"`) DO ( 
+	 if "%%F" == "True" (
+	   echo.
+		echo  [91m ATTENTION [0m
+		echo  [91m You are executing this script in a path that contains non-ASCII characters [0m
+		echo  [91m Doing so will cause patching to fail in a later stage. [0m
+		echo  [91m Please move the script to a different location and run it again. [0m
+		echo.
+		echo  [91m Your current path: %0  [0m
+		pause > nul 2> nul
+		EXIT
+	 )
+)
+
 REM pre-escape usernames with single quotes
 set "localappdata=%localappdata%"
 set "PSlocalData=%localappdata%"
 set "PSlocalData=!PSlocalData:'=''!"
-
-REM set script location to working dir
-pushd "%~dp0"
 
 REM create needed folders
 mkdir "%localappdata%\revanced-cli\" > nul 2> nul
