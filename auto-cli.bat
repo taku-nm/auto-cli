@@ -25,6 +25,19 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Comma
 	 )
 )
 
+REM check if major version is 3 at minimum
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "$Host.Version.Major"`) DO ( 
+    if not %%F geq 6 (
+	   echo.
+		echo  [91m ATTENTION [0m
+		echo  [91m Your PowerShell, Version %%F is too old to run this script. [0m
+		echo  [91m Please use the Windows Management Framework to update. [0m
+		echo  [93m https://www.microsoft.com/en-us/download/details.aspx?id=54616 [0m
+		pause > nul 2> nul
+		EXIT
+	 )
+)
+
 REM pre-escape usernames with single quotes
 set "localappdata=%localappdata%"
 set "PSlocalData=%localappdata%"
