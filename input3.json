@@ -265,9 +265,9 @@
             },
             {
                 "fname": "Reddit.apk",
-                "dname": "Reddit (2023.39.0)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159604227497271346/com.reddit.frontpage_2023.39.0-1211607.apk?ex=65568a98&is=65441598&hm=0500825864f58e24ca11c1fd2172e1b572d628c155c940f26d785dbdef34b61c&",
-                "hash": "407020611b48ea70e50f7f947baf7ed6fc8232e9574ae3cab93a471df4637ec3",
+                "dname": "Reddit (2023.44.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1173404561180999680/com.reddit.frontpage_2023.44.0-1268622.apk?ex=6563d528&is=65516028&hm=0295058bfa6ac26de9ef73dad8c06c7a094f82e939fb027a025db946519d3ba8&",
+                "hash": "0fa2ea10396966ed3ccaa956d4d781c29117ab2928cd5235a2837c87c64f7e41",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
