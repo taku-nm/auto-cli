@@ -20,10 +20,16 @@ jobs:
           fi
       - name: Update the README link
         run: sed -i -E 's/v[0-9]+\.[0-9]+/${{ github.event.inputs.version }}/g' README.md
-      - name: Commit readme
+      - name: Update deprecated input json files
+        run: |
+          jq --arg newVersion "${{ github.event.inputs.version }}" '.batVersion = $newVersion' "input.json" > ram1.json
+          mv ram1.json input.json
+          jq --arg newVersion "${{ github.event.inputs.version }}" '.batVersion = $newVersion' "input2.json" > ram2.json
+          mv ram2.json input2.json
+      - name: Commit readme and deprecated json
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'README.md' 
+          add: "['README.md', 'input.json', 'input2.json']" 
           message: 'chore: Release ${{ github.event.inputs.version }}'
           tag: ${{ github.event.inputs.version }} 
           push: true
