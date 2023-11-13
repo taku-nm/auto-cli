@@ -22,7 +22,7 @@ function main () {
     echo "Current Timestamp: $current_timestamp" 1>&2
     echo "Compared Timestamp: $compared_timestamp" 1>&2
     echo "Oldest Timestamp: $oldestTimestamp" 1>&2
-    if [ "$oldestTimestamp" -lt "$compared_timestamp" ]; then
+    if [ "$oldestTimestamp" -le "$compared_timestamp" ]; then
         echo "detected expired timestamp" 1>&2
         updateURL
         main
@@ -35,10 +35,8 @@ function main () {
     echo "Time difference: $timeDifference" 1>&2
     if [ "$timeDifference" -le "700" ]; then
         echo "Timestamp within range" 1>&2
-        if [ "$timeDifference" -gt "0" ]; then
-            echo "Sleeping..." 1>&2
-            sleep $(($timeDifference + 10))
-        fi
+        echo "Sleeping..." 1>&2
+        sleep $(($timeDifference + 10))
         updateURL "overwrite"
         main
     fi
