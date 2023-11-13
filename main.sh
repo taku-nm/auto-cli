@@ -47,7 +47,6 @@ function main () {
     if [ "$timeDifference" -gt "700" ]; then
         echo "Scheduling..." 1>&2
         cron_date=$(date -d "@$targetTimestamp" "+%M %H %d %m")
-        echo "$cron_date *"
     fi
 }
 
@@ -140,6 +139,7 @@ function updateURL () {
 git config --global user.email "actions@github.com" &> /dev/null
 git config --global user.name "GitHub Actions" &> /dev/null
 main
+echo "$cron_date *"
 git add "$inputFile" &> /dev/null
 git commit -m "$commit_message" &> /dev/null
 git push origin HEAD &> /dev/null
