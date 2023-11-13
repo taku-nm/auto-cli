@@ -11,12 +11,6 @@ regex_ex_value="(?<=\?ex=)[^&]+"
 
 function main () {
 
-    # catch recursive execution if end condition is met
-    if [ "$1" -le 0 ]; then
-        return 0
-        echo "Forced exit from main" 1>&2
-    fi
-
     inputFileContent=$(cat "$inputFile")
     
     # find link with oldest expire timestamp
@@ -24,11 +18,11 @@ function main () {
 
     # if link expires in a day, replace it
     current_timestamp=$(date +%s)
-    compared_timestamp=$(($current_timestamp - 86400))
+    compared_timestamp=$(($current_timestamp + 86400))
     echo "Current Timestamp: $current_timestamp" 1>&2
     echo "Compared Timestamp: $compared_timestamp" 1>&2
     echo "Oldest Timestamp: $oldestTimestamp" 1>&2
-    if [ "$oldestTimestamp" -gt "$compared_timestamp" ]; then
+    if [ "$oldestTimestamp" -lt "$compared_timestamp" ]; then
         echo "detected expired timestamp" 1>&2
         updateURL
         main
@@ -54,10 +48,6 @@ function main () {
         echo "Scheduling..." 1>&2
         cron_date=$(date -d "@$targetTimestamp" "+%M %H %d %m")
         echo "$cron_date *"
-        git add "$inputFile" &> /dev/null
-        git commit -m "$commit_message" &> /dev/null
-        git push origin HEAD &> /dev/null
-        return 0 
     fi
 }
 
@@ -150,3 +140,6 @@ function updateURL () {
 git config --global user.email "actions@github.com" &> /dev/null
 git config --global user.name "GitHub Actions" &> /dev/null
 main
+git add "$inputFile" &> /dev/null
+git commit -m "$commit_message" &> /dev/null
+git push origin HEAD &> /dev/null
