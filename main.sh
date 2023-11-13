@@ -11,11 +11,6 @@ regex_ex_value="(?<=\?ex=)[^&]+"
 
 function main () {
 
-    if [ "$1" -le 0 ]; then
-        echo "Forced exit from main" 1>&2
-        return 0
-    fi
-
     inputFileContent=$(cat "$inputFile")
     
     # find link with oldest expire timestamp
@@ -48,11 +43,15 @@ function main () {
         main
     fi
 
-    # if above two conditions aren't met, set schedule to target and commit
+    # if above two conditions aren't met, set schedule to target, commit and exit
     if [ "$timeDifference" -gt "700" ]; then
         echo "Scheduling..." 1>&2
         cron_date=$(date -d "@$targetTimestamp" "+%M %H %d %m")
-        main 0
+        echo "$cron_date *"
+        git add "$inputFile" &> /dev/null
+        git commit -m "$commit_message" &> /dev/null
+        git push origin HEAD &> /dev/null
+        exit 0
     fi
 }
 
@@ -145,7 +144,3 @@ function updateURL () {
 git config --global user.email "actions@github.com" &> /dev/null
 git config --global user.name "GitHub Actions" &> /dev/null
 main
-echo "$cron_date *"
-git add "$inputFile" &> /dev/null
-git commit -m "$commit_message" &> /dev/null
-git push origin HEAD &> /dev/null
