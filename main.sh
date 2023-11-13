@@ -11,6 +11,11 @@ regex_ex_value="(?<=\?ex=)[^&]+"
 
 function main () {
 
+    if [ "$1" -le 0 ]; then
+        echo "Forced exit from main" 1>&2
+        return 0
+    fi
+
     inputFileContent=$(cat "$inputFile")
     
     # find link with oldest expire timestamp
@@ -47,6 +52,7 @@ function main () {
     if [ "$timeDifference" -gt "700" ]; then
         echo "Scheduling..." 1>&2
         cron_date=$(date -d "@$targetTimestamp" "+%M %H %d %m")
+        main 0
     fi
 }
 
