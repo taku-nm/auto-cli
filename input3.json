@@ -35,9 +35,9 @@
                 "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
             },
             "patches": {
-                "fname": "revanced-patches-2.161.1.jar",
-                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.161.1/revanced-patches-2.161.1.jar",
-                "hash": "a6ef748281d7b3531567d426d65ce7c583dbff4de277b69c1fd8e435be401a20"
+                "fname": "revanced-patches-2.161.2.jar",
+                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.161.2/revanced-patches-2.161.2.jar",
+                "hash": "60cb72a39beb6eda7c051b8fb2d9ef2957269e33b11842c918983d70aba74b39"
             },
             "integrations": {
                 "fname": "revanced-integrations-0.96.9.apk",
@@ -64,19 +64,19 @@
         },
         "YT_extended_tools": {
             "cli": {
-                "fname": "revanced-cli-4.0.4-all.jar",
-                "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.0.4/revanced-cli-4.0.4-all.jar",
-                "hash": "8e5047ca81a50e96fb114383b083213b018f63cce34fe9bcdab0c7a67dea0400"
+                "fname": "revanced-cli-4.1.1-all.jar",
+                "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.1.1/revanced-cli-4.1.1-all.jar",
+                "hash": "f80e93eb6b69dd3f534266ade341160cca8f2d1f78c8e18c5b85248a9f4fe280"
             },
             "patches": {
-                "fname": "revanced-patches-2.195.12.jar",
-                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.195.12/revanced-patches-2.195.12.jar",
-                "hash": "4605e62fa9d9b2fec1689ae8d8cf0db3569e6cce63f258caa869df4ded20192f"
+                "fname": "revanced-patches-2.196.7.jar",
+                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.196.7/revanced-patches-2.196.7.jar",
+                "hash": "90841abadbd1e8169939f5a576d0fdf9a9da2df81003c84c2bc6dcfc84c988f5"
             },
             "integrations": {
-                "fname": "revanced-integrations-0.120.12.apk",
-                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.120.12/revanced-integrations-0.120.12.apk",
-                "hash": "d1e0b13322fcf2322eebe265ce186a553c12ba02dab6d5878f2c8491cb97b988"
+                "fname": "revanced-integrations-0.121.7.apk",
+                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.121.7/revanced-integrations-0.121.7.apk",
+                "hash": "a3cd57787259a66e304eb81741b0723fcd3cabb9205d7554057903f182af9711"
             }
         },
         "apps": [
@@ -333,9 +333,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube ReVanced Extended (18.40.34)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894435648610324/com.google.android.youtube_18.40.34-1540478400.apk?ex=655ca746&is=654a3246&hm=7d5d1babea6cb9656edd3b244796ace7353115d1c397c3112e85ec930400f6cc&",
-                "hash": "935586568f5b263910a879c53e2538050c82b4f916532266f5845a0e614fd555",
+                "dname": "YouTube ReVanced Extended (18.45.41)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1175227410728370237/com.google.android.youtube_18.45.41-1541148096.apk?ex=656a76d1&is=655801d1&hm=1bce473a33d526de530c8c20e1b65ae4fa6dd32fa16dadd5fd2f91d4a9b3663a&",
+                "hash": "b1b73fbb8e10294ef8098ffba780a8a305545d07b3369d996367ff028189570f",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_extended_",
@@ -354,9 +354,9 @@
             },
             {
                 "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music ReVanced Extended (6.25.53)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1168894755497853068/com.google.android.apps.youtube.music_6.25.53-62553230.apk?ex=655ca792&is=654a3292&hm=39626457721ec3746fa9011624786607c6a22f0a619f67cfa4bd610952b0ae3d&",
-                "hash": "c5255ae82b2365dc7843ce4dccf32e7219c3c8609e297b23469edb3183f26ab4",
+                "dname": "YouTube Music ReVanced Extended (6.28.52)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1175227755059740672/com.google.android.apps.youtube.music_6.28.52-62852230.apk?ex=656a7723&is=65580223&hm=51dce329ac2072af99346ab13d6071b4a1ef5d2063c054c1a4bee887fd1886ad&",
+                "hash": "b027d39db0c0ba168ba32286837f588ef96986a26481ac7ab7eebb63c750b75b",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_extended_",
