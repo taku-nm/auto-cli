@@ -253,7 +253,7 @@ if not defined c_choice goto custom_missing
 if %c_choice% geq 1 if %c_choice% leq %k% ( 
     call :fetchAppJson "%inputJson%" %c_choice%
     echo Downloading !fname!
-    call :downloadWithFallback !fname! !link! !hash!
+    call :downloadWithFallback "!fname!" "!link!" "!hash!"
 	 move /y "!fname!" "..\revanced-cli-input\input.apk" > nul 2> nul
 	 echo [92m input.apk placed in revanced-cli-input [0m
  )
