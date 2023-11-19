@@ -1,33 +1,32 @@
 {
-    "batVersion": "3.2",
-    "downloads": {
-        "tools": {
-            "cli": {
-                "fname": "revanced-cli-4.0.1-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.0.1/revanced-cli-4.0.1-all.jar",
-                "hash": "48ad04fcf3c7cdf7fddd3e52e3fc35fae9c4b6b7948e990cbb5d79154d181006"
-            },
-            "patches": {
-                "fname": "revanced-patches-2.193.0.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.193.0/revanced-patches-2.193.0.jar",
-                "hash": "101f682361438a4af5d56c01dbd2020da5e59bc6a79c55648db22981575e1e84"
-            },
-            "integrations": {
-                "fname": "revanced-integrations-0.119.0.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.119.0/revanced-integrations-0.119.0.apk",
-                "hash": "fe4eb9498b677030e180c7e93740a66ab6156e33fc0e7b40503f97f8965d79d9"
-            }
-        },
-        "apps": [
-            {
-                "fname": null
-            },
-	        {
-                "fname": "debug",
-                "dname": "This script is deprecated. Use a newer version."
-            }
-        ],
-        "extras": {
-        }
-    }
+  "batVersion": "v3.3",
+  "downloads": {
+    "tools": {
+      "cli": {
+        "fname": "revanced-cli-4.0.1-all.jar",
+        "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.0.1/revanced-cli-4.0.1-all.jar",
+        "hash": "48ad04fcf3c7cdf7fddd3e52e3fc35fae9c4b6b7948e990cbb5d79154d181006"
+      },
+      "patches": {
+        "fname": "revanced-patches-2.193.0.jar",
+        "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.193.0/revanced-patches-2.193.0.jar",
+        "hash": "101f682361438a4af5d56c01dbd2020da5e59bc6a79c55648db22981575e1e84"
+      },
+      "integrations": {
+        "fname": "revanced-integrations-0.119.0.apk",
+        "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.119.0/revanced-integrations-0.119.0.apk",
+        "hash": "fe4eb9498b677030e180c7e93740a66ab6156e33fc0e7b40503f97f8965d79d9"
+      }
+    },
+    "apps": [
+      {
+        "fname": null
+      },
+      {
+        "fname": "debug",
+        "dname": "This script is deprecated. Use a newer version."
+      }
+    ],
+    "extras": {}
+  }
 }
