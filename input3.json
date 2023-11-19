@@ -174,9 +174,9 @@
             },
 			{
                 "fname": "Twitch.apk",
-                "dname": "Twitch (17.1.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1175803656029876365/tv.twitch.android.app_17.1.0-1701006.apk?ex=656c8f7c&is=655a1a7c&hm=ecbdd4f2894f3ac8f8b13ad5080fefb54fdfdc08dc63bb7200155e7fcfdcffaa&",
-                "hash": "82ba23b20ea1ae0c9882beb77878c0a6b59b42e265673ad667d6a334a1a16d27",
+                "dname": "Twitch (16.1.0)",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159601275801968690/tv.twitch.android.app_16.1.0-1601000.apk?ex=655fc258&is=654d4d58&hm=0f1de16f5ccd2fb2ee3bd3f0384d9e381f8fa47028bedb9000daadf861632f2b&",
+                "hash": "f4610c8c8688c9dbf74de4facf5d310e10b7b54ecccf051d04533999bf011a45",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
