@@ -8,14 +8,14 @@
                 "hash": "8970a59ddba5d63b5ad42ad801cc666b8705c2d9a8128b5d8405826bf078707b"
             },
             "patches": {
-                "fname": "revanced-patches-2.196.0.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.196.0/revanced-patches-2.196.0.jar",
-                "hash": "1a93e75078daf2ae30f22b15fc2b5847ea234009349053d3130c1e1faf4e62d3"
+                "fname": "revanced-patches-2.198.0.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.198.0/revanced-patches-2.198.0.jar",
+                "hash": "72061da390c2aec00d5abae11faf27b585da8ba8a66226e614d83e4ced0a5a51"
             },
             "integrations": {
-                "fname": "revanced-integrations-0.121.0.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.121.0/revanced-integrations-0.121.0.apk",
-                "hash": "31c1699673406dd9080adcc9b591da34ee69aee777fe89e9daa7b6e39933b4b8"
+                "fname": "revanced-integrations-0.122.1.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.122.1/revanced-integrations-0.122.1.apk",
+                "hash": "d98642a79c600f035faa6fbf302414e3c23c261dba759086b2e8ebe8dfb1b5b3"
             },
             "JDK": {
                 "fname": "jdk.zip",
@@ -85,9 +85,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (Stock logo) (18.38.44)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1160415681360167023/com.google.android.youtube_18.38.44-1540236736.apk?ex=6562b8d1&is=655043d1&hm=fe80807601f1ab57235983311fe0d85628679444a9484f44fa78c9d4ead52452&",
-                "hash": "87b552a02da71b96421df31277e16c07718d14d158104763fabfcf08b04e72e2",
+                "dname": "YouTube (Stock logo) (18.45.41)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1175227410728370237/com.google.android.youtube_18.45.41-1541148096.apk?ex=656a76d1&is=655801d1&hm=1bce473a33d526de530c8c20e1b65ae4fa6dd32fa16dadd5fd2f91d4a9b3663a&",
+                "hash": "b1b73fbb8e10294ef8098ffba780a8a305545d07b3369d996367ff028189570f",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -106,9 +106,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (ReVanced logo) (18.38.44)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1160415681360167023/com.google.android.youtube_18.38.44-1540236736.apk?ex=6562b8d1&is=655043d1&hm=fe80807601f1ab57235983311fe0d85628679444a9484f44fa78c9d4ead52452&",
-                "hash": "87b552a02da71b96421df31277e16c07718d14d158104763fabfcf08b04e72e2",
+                "dname": "YouTube (ReVanced logo) (18.45.41)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1175227410728370237/com.google.android.youtube_18.45.41-1541148096.apk?ex=656a76d1&is=655801d1&hm=1bce473a33d526de530c8c20e1b65ae4fa6dd32fa16dadd5fd2f91d4a9b3663a&",
+                "hash": "b1b73fbb8e10294ef8098ffba780a8a305545d07b3369d996367ff028189570f",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -174,9 +174,9 @@
             },
 			{
                 "fname": "Twitch.apk",
-                "dname": "Twitch (16.1.0)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159601275801968690/tv.twitch.android.app_16.1.0-1601000.apk?ex=655fc258&is=654d4d58&hm=0f1de16f5ccd2fb2ee3bd3f0384d9e381f8fa47028bedb9000daadf861632f2b&",
-                "hash": "f4610c8c8688c9dbf74de4facf5d310e10b7b54ecccf051d04533999bf011a45",
+                "dname": "Twitch (17.1.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1175803656029876365/tv.twitch.android.app_17.1.0-1701006.apk?ex=656c8f7c&is=655a1a7c&hm=ecbdd4f2894f3ac8f8b13ad5080fefb54fdfdc08dc63bb7200155e7fcfdcffaa&",
+                "hash": "82ba23b20ea1ae0c9882beb77878c0a6b59b42e265673ad667d6a334a1a16d27",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
