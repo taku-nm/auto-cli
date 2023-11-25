@@ -8,14 +8,14 @@
                 "hash": "8970a59ddba5d63b5ad42ad801cc666b8705c2d9a8128b5d8405826bf078707b"
             },
             "patches": {
-                "fname": "revanced-patches-2.199.0.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.199.0/revanced-patches-2.199.0.jar",
-                "hash": "2090c54999fe4079aec194f8991cad1a591bb7295ebf1663df677ca04e4184b2"
+                "fname": "revanced-patches-2.201.0.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v2.201.0/revanced-patches-2.201.0.jar",
+                "hash": "bebbc2906df0fb9107ae63a80922b7b32fc2d298e3700540e32374660b364e2e"
             },
             "integrations": {
-                "fname": "revanced-integrations-0.123.0.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.123.0/revanced-integrations-0.123.0.apk",
-                "hash": "26e24fd6bd8e0f569a5cca512ec8d5c84536bf7273148a4c04b4f6b20932adda"
+                "fname": "revanced-integrations-0.124.0.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v0.124.0/revanced-integrations-0.124.0.apk",
+                "hash": "fe04cc900fc24740106a089c3b98e882965b1c6ab95fa099170dadd0cbb65cc1"
             },
             "JDK": {
                 "fname": "jdk.zip",
@@ -69,14 +69,14 @@
                 "hash": "f80e93eb6b69dd3f534266ade341160cca8f2d1f78c8e18c5b85248a9f4fe280"
             },
             "patches": {
-                "fname": "revanced-patches-2.196.7.jar",
-                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.196.7/revanced-patches-2.196.7.jar",
-                "hash": "90841abadbd1e8169939f5a576d0fdf9a9da2df81003c84c2bc6dcfc84c988f5"
+                "fname": "revanced-patches-2.199.1.jar",
+                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.199.1/revanced-patches-2.199.1.jar",
+                "hash": "1b4d79e1441e36670d514919763ce24fa5edbe46a690aaaa641bfa079ba26979"
             },
             "integrations": {
-                "fname": "revanced-integrations-0.121.7.apk",
-                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.121.7/revanced-integrations-0.121.7.apk",
-                "hash": "a3cd57787259a66e304eb81741b0723fcd3cabb9205d7554057903f182af9711"
+                "fname": "revanced-integrations-0.123.1.apk",
+                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.123.1/revanced-integrations-0.123.1.apk",
+                "hash": "e3e479c8cd3f1f61b6237ee0a3e863a95dc754b0dbc11b630e4831514ea879bd"
             }
         },
         "apps": [
