@@ -625,7 +625,7 @@ echo  Download any of them now?
 echo [93m Format your answer like this: 1, 2  [0m etc... 
 echo.
 set eC=
-set /p eC=Leave empty to skip. Press enter to confirm. 
+set /p eC=[93m Leave empty to skip. [0m Press enter to confirm. 
 if not defined eC EXIT /B 0
 set "eC_lastChar=!eC:~-1!"
 if "!eC_lastChar!"=="," echo [91m Invalid formatting. Remove the comma at the end. [0m && goto :extras
