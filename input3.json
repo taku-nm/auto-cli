@@ -264,6 +264,32 @@
                 ]
             },
             {
+                "fname": "Slide.apk",
+                "dname": "Slide for Reddit (6.7.1)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=658b56bd&is=6578e1bd&hm=cae45adcfecb9a9ba2b189708fb03d42a58ea9f20d8a89fc0e9a1dd2b01d1191&",
+                "hash": "68b5cd83dc4be19e627fb9b0052877cf36930856b013a9564c17f61ddab7cc30",
+                "patches": " ",
+                "uri" : "http://www.ccrama.me",
+                "toolMod" : " ",
+                "cmdMod" : " ",
+                "extras" : [
+                    { "enabled": false }
+                ]
+            },
+            {
+                "fname": "BaconReader.apk",
+                "dname": "BaconReader (6.1.4)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184265546309570641/com.onelouder.baconreader_6.1.4-183.apk?ex=658b583c&is=6578e33c&hm=ba1768cdb32961a278d843dcbbc5cf4d54325edf9c57ec98e3bac085e129f796&",
+                "hash": "c8a66396f027695b6d0dbb474b849b04775c4b1238a3bdc83d2dcdaa7b7a997b",
+                "patches": " ",
+                "uri" : "http://baconreader.com/auth",
+                "toolMod" : " ",
+                "cmdMod" : " ",
+                "extras" : [
+                    { "enabled": false }
+                ]
+            },
+            {
                 "fname": "RiF.apk",
                 "dname": "Rif for Reddit (5.6.22)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk?ex=657afdf2&is=656888f2&hm=8cf68859d83451fefa926aa72565d628b2120359d2c9c6506b3ded033837e888&",
