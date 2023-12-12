@@ -60,7 +60,7 @@ REM create link to install dir
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
 
-set "MODE=main"
+set "MODE=dev"
 :modeChange
 
 REM refresh input json 
@@ -346,8 +346,8 @@ goto end
 
 :end
 rmdir /s /q C:\revanced-cli-keystore\ > nul 2> nul
-rmdir /s /q revanced-resource-cache\ > nul 2> nul
-del .\options.json > nul 2> nul
+rmdir /s /q PATCHED_!keyString!-resource-cache\ > nul 2> nul
+del PATCHED_!keyString!-options.json > nul 2> nul
 del !fname! > nul 2> nul
 if exist PATCHED_*.apk (
     copy /y "PATCHED_*.apk" "%localappdata%\revanced-cli\apk_backups" > nul 2> nul

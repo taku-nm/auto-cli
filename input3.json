@@ -65,17 +65,17 @@
         "YT_extended_tools": {
             "cli": {
                 "fname": "revanced-extended-cli-4.3.1-all.jar",
-                "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.3.1/revanced-extended-cli-4.3.1-all.jar",
+                "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.3.1/revanced-cli-4.3.1-all.jar",
                 "hash": "c4bff13c425fbbd9d70812203ae2f6a31bde1975ec1df40d03830f2c99582af9"
             },
             "patches": {
                 "fname": "revanced-extended-patches-2.204.1.jar",
-                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.204.1/revanced-extended-patches-2.204.1.jar",
+                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.204.1/revanced-patches-2.204.1.jar",
                 "hash": "d6a675925b943329a3ee84da821b38ab459fb22d367cdc2beaff7b0c50a8e2e1"
             },
             "integrations": {
                 "fname": "revanced-extended-integrations-0.127.1.apk",
-                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.127.1/revanced-extended-integrations-0.127.1.apk",
+                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.127.1/revanced-integrations-0.127.1.apk",
                 "hash": "9760b861e39495a326c1708c7845b04a6f3b28140fdccb330dae5c678ffe66cf"
             }
         },
