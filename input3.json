@@ -251,6 +251,19 @@
                 ]
             },
             {
+                "fname": "Boost.apk",
+                "dname": "Boost for Reddit (1.12.12)",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154220795447488552/com.rubenmayayo.reddit_1.12.12-210011212.apk?ex=65838e62&is=65711962&hm=3c21eebc5a8059865b182a1cd2a6604c31c052f274322adf02c3a2fcca0847ca&",
+                "hash": "a68c22d632a5dd1f446c3759a171c7dbb9edab2afc3c2f87e39323f198606742",
+                "patches": " ",
+                "uri" : "http://rubenmayayo.com",
+                "toolMod" : " ",
+                "cmdMod" : " ",
+                "extras" : [
+                    { "enabled": false }
+                ]
+            },
+            {
                 "fname": "RiF.apk",
                 "dname": "Rif for Reddit (5.6.22)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk?ex=657afdf2&is=656888f2&hm=8cf68859d83451fefa926aa72565d628b2120359d2c9c6506b3ded033837e888&",
