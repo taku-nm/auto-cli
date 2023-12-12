@@ -36,6 +36,7 @@ Clean-up:
 <details>
   <summary>A visual demonstration</summary>
 
-![atuo-cli-2-screen](https://github.com/taku-nm/auto-cli/assets/23640508/7e09c180-ed6d-4567-aefb-61fa6fdf64e3)
+
+![auto-cli-screenshot-new](https://github.com/taku-nm/auto-cli/assets/23640508/81e545af-86b1-400f-a58a-4ae385164797)
 
 </details>
