@@ -354,7 +354,8 @@ if exist PATCHED_*.apk (
     ren "%localappdata%\revanced-cli\apk_backups\PATCHED_*.apk"  "PATCHED_* %time:~0,2%%time:~3,2%-%DATE:/=%.backup" > nul 2> nul
     echo.
     echo  [92m DONE! [0m
-    echo  [92m Transfer the PATCHED app found in the revanced-cli-output folder to your phone and open to the apk to install it [0m
+    echo  [92m Transfer the PATCHED app to your phone and open to the apk to install it [0m
+	 echo  [92m Location: %CD%\PATCHED_!fname! [0m
     if /i "!extra!!" == "true" call :extras
     echo.
     echo  bat Version %batVersion%
