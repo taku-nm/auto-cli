@@ -1,4 +1,3 @@
-@chcp 65001 > nul
 @echo off
 setlocal enabledelayedexpansion
 echo The source APKs are downloaded from discord cdn. They originate from apkmirror.
@@ -7,6 +6,23 @@ echo Every file's integrity can be checked using checksums.
 echo If you wish to abort, close this window.
 echo.
 pause
+
+FOR /F "tokens=2 delims=:." %%C IN ('chcp') DO (
+	if %%C equ 708 (
+      chcp 65001 > nul
+	) else if %%C equ 720 (
+		chcp 65001 > nul
+	) else if %%C equ 862 (
+		chcp 65001 > nul
+	) else if %%C equ 864 (
+		chcp 65001 > nul
+	) else if %%C equ 1255 (
+		chcp 65001 > nul
+	) else if %%C equ 1256 (
+		chcp 65001 > nul
+	)
+)
+
 
 REM set script location to working dir
 pushd "%~dp0"
