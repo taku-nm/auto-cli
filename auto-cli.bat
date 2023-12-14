@@ -1,3 +1,4 @@
+@chcp 65001 > nul
 @echo off
 setlocal enabledelayedexpansion
 echo The source APKs are downloaded from discord cdn. They originate from apkmirror.
