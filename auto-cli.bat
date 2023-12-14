@@ -371,12 +371,25 @@ if exist PATCHED_*.apk (
 	 echo.
     echo  [91m FATAL [0m
 	 echo  [91m Something must've gone wrong during patching. Contact taku on ReVanced discord or open an issue on GitHub. [0m
-	 if '%choice%' == 'A' (
-		echo  Since you've used the custom option, it is likely that your chosen CLI version and patches don't work with each other.
-		echo  Make sure to include the versions of what you've been using with your help request.
-	 )
+	 echo.
 	 echo  Include a screenshot of the entire terminal.
+	 echo  Debug info:
+	 if '%choice%' == 'A' (
+		echo.
+		echo  Since you've used the custom option, it is likely that your chosen CLI version and patches don't work with each other.
+		echo  [93mMake sure to include the versions of what you've been using with your help request.[0m
+		echo  CLI: %CLI%
+		echo  Patches: %PATCHES%
+		echo  Integrations: %INTEGRATIONS%
+		echo  Selection: %SELECTION%
+		echo  Options: %OPTIONS%
+		echo  Output: %OUTPUT%
+		echo  c_Choice: %c_choice%
+	 )
+	 echo.
 	 echo  bat Version %batVersion%
+	 echo  Choice: %choice%
+	 echo  Appdata/Local: %localappdata%
 	 echo.
     echo  Pressing any key will close this window.
     pause > nul 2> nul
