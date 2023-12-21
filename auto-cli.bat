@@ -127,18 +127,7 @@ if exist "%localappdata%\revanced-cli\revanced-curl\" (
 	del "%localappdata%\revanced-cli\curl.zip"
 )
 set "CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe"
-call :fetchToolsJson "%inputJson%" CRT
-if exist "%localappdata%\revanced-cli\revanced-curl\!fname!" (
-	set "CURLcert_ps=!PSlocalData!\revanced-cli\revanced-curl\!fname!"
-	FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!CURLcert_ps!' | Select-Object -ExpandProperty Hash"`) DO ( SET CURLcert_h=%%F )
-	if /i not "!CURLcert_h!" == "!hash! " (
-		goto :dlCert
-   )
-) else (
-	:dlCert
-   powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest '!link!' -OutFile '!PSlocalData!\revanced-cli\revanced-curl\!fname!'"
-)
-set "CURLcert=%localappdata%\revanced-cli\revanced-curl\!fname!"
+set "CURLcert=%localappdata%\revanced-cli\revanced-curl\curl-ca-bundle.crt"
 set "CURL_ps=!PSlocalData!\revanced-cli\revanced-curl\curl.exe"
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '%CURL_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
 if /i "%CURL_h%" == "7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599290D1 " (
