@@ -114,6 +114,25 @@ if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [93m Available version: %jsonBatVersion% [0m
 )
 
+REM wget setup
+if exist "%localappdata%\revanced-cli\revanced-wget\" (
+   echo  [92m Wget found! [0m
+) else (
+   echo  [93m No Wget found... Downloading... [0m
+	mkdir "%localappdata%\revanced-cli\revanced-wget\" > nul 2> nul
+   powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest 'https://eternallybored.org/misc/wget/1.21.4/64/wget.exe' -OutFile '!PSlocalData!\revanced-cli\revanced-wget\wget.exe'"
+)
+set "WGET=%localappdata%\revanced-cli\revanced-wget\wget.exe"
+set "WGET_ps=!PSlocalData!\revanced-cli\revanced-wget\wget.exe"
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '%WGET_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET WGET_h=%%F )
+if /i "%WGET_h%" == "6136e66e41acd14c409c2d3eb10d48a32febaba04267303d0460ed3bee746cc5 " (
+	echo  [92m Wget integrity validated! [0m
+) else (
+	echo  [93m Wget integrity invalid... [0m
+	rmdir /s /q "%localappdata%\revanced-cli\revanced-wget\" > nul 2> nul
+	echo  [93m Wget could not be validated... All downloads will likely revert to cURL or invoke webrequest... [0m
+)
+
 REM curl setup
 if exist "%localappdata%\revanced-cli\revanced-curl\" (
    echo  [92m cURL found! [0m
