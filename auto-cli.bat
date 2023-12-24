@@ -557,27 +557,39 @@ pause > nul 2> nul
 EXIT
 
 :downloadWithFallback
-set second_check=0
-"!CURL!" --cacert "!CURLcert!" -L "%~2" --output "%~1"
-:fallback_2
+set fallback=0
+"!WGET!" -q --show-progress -O "%~1" "%~2"
 set ram_h=
 set "ram_path=%~1"
 set "ram_path=!ram_path:'=''!"
+:fallback
+if '!fallback!'=='1' ( "!CURL!" --cacert "!CURLcert!" -L "%~2" --output "%~1" )
+if '!fallback!'=='2' ( powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest '%~2' -OutFile '!ram_path!'" )
 if "!MODE!" == "dev" (
 	echo ram_path !ram_path!
 	echo passed_value_1 "%~1"
 	echo passed_value_2 "%~2"
-) 
+)
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "%~3 " (
 	echo  [92m Integrity validated !ram_path! [0m
 ) else (
-	if '%second_check%'=='1' echo [91m FATAL : Download or integrity check for %~1 failed completely! [0m && goto downloadFail
-	set second_check=1
-	echo  [93m File integrity damaged... Something must've become corrupted during the download or curl had some issue... [0m
-	echo  Falling back to Invoke WebRequest... This might take a bit longer and doesn't give a nice status indication for the download.
-	powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest '%~2' -OutFile '!ram_path!'"
-	goto fallback_2
+	if '!fallback!'=='0' (
+       echo  [93m File integrity damaged... Something must've become corrupted during the download or wget had some issue... [0m
+		 echo Falling back to cURL...
+		 set /a "fallback=!fallback!+1"
+		 goto fallback
+	)
+	if '!fallback!'=='1' (
+       echo  [93m File integrity still damaged... Something must've become corrupted during the download or cURL had some issue... [0m
+		 echo Falling back to Invoke Webrequest...
+		 set /a "fallback=!fallback!+1"
+		 goto fallback
+	)
+	if '!fallback!'=='2' (
+		 echo [91m FATAL : Download or integrity check for %~1 failed completely! [0m
+		 goto downloadFail
+	)
 )
 EXIT /B 0
 
