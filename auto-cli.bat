@@ -372,7 +372,7 @@ if exist PATCHED_*.apk (
     echo.
     echo  [92m DONE! [0m
     echo  [92m Transfer the PATCHED app to your phone and open to the apk to install it [0m
-	 echo  [92m Location: %CD%\PATCHED_!fname! [0m
+	 if '%choice%' == 'A' ( echo  [92m Location: %CD%\PATCHED_!OUTPUT!.apk [0m ) else ( echo  [92m Location: %CD%\PATCHED_!fname! [0m )
     if /i "!extra!!" == "true" call :extras
     echo.
     echo  bat Version %batVersion%
