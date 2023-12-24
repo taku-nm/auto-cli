@@ -572,7 +572,7 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Comma
 if /i "%ram_h%" == "%~3 " (
 	echo  [92m Integrity validated !ram_path! [0m
 ) else (
-	if '%second_check%'=='1' echo [91m FATAL : Download or integrity check for !ram_path! failed completely! [0m && goto downloadFail
+	if '%second_check%'=='1' echo [91m FATAL : Download or integrity check for %~1 failed completely! [0m && goto downloadFail
 	set second_check=1
 	echo  [93m File integrity damaged... Something must've become corrupted during the download or curl had some issue... [0m
 	echo  Falling back to Invoke WebRequest... This might take a bit longer and doesn't give a nice status indication for the download.
