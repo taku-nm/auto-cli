@@ -8,14 +8,14 @@
                 "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
             },
             "patches": {
-                "fname": "revanced-patches-3.1.0.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v3.1.0/revanced-patches-3.1.0.jar",
-                "hash": "6a3cf49084dded9c6d93224ba7ef2481dc76685706d18f613eb41893b53de1b0"
+                "fname": "revanced-patches-3.2.0.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v3.2.0/revanced-patches-3.2.0.jar",
+                "hash": "cc047db11e49221adde109ad3b412e3aa432c2f6887dd42b01c2b2595ce69855"
             },
             "integrations": {
-                "fname": "revanced-integrations-1.0.0.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.0.0/revanced-integrations-1.0.0.apk",
-                "hash": "d9720e927908cc6f8c4d35cad459c9cf736c1552d6e605bbfaf00e5beb1cc55e"
+                "fname": "revanced-integrations-1.1.1-dev.1.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.1.1-dev.1/revanced-integrations-1.1.1-dev.1.apk",
+                "hash": "318bdbb2823176ac7eb33aec94c10788cc2c81d6fe65875ef7b7d9be26261cbe"
             },
             "JDK": {
                 "fname": "jdk.zip",
