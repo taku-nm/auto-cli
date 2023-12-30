@@ -7,6 +7,8 @@ echo If you wish to abort, close this window.
 echo.
 pause
 
+set batVersion=3.7
+
 FOR /F "tokens=2 delims=:." %%C IN ('chcp') DO (
 	if %%C equ 708 (
       chcp 65001 > nul
@@ -133,7 +135,6 @@ if exist "%localappdata%\revanced-cli\input.json" (
 )
 
 REM script version check
-set batVersion=3.7
 for /f %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).batVersion"') do ( set "jsonBatVersion=%%i" )
 if /i '%batVersion%' == '%jsonBatVersion%' (
 	echo  [92m Script up-to-date!   Version %batVersion% [0m
