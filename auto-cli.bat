@@ -600,7 +600,7 @@ if "!MODE!" == "dev" (
 )
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '!ram_path!' | Select-Object -ExpandProperty Hash"`) DO ( SET ram_h=%%F )
 if /i "%ram_h%" == "%~3 " (
-	echo  [92m Integrity validated !ram_path! [0m
+	echo  [92m Integrity validated %~1 [0m
 ) else (
 	if '!fallback!'=='0' (
        echo  [93m File integrity damaged... Something must've become corrupted during the download or wget had some issue... [0m
