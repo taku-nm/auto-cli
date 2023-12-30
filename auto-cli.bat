@@ -55,6 +55,15 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Comma
 	 )
 )
 
+REM check if PATH is greater than 2048 to avoid unexpected behaviour
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "$env:PATH.Length"`) DO ( 
+    if %%F geq 2048 (
+	   echo.
+		echo  [93m Warning: Your current PATH variable is over 2047 characters long. Current value: %%F [0m
+		echo  [93m If you encounter the script failing, this can be the cause. No immediate actions required. [0m
+	 )
+)
+
 REM pre-escape usernames with single quotes
 set "localappdata=%localappdata%"
 set "PSlocalData=%localappdata%"
