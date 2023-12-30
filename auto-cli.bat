@@ -27,6 +27,26 @@ FOR /F "tokens=2 delims=:." %%C IN ('chcp') DO (
 REM set script location to working dir
 pushd "%~dp0"
 
+REM check if powershell is present
+set PS_check=0
+:PScheck
+where powershell >nul 2>nul
+if not !errorlevel! equ 0 (
+	if !PS_check!==1 (
+		echo  [91m FATAL: Powershell is missing. [0m
+		echo  [91m Powershell was not found in PATH nor its default location. [0m
+		echo  [91m The script cannot function without powershell being accessible. [0m
+		echo.
+		pause > nul 2> nul
+		EXIT
+	)
+	echo.
+	echo  [93m Warning: Powershell is missing from your PATH variable. Attemping to fix for this session. [0m
+   set "PATH=!PATH!;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\"
+	set PS_check=1
+	goto :PScheck
+)
+
 REM check if current directory contains non-ASCII characters
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "'%cd%' -match '[^\x00-\x7F]'"`) DO ( 
 	 if "%%F" == "True" (
