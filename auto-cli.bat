@@ -146,7 +146,6 @@ if exist "%localappdata%\revanced-cli\revanced-curl\" (
 	del "%localappdata%\revanced-cli\curl.zip"
 )
 set "CURL=%localappdata%\revanced-cli\revanced-curl\curl.exe"
-set "CURLcert=%localappdata%\revanced-cli\revanced-curl\curl-ca-bundle.crt"
 set "CURL_ps=!PSlocalData!\revanced-cli\revanced-curl\curl.exe"
 FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "Get-FileHash -Algorithm SHA256 '%CURL_ps%' | Select-Object -ExpandProperty Hash"`) DO ( SET CURL_h=%%F )
 if /i "%CURL_h%" == "7B27734E0515F8937B7195ED952BBBC6309EE1EEF584DAE293751018599290D1 " (
@@ -563,7 +562,7 @@ set ram_h=
 set "ram_path=%~1"
 set "ram_path=!ram_path:'=''!"
 :fallback
-if '!fallback!'=='1' ( "!CURL!" --cacert "!CURLcert!" -L "%~2" --output "%~1" )
+if '!fallback!'=='1' ( "!CURL!" -k -L "%~2" --output "%~1" )
 if '!fallback!'=='2' ( powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest '%~2' -OutFile '!ram_path!'" )
 if "!MODE!" == "dev" (
 	echo ram_path !ram_path!
