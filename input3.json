@@ -204,6 +204,19 @@
                 ]
             },
 			{
+                "fname": "Trakt.apk",
+                "dname": "Trakt (1.1.1)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1191875716799811584/tv.trakt.trakt_1.1.1-71.apk?ex=65a707c2&is=659492c2&hm=d960f360ba5c0b73c522c774192399a7c39c47276c769a35a12b74b6dae00db1&",
+                "hash": "0cbf4602bf3885e150d247cfdadab188bd5a9c511ec607c70c1848e0fd4a0631",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : " ",
+                "cmdMod" : " ",
+                "extras" : [
+                    { "enabled": false }
+                ]
+            },
+			{
                 "fname": "Instagram.apk",
                 "dname": "Instagram (275.0.0.27.98)",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk?ex=659eff51&is=658c8a51&hm=18f4c92d559f8e6d8a6f81834374180ca32fe8e6de72402fec8f8db4baf3d56c&",
