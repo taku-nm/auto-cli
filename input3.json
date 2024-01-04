@@ -24,7 +24,7 @@
             },
             "BCS": {
                 "fname": "bcprov-jdk18on-176.jar",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=65970693&is=65849193&hm=6b0c9bd81c9a1cdb5e00a9e44b432bb6b4f80b0509c5be8667e5d5e9f3616ef9&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=65a04113&is=658dcc13&hm=aca86a6edc96e9378d27b656f4cc83cbafafe86535316b8910c67dce1643b0f0&",
                 "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
             },
             "CRT": {
@@ -258,7 +258,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=65970445&is=65848f45&hm=3b6ccfb43f0ddf3e36c3793c3459ebdf3a98c71f8acab860028346a55d2eb474&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=65a03ec5&is=658dc9c5&hm=a6ea44be6275496f4bbbe9477b51bc474ba1b9770de7a01aff3f6a7e7614e1e3&",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
@@ -310,7 +310,7 @@
             {
                 "fname": "RiF.apk",
                 "dname": "Rif for Reddit (5.6.22)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk?ex=6596ad72&is=65843872&hm=6c27591bbb4a559b03a561d0b8d9fc826f9b7ceb566fc824da73bc7fb3c2e0a5&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk?ex=65a92272&is=6596ad72&hm=27b85aae23b20f0a035b5bf982e21c8f6ffe4615b47893fff39146149f65d3c4&",
                 "hash": "88d39f859c850f51542c6a12d8bd3c79706debe0f1dff061ed0fe32b3dc688e1",
                 "patches": " ",
                 "uri" : "redditisfun://auth",
@@ -336,7 +336,7 @@
             {
                 "fname": "Lightroom.apk",
                 "dname": "Lightroom (9.0.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1172175597955465216/com.adobe.lrmobile_9.0.1-709001001.apk?ex=6596bb98&is=65844698&hm=b3665cc659639e3b8415c396859e67df8ff3fea3de891a7b73a079256b88fcbe&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1172175597955465216/com.adobe.lrmobile_9.0.1-709001001.apk?ex=65a93098&is=6596bb98&hm=df4d51e863b883ef5778d39f1221d0b110c5cd7b6d0ad30187523ae39200697b&",
                 "hash": "5226644711b6e4f1fe809eb432c7d9a163ba88619b5393a0243486e37f153462",
                 "patches": " ",
                 "uri" : " ",
