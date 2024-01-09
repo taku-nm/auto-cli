@@ -180,7 +180,7 @@
 			{
                 "fname": "Twitch.apk",
                 "dname": "Twitch (16.9.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1179519043204550718/tv.twitch.android.app_16.9.1-1609016.apk?ex=659efdb6&is=658c88b6&hm=4bcd68beb2a749d613e089cf51b727ebc17df3d3b4bae3f4a420731b51fe5d3d&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1179519043204550718/tv.twitch.android.app_16.9.1-1609016.apk?ex=65a83836&is=6595c336&hm=7c2d1c4e222102f2b37ab6a05c6fe1bd210b4dc0d8943585884a7770fdbad6b6&",
                 "hash": "137ee0a1e474c2a57f7db0a869f7d78d8225d3468ead7afbbf0d5d56cf29545e",
                 "patches": " ",
                 "uri" : " ",
@@ -219,7 +219,7 @@
 			{
                 "fname": "Instagram.apk",
                 "dname": "Instagram (275.0.0.27.98)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk?ex=659eff51&is=658c8a51&hm=18f4c92d559f8e6d8a6f81834374180ca32fe8e6de72402fec8f8db4baf3d56c&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156690330989637652/com.instagram.android_275.0.0.27.98-367507879.apk?ex=65a839d1&is=6595c4d1&hm=deb944ff2003e8e9e20827cf44da67c142d0eb361c3a3cb49f39bc38c06a189c&",
                 "hash": "8957feb085f5a6acd20b284853c23f8b6c9c2e554262bdbee76d75a6e5e7fa4b",
                 "patches": " ",
                 "uri" : " ",
@@ -284,7 +284,7 @@
             {
                 "fname": "Slide.apk",
                 "dname": "Slide for Reddit (6.7.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=659dcbbd&is=658b56bd&hm=bbd5eccf2ac6e74432176ca4c8a094ede615b8b51ce94704eecca20c860af189&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=65a7063d&is=6594913d&hm=9c516de86bfa7751a6a61929a9af802ff408e0fa3ffbb338afdf368ad227a473&",
                 "hash": "68b5cd83dc4be19e627fb9b0052877cf36930856b013a9564c17f61ddab7cc30",
                 "patches": " ",
                 "uri" : "http://www.ccrama.me",
@@ -297,7 +297,7 @@
             {
                 "fname": "BaconReader.apk",
                 "dname": "BaconReader (6.1.4)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184265546309570641/com.onelouder.baconreader_6.1.4-183.apk?ex=659dcd3c&is=658b583c&hm=6e7d8ab8a118e7ffa32928af47dc78ae6dd5b8ab783af2f442e19f3302df5921&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184265546309570641/com.onelouder.baconreader_6.1.4-183.apk?ex=65a707bc&is=659492bc&hm=bb586f9064371d81e818458785dcddd8cfc92c1b9da94da0a32e4ba3367c994c&",
                 "hash": "c8a66396f027695b6d0dbb474b849b04775c4b1238a3bdc83d2dcdaa7b7a997b",
                 "patches": " ",
                 "uri" : "http://baconreader.com/auth",
