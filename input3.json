@@ -26,11 +26,6 @@
                 "fname": "bcprov-jdk18on-176.jar",
                 "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=65d7a013&is=65c52b13&hm=4222eb66735ecfd79c0d5a0648c8da3cf52705712de42ec4d385ec969caad91d&",
                 "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
-            },
-            "CRT": {
-                "fname": "10837820963.crt",
-                "link": "https://crt.sh/?d=10837820963",
-                "hash": "e5eef3fc03b1cc9799caeca9cdf1b617c7575b3038f5ad7cd27a83c0b9bbdeeb"
             }
         },
         "YT_android_5_tools": {
