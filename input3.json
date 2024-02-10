@@ -8,14 +8,14 @@
                 "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
             },
             "patches": {
-                "fname": "revanced-patches-4.0.2-dev.1.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v4.0.2-dev.1/revanced-patches-4.0.2-dev.1.jar",
-                "hash": "625fd73b2e711150270d3eff92c07ed19d0e47da5bcc8f08f9e1d241d73a2454"
+                "fname": "revanced-patches-4.3.0-dev.2.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v4.3.0-dev.2/revanced-patches-4.3.0-dev.2.jar",
+                "hash": "89c35b774fefa8e97743e75e6ffe9646cfeadaabf3472b84697fad5198ed1eac"
             },
             "integrations": {
-                "fname": "revanced-integrations-1.2.1-dev.1.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.2.1-dev.1/revanced-integrations-1.2.1-dev.1.apk",
-                "hash": "7c6fd5e056939da95dc7bd5a887aa01864af6ac40f6ffb5cbd1be37cf8be1b18"
+                "fname": "revanced-integrations-1.4.0-dev.2.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.4.0-dev.2/revanced-integrations-1.4.0-dev.2.apk",
+                "hash": "916e505e057699698842b011276ee87efb6aad72c42f78da35b1a5dd921ec982"
             },
             "JDK": {
                 "fname": "jdk.zip",
@@ -74,14 +74,14 @@
                 "hash": "c4bff13c425fbbd9d70812203ae2f6a31bde1975ec1df40d03830f2c99582af9"
             },
             "patches": {
-                "fname": "revanced-extended-patches-2.215.1.jar",
-                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.215.1/revanced-patches-2.215.1.jar",
-                "hash": "0fa3f93ab71ff3b3737b92fbf4533f3ebdc03c15ab1cd3962238ec177e34d17a"
+                "fname": "revanced-extended-patches-2.220.1.jar",
+                "link": "https://github.com/inotia00/revanced-patches/releases/download/v2.220.1/revanced-patches-2.220.1.jar",
+                "hash": "e71b26065ec9bd3f636d5c413995fe32eff21a244b6a2c511fb0006b058d6897"
             },
             "integrations": {
-                "fname": "revanced-extended-integrations-0.135.1.apk",
-                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.135.1/revanced-integrations-0.135.1.apk",
-                "hash": "9ba675dea2a70a8c4e0902b0c65937b57e659713579cb8fecf265ef77f97c856"
+                "fname": "revanced-extended-integrations-0.140.1.apk",
+                "link": "https://github.com/inotia00/revanced-integrations/releases/download/v0.140.1/revanced-integrations-0.140.1.apk",
+                "hash": "85d683c06199967c7c214bf542bab14e65408de643d1d68b73e243587d89a229"
             }
         },
         "apps": [
@@ -90,9 +90,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (Stock logo) (19.03.35)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1200914903368740926/com.google.android.youtube_19.03.35-1544019392.apk?ex=65d124a8&is=65beafa8&hm=58b1621f90e5c73e83df4c5b197f592010638e5863b2dccd7cb403c492bd0eca&",
-                "hash": "2d772e43e24b9570f0e03fe1bc656b5ec1600de607a73e877178ec6e1000a3c9",
+                "dname": "YouTube (Stock logo) (19.04.37)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205876992818417674/com.google.android.youtube_19.04.37.apk?ex=65d9f777&is=65c78277&hm=e8a1ad2b8714246431c18f9e3a330c3233539d4499a439f57a61b1a723cbddb0&",
+                "hash": "762a3ecb1b1c1ca45295fd028c2aabaf843af214f92592722e305e88f7a3e3f7",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -111,9 +111,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (ReVanced logo) (19.03.35)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1200914903368740926/com.google.android.youtube_19.03.35-1544019392.apk?ex=65d124a8&is=65beafa8&hm=58b1621f90e5c73e83df4c5b197f592010638e5863b2dccd7cb403c492bd0eca&",
-                "hash": "2d772e43e24b9570f0e03fe1bc656b5ec1600de607a73e877178ec6e1000a3c9",
+                "dname": "YouTube (ReVanced logo) (19.04.37)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205876992818417674/com.google.android.youtube_19.04.37.apk?ex=65d9f777&is=65c78277&hm=e8a1ad2b8714246431c18f9e3a330c3233539d4499a439f57a61b1a723cbddb0&",
+                "hash": "762a3ecb1b1c1ca45295fd028c2aabaf843af214f92592722e305e88f7a3e3f7",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -132,9 +132,9 @@
             },
 			{
                 "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music (Google Pixel) (6.31.55)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184203894981664908/com.google.android.apps.youtube.music_6.31.55-63155240-v8a.apk?ex=65d4f2d2&is=65c27dd2&hm=39feb31ff56c73ebb5c6759bea97586013b86d2768c335f2d1f32c7d51452074&",
-                "hash": "c29501448ef9f2a334ef5d7b2f417e1f744c863ecc9efca707f925f207912165",
+                "dname": "YouTube Music (Google Pixel / Galaxy S24) (6.37.50)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205878404176420975/com.google.android.apps.youtube.music_6.37.50-63750240-v8a.apk?ex=65d9f8c7&is=65c783c7&hm=5df545c157e06bde873d35cb534db16595a3b408427fddfbf0633d7ea2f12845&",
+                "hash": "2939c9a0b0670334a3aaa63ba226fa5ebfa625c6bf2f7eae4f51dd568fa04e1a",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -149,9 +149,9 @@
             },
 			{
                 "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music (other devices) (6.31.55)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184203787385180190/com.google.android.apps.youtube.music_6.31.55-63155230-v7a.apk?ex=65d4f2b8&is=65c27db8&hm=f36f46b72e69e56c9f1becad647f3a26abebb0f9c51b91b94ada9429b48a1cac&",
-                "hash": "9393ee5788271bd8451f7d45fd3cfbf373d16a19817579b2ef7a7886779d743e",
+                "dname": "YouTube Music (other devices) (6.37.50)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205878425106260040/com.google.android.apps.youtube.music_6.37.50-63750230-v7a.apk?ex=65d9f8cc&is=65c783cc&hm=e3313cc8ffaedb3171ecedafa88b93d555ece640ae166c4efb74e5618085bff2&",
+                "hash": "6415552e8eb1227b9fd5f998644fc65639254a75f40202a6c1e1b47c3dff9a80",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -192,9 +192,9 @@
             },
 			{
                 "fname": "Twitter.apk",
-                "dname": "Twitter (10.19.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184205760343855247/com.twitter.android_10.19.0-release.0-310190000.apk?ex=65d4f48e&is=65c27f8e&hm=701e79584b06659410e564d137e1180e8f34a7a251fe7a86af68ad31f5f7cb92&",
-                "hash": "1abe21795cc4ae369a92f209f5e6fe419090e29a850451965d0397db108ecfa6",
+                "dname": "Twitter (10.27.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205885585668177950/com.twitter.android_10.27.0-release.0-310270000.apk?ex=65d9ff77&is=65c78a77&hm=86373b489aea12a9a139c5005d7852f99a1b1f87df1310fa3c8e83ff027d9291&",
+                "hash": "aafba98ad3c0cf2fd67d34ed52de68de23db3339e6d57cc35dd94f60410a7267",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -244,9 +244,9 @@
             },
             {
                 "fname": "Infinity.apk",
-                "dname": "Infinity for Reddit (6.4.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184205364330242078/ml.docilealligator.infinityforreddit_6.4.1-142.apk?ex=65d4f430&is=65c27f30&hm=a704df2023c88f01e853bed2ac4be026d355cb4d1078b0b84fa862dccdafe668&",
-                "hash": "e08765ddabb757a2b9fb6ee626fcaba39bbf92dfbf1a47083704fa730e71e19d",
+                "dname": "Infinity for Reddit (7.0.0)",
+                "link": "https://github.com/Docile-Alligator/Infinity-For-Reddit/releases/download/v7.0.0/Infinity-v7.0.0.apk",
+                "hash": "49aa636801039723d500df2bd91affff46f1f7bc68e44b58b846a9ad3087a985",
                 "patches": " ",
                 "uri" : "infinity://localhost",
                 "toolMod" : " ",
@@ -411,9 +411,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube ReVanced Extended (18.45.43)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184204168097964323/com.google.android.youtube_18.45.43-1541152192.apk?ex=65d4f313&is=65c27e13&hm=3bc3994cda96c408a815e00a79baf142bfd2bdd230ad423ac869b0db614af844&",
-                "hash": "715c41c54795e532da27b91593c04cf21663573eb74073623ebca8b7d22d6eb4",
+                "dname": "YouTube ReVanced Extended (19.02.39)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205877303050108989/com.google.android.youtube_19.02.39-1543896512.apk?ex=65d9f7c1&is=65c782c1&hm=110401149f458b2db0d3af4e4705330260430d519fe5c7d409667d549325650e&",
+                "hash": "d8145a80f1f2a9ea44294868f8802bd324870e150446e772d64b1ae1ab8944a2",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_extended_",
@@ -432,9 +432,9 @@
             },
             {
                 "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music ReVanced Extended (6.31.55)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184203787385180190/com.google.android.apps.youtube.music_6.31.55-63155230-v7a.apk?ex=65d4f2b8&is=65c27db8&hm=f36f46b72e69e56c9f1becad647f3a26abebb0f9c51b91b94ada9429b48a1cac&",
-                "hash": "9393ee5788271bd8451f7d45fd3cfbf373d16a19817579b2ef7a7886779d743e",
+                "dname": "YouTube Music ReVanced Extended (6.33.52)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205877747352870952/com.google.android.apps.youtube.music_6.33.52-63352230.apk?ex=65d9f82b&is=65c7832b&hm=6d2d3fa120810d829d48c24f15145abe12cb72692c850e1b514768dad7df395b&",
+                "hash": "f7b447199f6781c416ecaebb8c7cbdbe3761901ac96379c511732c1cfc64c0b2",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_extended_",
