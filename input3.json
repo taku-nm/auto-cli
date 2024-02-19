@@ -201,7 +201,7 @@
 			{
                 "fname": "Trakt.apk",
                 "dname": "Trakt (1.1.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1191875716799811584/tv.trakt.trakt_1.1.1-71.apk?ex=65d52c42&is=65c2b742&hm=2eac9be3c4c50738062cd1b2d1deaf4fceb9fb1bb8a6e0248bd16f68fbde67ea&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1191875716799811584/tv.trakt.trakt_1.1.1-71.apk?ex=65de66c2&is=65cbf1c2&hm=68c7f4c0fb66ccaba548f606bcce9206fd06fa02a45afd7252a13fb09bae605c&",
                 "hash": "0cbf4602bf3885e150d247cfdadab188bd5a9c511ec607c70c1848e0fd4a0631",
                 "patches": " ",
                 "uri" : " ",
@@ -279,7 +279,7 @@
             {
                 "fname": "Slide.apk",
                 "dname": "Slide for Reddit (6.7.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=65d52abd&is=65c2b5bd&hm=1663639cf578e46e4ace70b318d9b4d2ecd8fd577ae2c02ee0235ae7f681d9d7&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=65de653d&is=65cbf03d&hm=02c44632070fb8c2396d27ab2843c77be756b5bdb9e3c0f480469369073556d0&",
                 "hash": "68b5cd83dc4be19e627fb9b0052877cf36930856b013a9564c17f61ddab7cc30",
                 "patches": " ",
                 "uri" : "http://www.ccrama.me",
@@ -292,7 +292,7 @@
             {
                 "fname": "BaconReader.apk",
                 "dname": "BaconReader (6.1.4)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184265546309570641/com.onelouder.baconreader_6.1.4-183.apk?ex=65d52c3c&is=65c2b73c&hm=1332c44428ab59a7cc4463cbcc74d264ecfa54b4307f54249457d097e9d91eac&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184265546309570641/com.onelouder.baconreader_6.1.4-183.apk?ex=65de66bc&is=65cbf1bc&hm=193bb5a75e4366d7bd6c8b4bbb880d49bd0dc08c0b4ffb5431ccc67011d846af&",
                 "hash": "c8a66396f027695b6d0dbb474b849b04775c4b1238a3bdc83d2dcdaa7b7a997b",
                 "patches": " ",
                 "uri" : "http://baconreader.com/auth",
