@@ -13,9 +13,9 @@
                 "hash": "f6d500d6d7d5e64abf4181e025575ee04a22155dc187f29abbd5702795fb6e55"
             },
             "integrations": {
-                "fname": "revanced-integrations-1.4.1-dev.1.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.4.1-dev.1/revanced-integrations-1.4.1-dev.1.apk",
-                "hash": "ced6237e70a5857e5fe1c485cb42fec9852c62478c54394121cd52004c6ed4f6"
+                "fname": "revanced-integrations-1.4.0.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.4.0/revanced-integrations-1.4.0.apk",
+                "hash": "ffc63cd2adbf11e9af49a21eb991ae7973ab8f709a9163785c5a937967aa9b88"
             },
             "JDK": {
                 "fname": "jdk.zip",
