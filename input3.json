@@ -407,7 +407,7 @@
                         "required" : true
                     },
                     { 
-                        "ename" : "seal",
+                        "ename" : "YTDLnis",
                         "required" : false
                     }
                 ]
@@ -428,7 +428,7 @@
                         "required" : true
                     },
                     { 
-                        "ename" : "seal",
+                        "ename" : "YTDLnis",
                         "required" : false
                     }
                 ]
@@ -452,6 +452,12 @@
                 "dname": "Seal (external downloader)",
                 "link": "https://github.com/JunkFood02/Seal/releases/download/v1.10.0/Seal-1.10.0-armeabi-v7a-release.apk",
                 "hash": "8565855d90e1dce3789bacd6b0df79432c138675deec78f31cbd7224c03a6551"
+            },
+            "YTDLnis": {
+                "fname": "YTDLnis.apk",
+                "dname": "YTDLnis (external downloader)",
+                "link": "https://github.com/deniscerri/ytdlnis/releases/download/v1.7.3.1/YTDLnis-1.7.3.1-armeabi-v7a-release.apk",
+                "hash": "d8fefc4ce208ab0ebfd230dc2c7f44acb76b6f3cdac2c92e135b1df1a99516c5"
             }
         }
     }
