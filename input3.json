@@ -393,9 +393,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube ReVanced Advanced (19.06.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1213909793324933120/com.google.android.youtube_19.06.36-1544414656.apk?ex=65f73098&is=65e4bb98&hm=d12ee0906d9a5fc38b553cce4c2d7de9fb916ddb42a95e9b588b2a78c8a960d2&",
-                "hash": "b28bebf7486ad38fae880aec81cb0f7cda17c83f1e8987fd8b3d330efe3738f1",
+                "dname": "YouTube ReVanced Advanced (19.05.36)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1214690855206785094/com.google.android.youtube_19.05.36-1544283584.apk?ex=65fa0803&is=65e79303&hm=e138c911294ed8413fd831bfada57486dfa02bd724e46679757ee700f4cbb5ac&",
+                "hash": "b1e3d5a6c76f95d405586d6a4aa9ad9a470103d08878884b574ed4beb8c2d256",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_Advanced_",
