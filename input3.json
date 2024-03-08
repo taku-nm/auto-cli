@@ -86,7 +86,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube (Stock logo) (19.04.37)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205876992818417674/com.google.android.youtube_19.04.37.apk?ex=65ec6c77&is=65d9f777&hm=5ebbcee672a82906f55717c2e3a8bda64196a67ed51cbf82675d8ca4ec05ec79&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205876992818417674/com.google.android.youtube_19.04.37.apk?ex=65f5a6f7&is=65e331f7&hm=61e7ff5124b0c294c898dbc97f0ddb906f01dafa4908f17dd03cfdc421075d92&",
                 "hash": "762a3ecb1b1c1ca45295fd028c2aabaf843af214f92592722e305e88f7a3e3f7",
                 "patches": " ",
                 "uri" : " ",
@@ -107,7 +107,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube (ReVanced logo) (19.04.37)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205876992818417674/com.google.android.youtube_19.04.37.apk?ex=65ec6c77&is=65d9f777&hm=5ebbcee672a82906f55717c2e3a8bda64196a67ed51cbf82675d8ca4ec05ec79&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205876992818417674/com.google.android.youtube_19.04.37.apk?ex=65f5a6f7&is=65e331f7&hm=61e7ff5124b0c294c898dbc97f0ddb906f01dafa4908f17dd03cfdc421075d92&",
                 "hash": "762a3ecb1b1c1ca45295fd028c2aabaf843af214f92592722e305e88f7a3e3f7",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
@@ -128,7 +128,7 @@
 			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (Google Pixel / Galaxy S24) (6.37.50)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205878404176420975/com.google.android.apps.youtube.music_6.37.50-63750240-v8a.apk?ex=65ec6dc7&is=65d9f8c7&hm=f22b9d55dbb652074fd7452832fcd5beed9ccfc867600b57c68e1e7d1dac7d67&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205878404176420975/com.google.android.apps.youtube.music_6.37.50-63750240-v8a.apk?ex=65f5a847&is=65e33347&hm=8c103b70883a70702e8382744a7a842a12d68966a59f1d6705539d0c88101fc8&",
                 "hash": "2939c9a0b0670334a3aaa63ba226fa5ebfa625c6bf2f7eae4f51dd568fa04e1a",
                 "patches": " ",
                 "uri" : " ",
@@ -145,7 +145,7 @@
 			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (other devices) (6.37.50)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205878425106260040/com.google.android.apps.youtube.music_6.37.50-63750230-v7a.apk?ex=65ec6dcc&is=65d9f8cc&hm=2aed4af16ad64d7d8b2525109afb3d627f2b9d9fd37f2c1ac2cc2549a618133b&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205878425106260040/com.google.android.apps.youtube.music_6.37.50-63750230-v7a.apk?ex=65f5a84c&is=65e3334c&hm=ca2d5df89595dbbfccc4f1af8bd4fc19d98b9a79478220314cc8b14f028c4e86&",
                 "hash": "6415552e8eb1227b9fd5f998644fc65639254a75f40202a6c1e1b47c3dff9a80",
                 "patches": " ",
                 "uri" : " ",
@@ -415,7 +415,7 @@
             {
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music ReVanced Advanced (6.33.52)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205877747352870952/com.google.android.apps.youtube.music_6.33.52-63352230.apk?ex=65ec6d2b&is=65d9f82b&hm=e4bdd7d965919feac8e0b3ce9454f7f476340c66de56ffe686230c314c3befab&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205877747352870952/com.google.android.apps.youtube.music_6.33.52-63352230.apk?ex=65f5a7ab&is=65e332ab&hm=23ae3fe8da110f39925d6cadf91811e22d7e863dfcced3658c541e925816e453&",
                 "hash": "f7b447199f6781c416ecaebb8c7cbdbe3761901ac96379c511732c1cfc64c0b2",
                 "patches": " ",
                 "uri" : " ",
