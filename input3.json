@@ -71,7 +71,7 @@
             "patches": {
                 "fname": "revanced-advanced-patches-2.220.9.jar",
                 "link": "https://github.com/YT-Advanced/ReX-patches/releases/download/v2.220.9/revanced-patches-2.220.9.jar",
-                "hash": "4bbde1a60b775876a0813bc77abafdff977fd384b762566f3d1d93baa4049dc5"
+                "hash": "a2fe410a7b31e700f96846a43348746247a2e95c16d5d96eeb571780a121589c"
             },
             "integrations": {
                 "fname": "revanced-advanced-integrations-0.146.0.apk",
