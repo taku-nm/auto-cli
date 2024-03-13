@@ -71,12 +71,12 @@
             "patches": {
                 "fname": "revanced-advanced-patches-2.220.9.jar",
                 "link": "https://github.com/YT-Advanced/ReX-patches/releases/download/v2.220.9/revanced-patches-2.220.9.jar",
-                "hash": "a2fe410a7b31e700f96846a43348746247a2e95c16d5d96eeb571780a121589c"
+                "hash": "58085407210af6d62afca93e7cee7e4a05f9fa85f4d0a47885f2561dfc95ee5c"
             },
             "integrations": {
                 "fname": "revanced-advanced-integrations-0.146.0.apk",
                 "link": "https://github.com/YT-Advanced/ReX-integrations/releases/download/v0.146.0/revanced-integrations-0.146.0.apk",
-                "hash": "398bb2e92e5c18d48b483d5d0b4b072d0b756dc8b9bca1d77a4ffef10be981e9"
+                "hash": "89f1de54bd3b1a69a2e12bffb61e156874ee34332e04060e7eb0761601490c5d"
             }
         },
         "apps": [
