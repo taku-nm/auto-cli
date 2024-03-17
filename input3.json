@@ -71,12 +71,12 @@
             "patches": {
                 "fname": "revanced-advanced-patches-2.220.9.jar",
                 "link": "https://github.com/YT-Advanced/ReX-patches/releases/download/v2.220.9/revanced-patches-2.220.9.jar",
-                "hash": "bac8465c3664fc8982cbb25a4f6fb6a0e2ce15eb7066ba23475e39a0a73e7df3"
+                "hash": "4f5e9c868f2df3b1a0db7ec874b92bc47d67a946365c6071c3bb556c0fa8e6f8"
             },
             "integrations": {
-                "fname": "revanced-advanced-integrations-0.146.2.apk",
-                "link": "https://github.com/YT-Advanced/ReX-integrations/releases/download/v0.146.2/revanced-integrations-0.146.2.apk",
-                "hash": "6139cdcf0b1f97ac45e0a1393cfd3ced924158adf519e76a72a2407cd2638dd0"
+                "fname": "revanced-advanced-integrations-0.146.5.apk",
+                "link": "https://github.com/YT-Advanced/ReX-integrations/releases/download/v0.146.5/revanced-integrations-0.146.5.apk",
+                "hash": "930477da1dad3644e0e9963789b980018d5d56d7c2b56903507a17e857d43195"
             }
         },
         "apps": [
@@ -393,9 +393,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube ReVanced Advanced (19.05.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1214690855206785094/com.google.android.youtube_19.05.36-1544283584.apk?ex=65fa0803&is=65e79303&hm=e138c911294ed8413fd831bfada57486dfa02bd724e46679757ee700f4cbb5ac&",
-                "hash": "b1e3d5a6c76f95d405586d6a4aa9ad9a470103d08878884b574ed4beb8c2d256",
+                "dname": "YouTube ReVanced Advanced (19.07.40)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1218772384568447076/com.google.android.youtube_19.07.40-1544553920.apk?ex=6608e13c&is=65f66c3c&hm=6db02cf144ad533722e0298e409fc5907ae2836d4d1fc2f5ba5c9bce9e767890&",
+                "hash": "4e6d670982dc7e4d7fa5643e516e41c87cd8b30ecb62992c17c4190f89fb3d7a",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_Advanced_",
