@@ -79,6 +79,23 @@
                 "hash": "930477da1dad3644e0e9963789b980018d5d56d7c2b56903507a17e857d43195"
             }
         },
+        "piko_tools": {
+            "cli": {
+                "fname": "revanced-cli-4.3.0-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.3.0/revanced-cli-4.3.0-all.jar",
+                "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
+            },
+            "patches": {
+                "fname": "revanced-piko-patches-1.15.0.jar",
+                "link": "https://github.com/crimera/piko/releases/download/v1.15.0/revanced-patches-1.15.0.jar",
+                "hash": "f07b5b9e07ea1a91b09d86830d695e9f5c09d7527e18bc61067fa3d2df116da1"
+            },
+            "integrations": {
+                "fname": "revanced-piko-integrations-1.7.0.apk",
+                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.7.0/revanced-integrations-1.7.0.apk",
+                "hash": "ef698026a6ce247de8cae67893b94d31fa02d2949d11905597c83609f51b7b62"
+            }
+        },
         "apps": [
 	        {
                 "fname": null
@@ -187,9 +204,9 @@
             },
 			{
                 "fname": "Twitter.apk",
-                "dname": "Twitter (10.27.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205885585668177950/com.twitter.android_10.27.0-release.0-310270000.apk?ex=660823f7&is=65f5aef7&hm=a842f5e0808cd62bfb6b8e9187a856db7e7229d8c069bded23f17e7d69b3fc7b&",
-                "hash": "aafba98ad3c0cf2fd67d34ed52de68de23db3339e6d57cc35dd94f60410a7267",
+                "dname": "Twitter (10.33.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221409898969956424/com.twitter.android_10.33.0-release.0-310330000.apk?ex=6612799c&is=6600049c&hm=a5ccb3f4f05f9341eff7599ab7388f0951a42e24eaa5021908fc7c9aba725876&",
+                "hash": "3861127acd02958f8716ff503fbcbea82d397ed257dad2df03e431432484d08f",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -304,9 +321,9 @@
             },
             {
                 "fname": "Reddit.apk",
-                "dname": "Reddit (2023.44.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1173404561180999680/com.reddit.frontpage_2023.44.0-1268622.apk?ex=6609f228&is=65f77d28&hm=7f170ab93b69280e57d1cd90505f68850568a7d33b07db2ac46695ba9599027d&",
-                "hash": "0fa2ea10396966ed3ccaa956d4d781c29117ab2928cd5235a2837c87c64f7e41",
+                "dname": "Reddit (2024.12.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221413967524528168/com.reddit.frontpage_2024.12.0-1494694.apk?ex=66127d66&is=66000866&hm=5e9907dbab828c9ba5a716184f1295f29112bb0e3402e9e7789d20d858b69dac&",
+                "hash": "b0eb96742b67e76436e265a6279d124d30346ab4db7551a56001e10086b3ede8",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -317,9 +334,9 @@
             },
             {
                 "fname": "Lightroom.apk",
-                "dname": "Lightroom (9.0.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1172175597955465216/com.adobe.lrmobile_9.0.1-709001001.apk?ex=660eb418&is=65fc3f18&hm=5d4bdeb59b26941f93dbeffdea656865e585aafe94286a01b5326f55bc74697e&",
-                "hash": "5226644711b6e4f1fe809eb432c7d9a163ba88619b5393a0243486e37f153462",
+                "dname": "Lightroom (9.2.1)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221413428321587290/com.adobe.lrmobile_9.2.1-710902100.apk?ex=66127ce6&is=660007e6&hm=82efa9b1d3ba3280138318ce62c37a02e765158914af59da7c52728c6cc93d55&",
+                "hash": "7f339b7aa2672e9d5b1dc63179e73eb8d0666b74c4ded146c3b1da4208f45ff2",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -431,6 +448,19 @@
                         "ename" : "YTDLnis",
                         "required" : false
                     }
+                ]
+            },
+			{
+                "fname": "Twitter.apk",
+                "dname": "Twitter piko by crimera (10.33.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221409898969956424/com.twitter.android_10.33.0-release.0-310330000.apk?ex=6612799c&is=6600049c&hm=a5ccb3f4f05f9341eff7599ab7388f0951a42e24eaa5021908fc7c9aba725876&",
+                "hash": "3861127acd02958f8716ff503fbcbea82d397ed257dad2df03e431432484d08f",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : "piko_",
+                "cmdMod" : " ",
+                "extras" : [
+                    { "enabled": false }
                 ]
             }
         ],
