@@ -108,7 +108,7 @@ REM create link to install dir
 mklink /D "backups and more" "%localappdata%\revanced-cli\" > nul 2> nul
 echo.
 
-set "MODE=main"
+set "MODE=dev"
 :modeChange
 
 REM refresh input json 
