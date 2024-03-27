@@ -479,10 +479,10 @@
         ],
         "extras": {
             "microG": {
-                "fname": "Vanced_MicroG_v0.2.24.220220.apk",
-                "dname": "Vanced MicroG",
-                "link": "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.24.220220-220220001/microg.apk",
-                "hash": "e5ce4f9759d3e70ac479bf2d0707efe5a42fca8513cf387de583b8659dbfbbbf"
+                "fname": "GmsCore_v0.3.1.2.240913.apk",
+                "dname": "GmsCore",
+                "link": "https://github.com/ReVanced/GmsCore/releases/download/v0.3.1.2.240913/app.revanced.android.gms-240913004-signed.apk",
+                "hash": "466bc8c37bc84e8c0f8012c26b9517555a06889d06bbe4b2911f9c4bd6806a4d"
             },
             "microG_A_5": {
                 "fname": "Vanced_MicroG_v0.2.22.212658.apk",
