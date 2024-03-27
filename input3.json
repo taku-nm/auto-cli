@@ -86,14 +86,14 @@
                 "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
             },
             "patches": {
-                "fname": "revanced-piko-patches-1.15.0.jar",
-                "link": "https://github.com/crimera/piko/releases/download/v1.15.0/revanced-patches-1.15.0.jar",
-                "hash": "f07b5b9e07ea1a91b09d86830d695e9f5c09d7527e18bc61067fa3d2df116da1"
+                "fname": "revanced-piko-patches-1.16.0.jar",
+                "link": "https://github.com/crimera/piko/releases/download/v1.16.0/revanced-patches-1.16.0.jar",
+                "hash": "cb3f189564f8330a3bea678cd0110fe5ccb3450e16d57610874a138c1631105d"
             },
             "integrations": {
-                "fname": "revanced-piko-integrations-1.7.0.apk",
-                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.7.0/revanced-integrations-1.7.0.apk",
-                "hash": "ef698026a6ce247de8cae67893b94d31fa02d2949d11905597c83609f51b7b62"
+                "fname": "revanced-piko-integrations-1.8.1.apk",
+                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.8.1/revanced-integrations-1.8.1.apk",
+                "hash": "f6b79f2eead93ef1859e64d992ea23749255ec5684db544eca6187c826ba2f66"
             }
         },
         "apps": [
