@@ -35,14 +35,14 @@
                 "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
             },
             "patches": {
-                "fname": "revanced-patches-a5-2.161.3.jar",
-                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.161.3/revanced-patches-2.161.3.jar",
-                "hash": "23f4b291f10fbac7bc7dd2d8ae3a9608d7575980d9f26c13158fb726d2f09a24"
+                "fname": "revanced-patches-a5-2.161.4.jar",
+                "link": "https://github.com/d4n3436/revanced-patches-android5/releases/download/v2.161.4/revanced-patches-2.161.4.jar",
+                "hash": "61e21c129236ff7a5831d54cf8a42ab1b3d89ac9f7201c1b8063242fb386b92c"
             },
             "integrations": {
-                "fname": "revanced-integrations-a5-0.97.0.apk",
-                "link": "https://github.com/d4n3436/revanced-integrations/releases/download/v0.97.0/revanced-integrations-0.97.0.apk",
-                "hash": "2889dd967420f98e641c03af23d1cc199fdd44053ed27b33c6e7878c0b8c21a0"
+                "fname": "revanced-integrations-a5-0.97.1.apk",
+                "link": "https://github.com/d4n3436/revanced-integrations/releases/download/v0.97.1/revanced-integrations-0.97.1.apk",
+                "hash": "e7c28ddecfeb4102b0aa96b9f1594e0d5beb70288d13ae0784bb2b3749742274"
             }
         },
         "YT_android_6_7_tools": {
