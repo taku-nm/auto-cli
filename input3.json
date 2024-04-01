@@ -370,7 +370,7 @@
                 "extras" : [
                     { "enabled": true },
                     { 
-                        "ename" : "microG_A_5",
+                        "ename" : "microG",
                         "required" : true
                     },
                     {
@@ -483,12 +483,6 @@
                 "dname": "GmsCore",
                 "link": "https://github.com/ReVanced/GmsCore/releases/download/v0.3.1.3.240913/app.revanced.android.gms-240913006-signed.apk",
                 "hash": "ad71d591fd5696f94c344540dda9da546d99af98ea19b2a847d84c65bf94866e"
-            },
-            "microG_A_5": {
-                "fname": "Vanced_MicroG_v0.2.22.212658.apk",
-                "dname": "Vanced MicroG",
-                "link": "https://github.com/TeamVanced/VancedMicroG/releases/download/v0.2.22.212658-212658001/microg.apk",
-                "hash": "5755a6203716ee584b1e105f5eb37e7adef2cf0257a2422b613b3d1480f16375"
             },
             "seal": {
                 "fname": "seal.apk",
