@@ -16,9 +16,9 @@ function main () {
     # find link with oldest expire timestamp
     findOldestURL "$inputFileContent"
 
-    # if link expires in a day, replace it
+    # if link expires in an hour, replace it
     current_timestamp=$(date +%s)
-    compared_timestamp=$(($current_timestamp + 86400))
+    compared_timestamp=$(($current_timestamp + 3600))
     echo "Current Timestamp: $current_timestamp" 1>&2
     echo "Compared Timestamp: $compared_timestamp" 1>&2
     echo "Oldest Timestamp: $oldestTimestamp" 1>&2
@@ -28,9 +28,9 @@ function main () {
         main
     fi
 
-    # target schedule 1 day before link expires
+    # target schedule 1 hour before link expires
     # if scheduled within 700 seconds, wait and then replace, to avoid tight scheduling
-    targetTimestamp=$(($oldestTimestamp - 86400))
+    targetTimestamp=$(($oldestTimestamp - 3600))
     timeDifference=$(($targetTimestamp - $current_timestamp))
     echo "Time difference: $timeDifference" 1>&2
     if [ "$timeDifference" -le "700" ]; then
