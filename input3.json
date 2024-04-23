@@ -296,7 +296,7 @@
             {
                 "fname": "Slide.apk",
                 "dname": "Slide for Reddit (6.7.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=6627907d&is=66263efd&hm=ed903e70a4bc92a4db2416c501dbfe1beb32ba03ec4f925ccd957707f7d14c30&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=6628393d&is=6626e7bd&hm=4239564c9cc589cb15ad48d9ce5589a3f20d1fe893ef204f23e87cfd06c125f2&",
                 "hash": "68b5cd83dc4be19e627fb9b0052877cf36930856b013a9564c17f61ddab7cc30",
                 "patches": " ",
                 "uri" : "http://www.ccrama.me",
@@ -348,7 +348,7 @@
             {
                 "fname": "Lightroom.apk",
                 "dname": "Lightroom (9.2.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221413428321587290/com.adobe.lrmobile_9.2.1-710902100.apk?ex=662794e6&is=66264366&hm=d61f1610bf75570a6abd727da6e826e9db23adc2639833db5e2a2f7e9d57b6c5&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221413428321587290/com.adobe.lrmobile_9.2.1-710902100.apk?ex=66283da6&is=6626ec26&hm=9050139f9a1c7cf22e023c220b6136a0d8aae485075e5cddc813f32c513db404&",
                 "hash": "7f339b7aa2672e9d5b1dc63179e73eb8d0666b74c4ded146c3b1da4208f45ff2",
                 "patches": " ",
                 "uri" : " ",
@@ -382,7 +382,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 6 / 7 (Stock logo) (17.34.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=662792a4&is=66264124&hm=4b17746b8a3c1e672d882d75dd932295b2d020ceb13e4569def59a67778daaf9&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=66283b64&is=6626e9e4&hm=44797b1253f253c12c000b5e23c5209fb193fb742c1f06c002c8fdbf01549fd5&",
                 "hash": "9c71f516434858b87663810f25b88716c71fb75a72f5e6875937e6b0009e0bf6",
                 "patches": "-e \"custom-branding-name\" -e \"custom-branding-icon-afn-blue\" -e \"custom-branding-icon-afn-red\" -e \"custom-branding-icon-revancify\"",
                 "uri" : " ",
@@ -403,7 +403,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 6 / 7 (RVX logo) (17.34.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=662792a4&is=66264124&hm=4b17746b8a3c1e672d882d75dd932295b2d020ceb13e4569def59a67778daaf9&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=66283b64&is=6626e9e4&hm=44797b1253f253c12c000b5e23c5209fb193fb742c1f06c002c8fdbf01549fd5&",
                 "hash": "9c71f516434858b87663810f25b88716c71fb75a72f5e6875937e6b0009e0bf6",
                 "patches": " ",
                 "uri" : " ",
