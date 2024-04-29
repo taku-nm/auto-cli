@@ -19,7 +19,7 @@
             },
             "JDK": {
                 "fname": "jdk.zip",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=662ff9c1&is=662ea841&hm=a68e3829fb1b4d44103959da1f83823caca1b581943cae4f53169f97f16c7b49&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=66314b41&is=662ff9c1&hm=2aec8bf9f058247f3cd4175261b72a2602d5d203fabdc4411e1cc08c56271871&",
                 "hash": "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
             },
             "BCS": {
@@ -270,7 +270,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=662ff245&is=662ea0c5&hm=fe7850f0df7a8f3f6c616f2e7961a5838b9d84f539745b581187a07c759b7617&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=663143c5&is=662ff245&hm=2ff612e31996fb142afed1deb7feb0cfdc8677db1c636efb10560b0275998405&",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
@@ -361,7 +361,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 5 (16.40.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=662fd8e5&is=662e8765&hm=b422442ae977ecd26d3b08407740722df849a5fd277b6f96429f699d3b46bef5&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=66312a65&is=662fd8e5&hm=7cd5c6998d4029be9e57c92782734913f4e480b9f14febc618a4d0e3de37ca0f&",
                 "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
                 "patches": " ",
                 "uri" : " ",
