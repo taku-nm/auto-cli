@@ -361,7 +361,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 5 (16.40.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=66327be5&is=66312a65&hm=826ae4f0126e5c82fa11d7d9259cf1ae494802949b29b220602f51dd240c0b43&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=663324a5&is=6631d325&hm=debd46b40edb1c0128e5e2ac3f20bd0d5048fbf797cebd08d62de042414c65e2&",
                 "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
                 "patches": " ",
                 "uri" : " ",
@@ -424,7 +424,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube ReVanced Advanced (19.07.40)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1218772384568447076/com.google.android.youtube_19.07.40-1544553920.apk?ex=6632687c&is=663116fc&hm=297caf7dcbba9c5c6f7d1927ea39e9c130a99010ab212d0223dfc1cec2318cf0&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1218772384568447076/com.google.android.youtube_19.07.40-1544553920.apk?ex=6633b9fc&is=6632687c&hm=7ae048b13af406ef47f0015ca7833dd177b6f6749889a5c2e41bf7e2022dd5c4&",
                 "hash": "4e6d670982dc7e4d7fa5643e516e41c87cd8b30ecb62992c17c4190f89fb3d7a",
                 "patches": "-e \"Change player flyout panel toggles\" ",
                 "uri" : " ",
