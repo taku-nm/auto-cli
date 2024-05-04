@@ -24,7 +24,7 @@
             },
             "BCS": {
                 "fname": "bcprov-jdk18on-176.jar",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=6635e353&is=663491d3&hm=0a9b2f8fa604efb20b6a7606cf16a3a94e54f884623409ff133410572286ca64&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=66368c13&is=66353a93&hm=8b589a9eb49f507bca5a103282011217454a521e4135ce4c9784fedb56172e31&",
                 "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
             }
         },
@@ -270,7 +270,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=6635e105&is=66348f85&hm=36b40e63f690576a3fdaf3db648073704262c3c2671073d11094ba457bd44e08&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=663689c5&is=66353845&hm=bef2f37b819d40bdf69e1c500dd6d2d94f5b66bd514bf33d27a2b4c58d41c5be&",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
