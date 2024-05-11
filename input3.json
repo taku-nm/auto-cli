@@ -3,19 +3,19 @@
     "downloads": {
         "tools": {
             "cli": {
-                "fname": "revanced-cli-4.6.0-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.6.0/revanced-cli-4.6.0-all.jar",
-                "hash": "4101fb68491f0542ea02f27416c285c6bada1638359b52499ee0edcaf2c95c49"
+                "fname": "revanced-cli-4.3.0-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.3.0/revanced-cli-4.3.0-all.jar",
+                "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
             },
             "patches": {
-                "fname": "revanced-patches-4.8.0-dev.15.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v4.8.0-dev.15/revanced-patches-4.8.0-dev.15.jar",
-                "hash": "423ec1cb302f6ffb0df12d2d5841d14b737e77651dfa0ee682da55b2abdc81a7"
+                "fname": "revanced-patches-4.5.0.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v4.5.0/revanced-patches-4.5.0.jar",
+                "hash": "d67ce1352fd9a2c32e70b47be0aa1d83d2c9a49bb9736a1368a159125ab8ce76"
             },
             "integrations": {
-                "fname": "revanced-integrations-1.8.0.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.8.0/revanced-integrations-1.8.0.apk",
-                "hash": "97b671e9b13754a5616cf220677a5391e8d0a64cc6d5d2618b35ee9e531c9732"
+                "fname": "revanced-integrations-1.7.0.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.7.0/revanced-integrations-1.7.0.apk",
+                "hash": "c86f41a6f5c930ce9e29b06d8d2ba04ece71a37857c16ec668d6a5658dbe5713"
             },
             "JDK": {
                 "fname": "jdk.zip",
@@ -102,9 +102,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (Stock logo) (19.11.43)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238945799799308451/com.google.android.youtube_19.11.43-1545084352.apk?ex=664121b1&is=663fd031&hm=0ff4d3fbea10ee7cb6f3dbca06627685f0027e6dd0f97b601518b2c776da1859&",
-                "hash": "cce45e8ae69c58b10babdc57290cfe99ba939c70436101f2c2bf8e70912f19e5",
+                "dname": "YouTube (Stock logo) (19.09.37)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222645085317894265/com.google.android.youtube_19.09.37-1544809920.apk?ex=66407f37&is=663f2db7&hm=b2aa4e4f97731ee4d9a1e8f32a83332d549a8173324b452a71ab894da6c75784&",
+                "hash": "80ab69b6f08ae239b7396d4581e806a1dac8fe519402da5057eeb8936a439020",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -123,9 +123,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (ReVanced logo) (19.11.43)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238945799799308451/com.google.android.youtube_19.11.43-1545084352.apk?ex=664121b1&is=663fd031&hm=0ff4d3fbea10ee7cb6f3dbca06627685f0027e6dd0f97b601518b2c776da1859&",
-                "hash": "cce45e8ae69c58b10babdc57290cfe99ba939c70436101f2c2bf8e70912f19e5",
+                "dname": "YouTube (ReVanced logo) (19.09.37)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222645085317894265/com.google.android.youtube_19.09.37-1544809920.apk?ex=66407f37&is=663f2db7&hm=b2aa4e4f97731ee4d9a1e8f32a83332d549a8173324b452a71ab894da6c75784&",
+                "hash": "80ab69b6f08ae239b7396d4581e806a1dac8fe519402da5057eeb8936a439020",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
                 "toolMod" : " ",
