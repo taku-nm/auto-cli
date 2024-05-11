@@ -3,9 +3,9 @@
     "downloads": {
         "tools": {
             "cli": {
-                "fname": "revanced-cli-4.3.0-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.3.0/revanced-cli-4.3.0-all.jar",
-                "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
+                "fname": "revanced-cli-4.6.0-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.6.0/revanced-cli-4.6.0-all.jar",
+                "hash": "4101fb68491f0542ea02f27416c285c6bada1638359b52499ee0edcaf2c95c49"
             },
             "patches": {
                 "fname": "revanced-patches-4.7.0.jar",
