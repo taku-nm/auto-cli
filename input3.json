@@ -8,14 +8,14 @@
                 "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
             },
             "patches": {
-                "fname": "revanced-patches-4.5.0.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v4.5.0/revanced-patches-4.5.0.jar",
-                "hash": "d67ce1352fd9a2c32e70b47be0aa1d83d2c9a49bb9736a1368a159125ab8ce76"
+                "fname": "revanced-patches-4.7.0.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v4.7.0/revanced-patches-4.7.0.jar",
+                "hash": "0bf26daa5471920d28ed2f7be59dcd20021ff08382240630c5c8be0350120a0c"
             },
             "integrations": {
-                "fname": "revanced-integrations-1.7.0.apk",
-                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.7.0/revanced-integrations-1.7.0.apk",
-                "hash": "c86f41a6f5c930ce9e29b06d8d2ba04ece71a37857c16ec668d6a5658dbe5713"
+                "fname": "revanced-integrations-1.8.0.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.8.0/revanced-integrations-1.8.0.apk",
+                "hash": "97b671e9b13754a5616cf220677a5391e8d0a64cc6d5d2618b35ee9e531c9732"
             },
             "JDK": {
                 "fname": "jdk.zip",
@@ -86,14 +86,14 @@
                 "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
             },
             "patches": {
-                "fname": "revanced-piko-patches-1.16.0.jar",
-                "link": "https://github.com/crimera/piko/releases/download/v1.16.0/revanced-patches-1.16.0.jar",
-                "hash": "cb3f189564f8330a3bea678cd0110fe5ccb3450e16d57610874a138c1631105d"
+                "fname": "revanced-piko-patches-1.27.1.jar",
+                "link": "https://github.com/crimera/piko/releases/download/v1.27.1/revanced-patches-1.27.1.jar",
+                "hash": "8c51351b7295529f41650c82c14d0d5f760ee06254bd6c2d370d3c9bb0ae0da2"
             },
             "integrations": {
-                "fname": "revanced-piko-integrations-1.8.1.apk",
-                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.8.1/revanced-integrations-1.8.1.apk",
-                "hash": "f6b79f2eead93ef1859e64d992ea23749255ec5684db544eca6187c826ba2f66"
+                "fname": "revanced-piko-integrations-1.17.0.apk",
+                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.17.0/revanced-integrations-1.17.0.apk",
+                "hash": "bcd64f62a8a87ecb976496b46dfb77a80198152c0b798a8eb7c50e4924bad745"
             }
         },
         "apps": [
@@ -102,9 +102,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (Stock logo) (19.09.37)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222645085317894265/com.google.android.youtube_19.09.37-1544809920.apk?ex=66407f37&is=663f2db7&hm=b2aa4e4f97731ee4d9a1e8f32a83332d549a8173324b452a71ab894da6c75784&",
-                "hash": "80ab69b6f08ae239b7396d4581e806a1dac8fe519402da5057eeb8936a439020",
+                "dname": "YouTube (Stock logo) (19.11.43)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238945799799308451/com.google.android.youtube_19.11.43-1545084352.apk?ex=664121b1&is=663fd031&hm=0ff4d3fbea10ee7cb6f3dbca06627685f0027e6dd0f97b601518b2c776da1859&",
+                "hash": "cce45e8ae69c58b10babdc57290cfe99ba939c70436101f2c2bf8e70912f19e5",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -123,9 +123,9 @@
             },
             {
                 "fname": "YouTube.apk",
-                "dname": "YouTube (ReVanced logo) (19.09.37)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222645085317894265/com.google.android.youtube_19.09.37-1544809920.apk?ex=66407f37&is=663f2db7&hm=b2aa4e4f97731ee4d9a1e8f32a83332d549a8173324b452a71ab894da6c75784&",
-                "hash": "80ab69b6f08ae239b7396d4581e806a1dac8fe519402da5057eeb8936a439020",
+                "dname": "YouTube (ReVanced logo) (19.11.43)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238945799799308451/com.google.android.youtube_19.11.43-1545084352.apk?ex=664121b1&is=663fd031&hm=0ff4d3fbea10ee7cb6f3dbca06627685f0027e6dd0f97b601518b2c776da1859&",
+                "hash": "cce45e8ae69c58b10babdc57290cfe99ba939c70436101f2c2bf8e70912f19e5",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -144,9 +144,9 @@
             },
 			{
                 "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music (Google Pixel / Galaxy S24) (6.45.54)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222654817718112336/com.google.android.apps.youtube.music_6.45.54-64554240-v8a.apk?ex=663fdf88&is=663e8e08&hm=a153d499696d7cedfa274e654dae0e741aafbb96a947475916005a6895fac34a&",
-                "hash": "ad4d697d22ed52a3b689755f066a00da12e0b051335ce44f2c271ced0ffcc915",
+                "dname": "YouTube Music (Google Pixel / Galaxy S24) (6.51.52)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238947058203885668/com.google.android.apps.youtube.music_6.51.52-65152240_armv8.apk?ex=664122dd&is=663fd15d&hm=cb2b6bdc56f3a0cd303465fa85345018a6600f2b5ea459cde80376107a4eb179&",
+                "hash": "d811b84bdf6fd33414a6f97b4ba56d905e306d024dce7ea0a76756d87f41ac17",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -161,9 +161,9 @@
             },
 			{
                 "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music (other devices) (6.45.54)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222654808503353484/com.google.android.apps.youtube.music_6.45.54-64554230-v7a.apk?ex=663fdf86&is=663e8e06&hm=803f1a86c55be83eb770e4f1aea1424f1efe66750511d4c3733fd75dfa8db86a&",
-                "hash": "4605b940a015c1b39aebfa966b13387e49b330287c267d9c4d4c6f903d259a83",
+                "dname": "YouTube Music (other devices) (6.51.52)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238946974917722192/com.google.android.apps.youtube.music_6.51.52-65152230_armv7.apk?ex=664122c9&is=663fd149&hm=62b20a0440190dfb7852a5ea8280138619b364ad579a4314ba9495724fa48971&",
+                "hash": "51bfe2ac0fb9fc5cd2a4cc23f31f4c8b2a3d4c1d8b989b665598c91f54fb0141",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -204,9 +204,9 @@
             },
 			{
                 "fname": "Twitter.apk",
-                "dname": "Twitter (10.34.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=663feb67&is=663e99e7&hm=da6c18192d181bf8c09e39e7a6062db2b35b072274b17ea1b3adc08633c35754&",
-                "hash": "8312b0c0332bfb7d44ed3a4e444eafec53f3c51ffcb8f43acd47a81de19892e6",
+                "dname": "Twitter (10.40.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238948042942582835/com.twitter.android_10.40.0-release.0-310400000.apk?ex=664123c7&is=663fd247&hm=48caf860393820250fb452d4da7530d957e6abd092d2283ed242b08ecbd32278&",
+                "hash": "f02af46a5cf7d731525f3f0c364945b67268a9e380be7d44a8e6611a5e64bc79",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -465,9 +465,9 @@
             },
 			{
                 "fname": "Twitter.apk",
-                "dname": "Twitter piko by crimera (10.34.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=663feb67&is=663e99e7&hm=da6c18192d181bf8c09e39e7a6062db2b35b072274b17ea1b3adc08633c35754&",
-                "hash": "8312b0c0332bfb7d44ed3a4e444eafec53f3c51ffcb8f43acd47a81de19892e6",
+                "dname": "Twitter piko by crimera (10.40.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238948042942582835/com.twitter.android_10.40.0-release.0-310400000.apk?ex=664123c7&is=663fd247&hm=48caf860393820250fb452d4da7530d957e6abd092d2283ed242b08ecbd32278&",
+                "hash": "f02af46a5cf7d731525f3f0c364945b67268a9e380be7d44a8e6611a5e64bc79",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "piko_",
@@ -487,14 +487,14 @@
             "seal": {
                 "fname": "seal.apk",
                 "dname": "Seal (external downloader)",
-                "link": "https://github.com/JunkFood02/Seal/releases/download/v1.10.0/Seal-1.10.0-armeabi-v7a-release.apk",
-                "hash": "8565855d90e1dce3789bacd6b0df79432c138675deec78f31cbd7224c03a6551"
+                "link": "https://github.com/JunkFood02/Seal/releases/download/v1.12.1/Seal-1.12.1-universal-release.apk",
+                "hash": "bbb4f8ef989d1e980610ed1a2cfef1d6c987b1df3057468328de70f4eabd7593"
             },
             "YTDLnis": {
                 "fname": "YTDLnis.apk",
                 "dname": "YTDLnis (external downloader)",
-                "link": "https://github.com/deniscerri/ytdlnis/releases/download/v1.7.3.1/YTDLnis-1.7.3.1-armeabi-v7a-release.apk",
-                "hash": "d8fefc4ce208ab0ebfd230dc2c7f44acb76b6f3cdac2c92e135b1df1a99516c5"
+                "link": "https://github.com/deniscerri/ytdlnis/releases/download/v1.7.5/YTDLnis-1.7.5-universal-release.apk",
+                "hash": "c80a8ebc20183dd4bd8cbac2caf13a61c5bbd98b3507810952cdc85d7592748e"
             }
         }
     }
