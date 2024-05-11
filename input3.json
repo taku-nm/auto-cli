@@ -8,9 +8,9 @@
                 "hash": "4101fb68491f0542ea02f27416c285c6bada1638359b52499ee0edcaf2c95c49"
             },
             "patches": {
-                "fname": "revanced-patches-4.7.0.jar",
-                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v4.7.0/revanced-patches-4.7.0.jar",
-                "hash": "0bf26daa5471920d28ed2f7be59dcd20021ff08382240630c5c8be0350120a0c"
+                "fname": "revanced-patches-4.8.0-dev.15.jar",
+                "link": "https://github.com/ReVanced/revanced-patches/releases/download/v4.8.0-dev.15/revanced-patches-4.8.0-dev.15.jar",
+                "hash": "423ec1cb302f6ffb0df12d2d5841d14b737e77651dfa0ee682da55b2abdc81a7"
             },
             "integrations": {
                 "fname": "revanced-integrations-1.8.0.apk",
