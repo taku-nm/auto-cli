@@ -81,19 +81,19 @@
         },
         "piko_tools": {
             "cli": {
-                "fname": "revanced-cli-4.6.0-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.6.0/revanced-cli-4.6.0-all.jar",
-                "hash": "4101fb68491f0542ea02f27416c285c6bada1638359b52499ee0edcaf2c95c49"
+                "fname": "revanced-cli-4.3.0-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.3.0/revanced-cli-4.3.0-all.jar",
+                "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
             },
             "patches": {
-                "fname": "revanced-piko-patches-1.27.1.jar",
-                "link": "https://github.com/crimera/piko/releases/download/v1.27.1/revanced-patches-1.27.1.jar",
-                "hash": "8c51351b7295529f41650c82c14d0d5f760ee06254bd6c2d370d3c9bb0ae0da2"
+                "fname": "revanced-piko-patches-1.16.0.jar",
+                "link": "https://github.com/crimera/piko/releases/download/v1.16.0/revanced-patches-1.16.0.jar",
+                "hash": "cb3f189564f8330a3bea678cd0110fe5ccb3450e16d57610874a138c1631105d"
             },
             "integrations": {
-                "fname": "revanced-piko-integrations-1.17.0.apk",
-                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.17.0/revanced-integrations-1.17.0.apk",
-                "hash": "bcd64f62a8a87ecb976496b46dfb77a80198152c0b798a8eb7c50e4924bad745"
+                "fname": "revanced-piko-integrations-1.8.1.apk",
+                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.8.1/revanced-integrations-1.8.1.apk",
+                "hash": "f6b79f2eead93ef1859e64d992ea23749255ec5684db544eca6187c826ba2f66"
             }
         },
         "apps": [
@@ -204,9 +204,9 @@
             },
 			{
                 "fname": "Twitter.apk",
-                "dname": "Twitter (10.40.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238948042942582835/com.twitter.android_10.40.0-release.0-310400000.apk?ex=664123c7&is=663fd247&hm=48caf860393820250fb452d4da7530d957e6abd092d2283ed242b08ecbd32278&",
-                "hash": "f02af46a5cf7d731525f3f0c364945b67268a9e380be7d44a8e6611a5e64bc79",
+                "dname": "Twitter (10.34.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=66409427&is=663f42a7&hm=adf34f954663cc647b9f0a5637c0799dfb4d8f05179152e8cff03dc77d7eba3b&",
+                "hash": "8312b0c0332bfb7d44ed3a4e444eafec53f3c51ffcb8f43acd47a81de19892e6",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
@@ -218,7 +218,7 @@
 			{
                 "fname": "Trakt.apk",
                 "dname": "Trakt (1.1.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1191875716799811584/tv.trakt.trakt_1.1.1-71.apk?ex=663ff5c2&is=663ea442&hm=f1346c70d3b0da59d312bb06d500096c8d436bf0264f5d1a1b7b0c08444e580d&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1191875716799811584/tv.trakt.trakt_1.1.1-71.apk?ex=66409e82&is=663f4d02&hm=ce29ca4c084822c7df10cd82b366622e6778789393bc7dbcf171018c2d634602&",
                 "hash": "0cbf4602bf3885e150d247cfdadab188bd5a9c511ec607c70c1848e0fd4a0631",
                 "patches": " ",
                 "uri" : " ",
@@ -296,7 +296,7 @@
             {
                 "fname": "Slide.apk",
                 "dname": "Slide for Reddit (6.7.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=663ff43d&is=663ea2bd&hm=816ce527217f7bfb948fe9dcdb2605a7d6c8c3f05a9f05617494e2ff0e949af0&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184263939589161010/me.ccrama.redditslide_6.7.1-337.apk?ex=66409cfd&is=663f4b7d&hm=128907e42e46753baebec293fffc8e8ee27f83f2f2be7067a8a4667d368419ad&",
                 "hash": "68b5cd83dc4be19e627fb9b0052877cf36930856b013a9564c17f61ddab7cc30",
                 "patches": " ",
                 "uri" : "http://www.ccrama.me",
@@ -309,7 +309,7 @@
             {
                 "fname": "BaconReader.apk",
                 "dname": "BaconReader (6.1.4)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184265546309570641/com.onelouder.baconreader_6.1.4-183.apk?ex=663ff5bc&is=663ea43c&hm=5e5f576135798c7a42b406fc18649eb455a4348677d4c838eb3c27486346fdee&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184265546309570641/com.onelouder.baconreader_6.1.4-183.apk?ex=66409e7c&is=663f4cfc&hm=afd109c7edb77891f374de3b457101a61a2aaa3712d9ecfb0b380f1860b65dca&",
                 "hash": "c8a66396f027695b6d0dbb474b849b04775c4b1238a3bdc83d2dcdaa7b7a997b",
                 "patches": " ",
                 "uri" : "http://baconreader.com/auth",
@@ -335,7 +335,7 @@
             {
                 "fname": "Reddit.apk",
                 "dname": "Reddit (2024.12.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221413967524528168/com.reddit.frontpage_2024.12.0-1494694.apk?ex=663ff926&is=663ea7a6&hm=31b71ab85383be1b48d349bb4fd10f85aaf7cbed68cd3e0b801b4cd971559094&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221413967524528168/com.reddit.frontpage_2024.12.0-1494694.apk?ex=6640a1e6&is=663f5066&hm=4592b1f2b79444d069d8c70aab17c66575342ff2aa4138cfa848005ab46eccf8&",
                 "hash": "b0eb96742b67e76436e265a6279d124d30346ab4db7551a56001e10086b3ede8",
                 "patches": " ",
                 "uri" : " ",
@@ -348,7 +348,7 @@
             {
                 "fname": "Lightroom.apk",
                 "dname": "Lightroom (9.2.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221413428321587290/com.adobe.lrmobile_9.2.1-710902100.apk?ex=663ff8a6&is=663ea726&hm=17a3a9ce501065da421de8d9694835d28d0444cc3ebeb095e645cc6e6b7087e2&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1221413428321587290/com.adobe.lrmobile_9.2.1-710902100.apk?ex=6640a166&is=663f4fe6&hm=07e24f37335c20b0c67bd51e3a787e5611c7bb0c1709583987b5db4a1fd4b264&",
                 "hash": "7f339b7aa2672e9d5b1dc63179e73eb8d0666b74c4ded146c3b1da4208f45ff2",
                 "patches": " ",
                 "uri" : " ",
@@ -382,7 +382,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 6 / 7 (Stock logo) (17.34.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=663ff664&is=663ea4e4&hm=495c2976f70812850377484e17bfc1c41c3f61b24480cbddcfc2ff77d227b507&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=66409f24&is=663f4da4&hm=df3e8876c56a2a31d6933f37ce358c3fdf1bc2c0de7c4db99603ed62450051aa&",
                 "hash": "9c71f516434858b87663810f25b88716c71fb75a72f5e6875937e6b0009e0bf6",
                 "patches": "-e \"custom-branding-name\" -e \"custom-branding-icon-afn-blue\" -e \"custom-branding-icon-afn-red\" -e \"custom-branding-icon-revancify\"",
                 "uri" : " ",
@@ -403,7 +403,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 6 / 7 (RVX logo) (17.34.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=663ff664&is=663ea4e4&hm=495c2976f70812850377484e17bfc1c41c3f61b24480cbddcfc2ff77d227b507&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167958795264217158/com.google.android.youtube_17.34.36-1531307456.apk?ex=66409f24&is=663f4da4&hm=df3e8876c56a2a31d6933f37ce358c3fdf1bc2c0de7c4db99603ed62450051aa&",
                 "hash": "9c71f516434858b87663810f25b88716c71fb75a72f5e6875937e6b0009e0bf6",
                 "patches": " ",
                 "uri" : " ",
@@ -465,9 +465,9 @@
             },
 			{
                 "fname": "Twitter.apk",
-                "dname": "Twitter piko by crimera (10.40.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1238948042942582835/com.twitter.android_10.40.0-release.0-310400000.apk?ex=664123c7&is=663fd247&hm=48caf860393820250fb452d4da7530d957e6abd092d2283ed242b08ecbd32278&",
-                "hash": "f02af46a5cf7d731525f3f0c364945b67268a9e380be7d44a8e6611a5e64bc79",
+                "dname": "Twitter piko by crimera (10.34.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=66409427&is=663f42a7&hm=adf34f954663cc647b9f0a5637c0799dfb4d8f05179152e8cff03dc77d7eba3b&",
+                "hash": "8312b0c0332bfb7d44ed3a4e444eafec53f3c51ffcb8f43acd47a81de19892e6",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "piko_",
@@ -487,14 +487,14 @@
             "seal": {
                 "fname": "seal.apk",
                 "dname": "Seal (external downloader)",
-                "link": "https://github.com/JunkFood02/Seal/releases/download/v1.12.1/Seal-1.12.1-universal-release.apk",
-                "hash": "bbb4f8ef989d1e980610ed1a2cfef1d6c987b1df3057468328de70f4eabd7593"
+                "link": "https://github.com/JunkFood02/Seal/releases/download/v1.10.0/Seal-1.10.0-armeabi-v7a-release.apk",
+                "hash": "8565855d90e1dce3789bacd6b0df79432c138675deec78f31cbd7224c03a6551"
             },
             "YTDLnis": {
                 "fname": "YTDLnis.apk",
                 "dname": "YTDLnis (external downloader)",
-                "link": "https://github.com/deniscerri/ytdlnis/releases/download/v1.7.5/YTDLnis-1.7.5-universal-release.apk",
-                "hash": "c80a8ebc20183dd4bd8cbac2caf13a61c5bbd98b3507810952cdc85d7592748e"
+                "link": "https://github.com/deniscerri/ytdlnis/releases/download/v1.7.3.1/YTDLnis-1.7.3.1-armeabi-v7a-release.apk",
+                "hash": "d8fefc4ce208ab0ebfd230dc2c7f44acb76b6f3cdac2c92e135b1df1a99516c5"
             }
         }
     }
