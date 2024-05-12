@@ -204,9 +204,22 @@
             },
 			{
                 "fname": "Twitter.apk",
-                "dname": "Twitter (10.34.0)",
+                "dname": "Twitter (Android 8+) (10.34.0)",
                 "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=6641e5a7&is=66409427&hm=d4a4044e05f9e12f75888e43c1759e47aa413a615980827ebbe511df961fe01f&",
                 "hash": "8312b0c0332bfb7d44ed3a4e444eafec53f3c51ffcb8f43acd47a81de19892e6",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : " ",
+                "cmdMod" : " ",
+                "extras" : [
+                    { "enabled": false }
+                ]
+            },
+			{
+                "fname": "Twitter.apk",
+                "dname": "Twitter (Android 6+) (10.23.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1239253482004021258/com.twitter.android_10.23.0-release.0-310230000.apk?ex=6642403e&is=6640eebe&hm=e33ad8163c8e97df7054a582db69fb174355f2fe6c32745bf7dc6699a4240036&",
+                "hash": "298f21ff824e135689b70125180e80f2b42aff477a9c20ab9eb2b95b2f05cb49",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : " ",
