@@ -218,7 +218,7 @@
 			{
                 "fname": "Twitter.apk",
                 "dname": "Twitter (Android 6+) (10.23.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1239253482004021258/com.twitter.android_10.23.0-release.0-310230000.apk?ex=6642403e&is=6640eebe&hm=e33ad8163c8e97df7054a582db69fb174355f2fe6c32745bf7dc6699a4240036&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1239253482004021258/com.twitter.android_10.23.0-release.0-310230000.apk?ex=6642e8fe&is=6641977e&hm=71eba4bdc4d2821205a3f7aacd4a4e22ba64f1c748bc38fe0896527af89ffbc1&",
                 "hash": "298f21ff824e135689b70125180e80f2b42aff477a9c20ab9eb2b95b2f05cb49",
                 "patches": " ",
                 "uri" : " ",
@@ -257,7 +257,7 @@
             {
                 "fname": "Sync.apk",
                 "dname": "Sync for Reddit (23.06.30-13:39)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155165102341898292/com.laurencedawson.reddit_sync_v23.06.30-13_39-23033.apk?ex=664232d6&is=6640e156&hm=8f94fb5adf1adce275c4d4ab74359a6c9d7afb4b5c98ad1aeff6ed2892fd7cff&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155165102341898292/com.laurencedawson.reddit_sync_v23.06.30-13_39-23033.apk?ex=6642db96&is=66418a16&hm=deef567b7fbcbda47bed554ccf935fb5007d2a62fb441c416b20eff46410ae8e&",
                 "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
@@ -437,7 +437,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube ReVanced Advanced (19.07.40)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1218772384568447076/com.google.android.youtube_19.07.40-1544553920.apk?ex=66423a7c&is=6640e8fc&hm=3e1a37aa81e26906a0b0c8de255b15437226b79d24fd4ac128393d6751b60c93&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1218772384568447076/com.google.android.youtube_19.07.40-1544553920.apk?ex=6642e33c&is=664191bc&hm=7250a73989830508b9d1bbd07bb800631426143175e49f62aaeb0284ecfe5a3d&",
                 "hash": "4e6d670982dc7e4d7fa5643e516e41c87cd8b30ecb62992c17c4190f89fb3d7a",
                 "patches": "-e \"Change player flyout panel toggles\" ",
                 "uri" : " ",
