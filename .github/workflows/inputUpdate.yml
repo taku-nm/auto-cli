@@ -3,7 +3,7 @@ name: "chore: refresh links"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "29 16 13 05 *"
+    - cron: "56 17 13 05 *"
 
 jobs:
   run-script:
