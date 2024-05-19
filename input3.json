@@ -19,12 +19,12 @@
             },
             "JDK": {
                 "fname": "jdk.zip",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=6649af01&is=66485d81&hm=6e8e69edcc3b0ad185499bf4760be34a98f7eab534f55e0d05cdf09770e3a505&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=664b0081&is=6649af01&hm=0808c5a5db72f17854755467a6c410bf6cca77d079635824c9cf07e0cf7537f8&",
                 "hash": "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
             },
             "BCS": {
                 "fname": "bcprov-jdk18on-176.jar",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=6649a9d3&is=66485853&hm=c96cd09644d3e216e3d5b5593575149b84b9cbc0db2d466af9507a0c36989ba6&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=664afb53&is=6649a9d3&hm=270f22028cdc5a90db8ae8d23550ba5c5820c84be6438229b07910f87f44cef8&",
                 "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
             }
         },
@@ -103,7 +103,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube (Stock logo) (19.09.37)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222645085317894265/com.google.android.youtube_19.09.37-1544809920.apk?ex=6649b9b7&is=66486837&hm=c0943fc51123778ee8f9a4d0cc737bc71001b9b3c1f70a9c114b0f8354510fd0&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222645085317894265/com.google.android.youtube_19.09.37-1544809920.apk?ex=664b0b37&is=6649b9b7&hm=bd89a77f984180f0319189e2d98ed2382eb207a6bf09d12e5f9382390abc477d&",
                 "hash": "80ab69b6f08ae239b7396d4581e806a1dac8fe519402da5057eeb8936a439020",
                 "patches": " ",
                 "uri" : " ",
@@ -124,7 +124,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube (ReVanced logo) (19.09.37)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222645085317894265/com.google.android.youtube_19.09.37-1544809920.apk?ex=6649b9b7&is=66486837&hm=c0943fc51123778ee8f9a4d0cc737bc71001b9b3c1f70a9c114b0f8354510fd0&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222645085317894265/com.google.android.youtube_19.09.37-1544809920.apk?ex=664b0b37&is=6649b9b7&hm=bd89a77f984180f0319189e2d98ed2382eb207a6bf09d12e5f9382390abc477d&",
                 "hash": "80ab69b6f08ae239b7396d4581e806a1dac8fe519402da5057eeb8936a439020",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
@@ -145,7 +145,7 @@
 			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (Google Pixel / Galaxy S24) (6.45.54)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222654817718112336/com.google.android.apps.youtube.music_6.45.54-64554240-v8a.apk?ex=6649c2c8&is=66487148&hm=b2e2c2780b63dcac486ed306343f247d4be8f665a6578e0c07adc277925affd0&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222654817718112336/com.google.android.apps.youtube.music_6.45.54-64554240-v8a.apk?ex=664b1448&is=6649c2c8&hm=ecce9dad62f423fc26c162516cd2c40a9b9a19a52e2bad44c16da32d1cd3ef77&",
                 "hash": "ad4d697d22ed52a3b689755f066a00da12e0b051335ce44f2c271ced0ffcc915",
                 "patches": " ",
                 "uri" : " ",
@@ -162,7 +162,7 @@
 			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (other devices) (6.45.54)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222654808503353484/com.google.android.apps.youtube.music_6.45.54-64554230-v7a.apk?ex=6649c2c6&is=66487146&hm=5c1c7ba24139445d061ff91dda8eaeb463c6ebc1fc8432fd78c55ffbd490bb55&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222654808503353484/com.google.android.apps.youtube.music_6.45.54-64554230-v7a.apk?ex=664b1446&is=6649c2c6&hm=6aded318f31b6c8e5f7f3d975bdf31fa3dbc9cd038c494b77476ecd2a454c039&",
                 "hash": "4605b940a015c1b39aebfa966b13387e49b330287c267d9c4d4c6f903d259a83",
                 "patches": " ",
                 "uri" : " ",
@@ -179,7 +179,7 @@
 			{
                 "fname": "TikTok.apk",
                 "dname": "TikTok (32.5.3)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=6649a285&is=66485105&hm=03a1e127b66bca512095e870b09a4da6f42ba4f67ffa0676bd1ff866b1dff253&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=664af405&is=6649a285&hm=b641fd9a447ce39a505d9dc6bb3dd14803ef07bddc5131988e88a1da1fb59487&",
                 "hash": "ceb5f0e9dc1173a811fb16802cacc97845e09b12f5a70bcdb9a7eb9849f79f43",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
@@ -192,7 +192,7 @@
 			{
                 "fname": "Twitch.apk",
                 "dname": "Twitch (16.9.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1179519043204550718/tv.twitch.android.app_16.9.1-1609016.apk?ex=6649b7f6&is=66486676&hm=ea15d9544ad794d90ce47fbae2fb0d87bad21df46a4369f411357081783a5840&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1179519043204550718/tv.twitch.android.app_16.9.1-1609016.apk?ex=664b0976&is=6649b7f6&hm=a34d548bf78dc2fffad71b56126273ac66c922e011608fee343cfc87e108ebb8&",
                 "hash": "137ee0a1e474c2a57f7db0a869f7d78d8225d3468ead7afbbf0d5d56cf29545e",
                 "patches": " ",
                 "uri" : " ",
@@ -205,7 +205,7 @@
 			{
                 "fname": "Twitter.apk",
                 "dname": "Twitter (Android 8+) (10.34.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=6649cea7&is=66487d27&hm=2da5915d102409eb37490d1278f5c8eecef8cccf6e4afdb3d66b10ff175e90b1&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=664a7767&is=664925e7&hm=ffb33716768ca3a1815baeab92302a0fc569fc80ddbc55fe52cdb727d0b68973&",
                 "hash": "8312b0c0332bfb7d44ed3a4e444eafec53f3c51ffcb8f43acd47a81de19892e6",
                 "patches": " ",
                 "uri" : " ",
@@ -218,7 +218,7 @@
 			{
                 "fname": "Twitter.apk",
                 "dname": "Twitter (Android 6+) (10.23.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1239253482004021258/com.twitter.android_10.23.0-release.0-310230000.apk?ex=6649807e&is=66482efe&hm=4fc333888c55ebd4378b301c99b001e1cff2feb702e3e11a9c1022d69f655a27&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1239253482004021258/com.twitter.android_10.23.0-release.0-310230000.apk?ex=664ad1fe&is=6649807e&hm=adad347d4ef702b71ebb9511c0199ac90c2f2881b33cce79a127efeb7566eaf9&",
                 "hash": "298f21ff824e135689b70125180e80f2b42aff477a9c20ab9eb2b95b2f05cb49",
                 "patches": " ",
                 "uri" : " ",
@@ -244,7 +244,7 @@
 			{
                 "fname": "Instagram.apk",
                 "dname": "Instagram (324.0.0.27.50)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222647951348990126/com.instagram.android_324.0.0.27.50-372406048.apk?ex=6649bc63&is=66486ae3&hm=17b299412d9f51de51f7ee3e9838836e7997a8328fc5483e8608fff126a799ab&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222647951348990126/com.instagram.android_324.0.0.27.50-372406048.apk?ex=664b0de3&is=6649bc63&hm=861cf5e9b5375ba855c5c8232546d8318aaad18949ccf55509d4caae976343c5&",
                 "hash": "0495b607e83b79ac9bb88684520adf6c7f35a4e12aa27dcb9cbb70cc761e3c57",
                 "patches": " ",
                 "uri" : " ",
@@ -283,7 +283,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=6649a785&is=66485605&hm=973a1479ad2bdb9b37e7de3ad5f6821f787ecaaa07ecbcf0feb5e87a84eea54b&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=664af905&is=6649a785&hm=15ec931b3a7cc00f4dabf9c265ee2db1349dd6e42affb1dc900116b8194409fe&",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
@@ -374,7 +374,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 5 (16.40.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=66498e25&is=66483ca5&hm=dbcded6b4ce1c7a19fd9758055366ab6e4151123da02d2915c686a31ff159fc0&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=664adfa5&is=66498e25&hm=08f20f13c239830751534c41a2219f7f96b0014df29a10332f4ecc17be5a3db7&",
                 "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
                 "patches": " ",
                 "uri" : " ",
@@ -437,7 +437,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube ReVanced Advanced (19.07.40)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1218772384568447076/com.google.android.youtube_19.07.40-1544553920.apk?ex=66497abc&is=6648293c&hm=62241a51a87f10a4d32e1e68893c343d450de0d1a6950078b093015468461aec&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1218772384568447076/com.google.android.youtube_19.07.40-1544553920.apk?ex=664acc3c&is=66497abc&hm=bd6c88d56ccf13d7dd21e02ff3b68e184af3fa6ced8aa344dffd91d22031f8b5&",
                 "hash": "4e6d670982dc7e4d7fa5643e516e41c87cd8b30ecb62992c17c4190f89fb3d7a",
                 "patches": "-e \"Change player flyout panel toggles\" ",
                 "uri" : " ",
@@ -479,7 +479,7 @@
 			{
                 "fname": "Twitter.apk",
                 "dname": "Twitter piko by crimera (10.34.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=6649cea7&is=66487d27&hm=2da5915d102409eb37490d1278f5c8eecef8cccf6e4afdb3d66b10ff175e90b1&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=664a7767&is=664925e7&hm=ffb33716768ca3a1815baeab92302a0fc569fc80ddbc55fe52cdb727d0b68973&",
                 "hash": "8312b0c0332bfb7d44ed3a4e444eafec53f3c51ffcb8f43acd47a81de19892e6",
                 "patches": " ",
                 "uri" : " ",
