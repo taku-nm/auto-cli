@@ -64,19 +64,19 @@
         },
         "piko_tools": {
             "cli": {
-                "fname": "revanced-cli-4.3.0-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.3.0/revanced-cli-4.3.0-all.jar",
-                "hash": "0ffe334793ef719aaff32c8d2336e76271a81c3acf400787cab37f1b842c4c1d"
+                "fname": "revanced-cli-4.6.0-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.6.0/revanced-cli-4.6.0-all.jar",
+                "hash": "4101fb68491f0542ea02f27416c285c6bada1638359b52499ee0edcaf2c95c49"
             },
             "patches": {
-                "fname": "revanced-piko-patches-1.16.0.jar",
-                "link": "https://github.com/crimera/piko/releases/download/v1.16.0/revanced-patches-1.16.0.jar",
-                "hash": "cb3f189564f8330a3bea678cd0110fe5ccb3450e16d57610874a138c1631105d"
+                "fname": "revanced-piko-patches-1.29.1.jar",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242560404882718791/piko-revanced-patches-1.29.1.jar?ex=664e480e&is=664cf68e&hm=d68a9e39c3053a01dfa233f0e09ffeb56a9de934ec07390c2e8a8061af2cf0a1&",
+                "hash": "29822729948af5e7242424d1b00fb246d45a1755efcb8e5f81ecec6818dd88bb"
             },
             "integrations": {
-                "fname": "revanced-piko-integrations-1.8.1.apk",
-                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.8.1/revanced-integrations-1.8.1.apk",
-                "hash": "f6b79f2eead93ef1859e64d992ea23749255ec5684db544eca6187c826ba2f66"
+                "fname": "revanced-piko-integrations-1.18.1.apk",
+                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.18.1/revanced-integrations-1.18.1.apk",
+                "hash": "01286bb5b462084f405309c5990220a37eac20cd57f8f1327dbec9d2763aff62"
             }
         },
         "apps": [
@@ -419,9 +419,9 @@
             },
 			{
                 "fname": "Twitter.apk",
-                "dname": "Twitter piko by crimera (10.34.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1222667565592088596/com.twitter.android_10.34.0-release.0-310340000.apk?ex=664dc327&is=664c71a7&hm=c907b119ad37c59b21db3d52341ac8cbfe46299d92431ef5bad0bb2b9055de9f&",
-                "hash": "8312b0c0332bfb7d44ed3a4e444eafec53f3c51ffcb8f43acd47a81de19892e6",
+                "dname": "Twitter piko by crimera (10.41.0)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242536219146190939/com.twitter.android_10.41.0-release.1-310410001.apk?ex=664e3187&is=664ce007&hm=48b04b137b1d1393b542c34d4f94d80e9e0690ba63cecef6876f5c13632a484a&",
+                "hash": "ab991e7342e951f98a19f9446037f4d8ea732fa14f5ef0463eeedfa9beb8bd74",
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "piko_",
