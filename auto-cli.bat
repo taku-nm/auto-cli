@@ -7,7 +7,7 @@ echo If you wish to abort, close this window.
 echo.
 pause
 
-set batVersion=3.8
+set batVersion=3.9
 
 FOR /F "tokens=2 delims=:." %%C IN ('chcp') DO (
 	if %%C equ 708 (
