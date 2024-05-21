@@ -45,7 +45,8 @@ function main () {
     if [ "$timeDifference" -gt "700" ]; then
         echo "Scheduling..." 1>&2
         cron_date=$(date -d "@$targetTimestamp" "+%M %H %d %m")
-        echo "$cron_date *"
+        #echo "$cron_date *"
+        echo "24 * * * *"
         git add "$inputFile" &> /dev/null
         git commit -m "$commit_message" &> /dev/null
         git push origin HEAD &> /dev/null
