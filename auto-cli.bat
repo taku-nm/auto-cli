@@ -744,7 +744,7 @@ EXIT /B 0
 for /f "tokens=*" %%a in ("%~1") do (
     for %%b in (%%a) do (
 	   call :fetchToolsJson "%inputJson%" %%b %~2
-	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" !link! !hash!
+	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" "!link!" "!hash!"
 	   set "%%b=%localappdata%\revanced-cli\revanced-tools\!fname!" 
     )
 )
