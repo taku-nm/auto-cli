@@ -79,6 +79,23 @@
                 "hash": "01286bb5b462084f405309c5990220a37eac20cd57f8f1327dbec9d2763aff62"
             }
         },
+        "dropped_tools": {
+            "cli": {
+                "fname": "revanced-cli-4.6.0-all.jar",
+                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v4.6.0/revanced-cli-4.6.0-all.jar",
+                "hash": "4101fb68491f0542ea02f27416c285c6bada1638359b52499ee0edcaf2c95c49"
+            },
+            "patches": {
+                "fname": "dropped-revanced-patches-1.4.2.jar",
+                "link": "https://github.com/indrastorms/Dropped-Patches/releases/download/v1.4.2/dropped-patches-1.4.2.jar",
+                "hash": "8258767f2582490ba12683392f4f22a7484b05d6506cf902fae21c5aa4c5063d"
+            },
+            "integrations": {
+                "fname": "revanced-integrations-1.9.0.apk",
+                "link": "https://github.com/ReVanced/revanced-integrations/releases/download/v1.9.0/revanced-integrations-1.9.0.apk",
+                "hash": "ba1205ca16ead0bbec5115961579ed94e5f7d286f31f6ada876476bdf91983fb"
+            }
+        },
         "apps": [
 	        {
                 "fname": null
@@ -425,6 +442,19 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "piko_",
+                "cmdMod" : " ",
+                "extras" : [
+                    { "enabled": false }
+                ]
+            },
+			{
+                "fname": "Spotify.apk",
+                "dname": "Spotify (8.9.8.545)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242573980553187348/com.spotify.music_8.9.8.545.apk?ex=664e54b2&is=664d0332&hm=cbe11dadc735390c996fcbc6ea4d8138d1791640319af8c9ce146ec48abf464e&",
+                "hash": "31b0825d86aaca3bb58789e312437d07f31b9399a0625ddf43103814ebd621a6",
+                "patches": " ",
+                "uri" : " ",
+                "toolMod" : "dropped_",
                 "cmdMod" : " ",
                 "extras" : [
                     { "enabled": false }
