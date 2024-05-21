@@ -62,23 +62,6 @@
                 "hash": "a1e7868f912873fdeb0bae41403f54899fcbdca2ad51e7539e377ef04f7c5597"
             }
         },
-        "YT_Advanced_tools": {
-            "cli": {
-                "fname": "revanced-extended-cli-4.3.1-all.jar",
-                "link": "https://github.com/inotia00/revanced-cli/releases/download/v4.3.1/revanced-cli-4.3.1-all.jar",
-                "hash": "c4bff13c425fbbd9d70812203ae2f6a31bde1975ec1df40d03830f2c99582af9"
-            },
-            "patches": {
-                "fname": "revanced-advanced-patches-2.220.10.jar",
-                "link": "https://github.com/YT-Advanced/ReX-patches/releases/download/v2.220.10/revanced-patches-2.220.10.jar",
-                "hash": "110d89a0f5332542505f3cdeb3f3cdafa18fa7a9f5b36fb22caa9d843e622d20"
-            },
-            "integrations": {
-                "fname": "revanced-advanced-integrations-0.148.4.apk",
-                "link": "https://github.com/YT-Advanced/ReX-integrations/releases/download/v0.148.4/revanced-integrations-0.148.4.apk",
-                "hash": "93431d19f518f0814ef6f5d7cc24f5f415a46f92a83255c9345549fb0adf295d"
-            }
-        },
         "piko_tools": {
             "cli": {
                 "fname": "revanced-cli-4.3.0-all.jar",
@@ -430,48 +413,6 @@
                     },
                     { 
                         "ename" : "seal",
-                        "required" : false
-                    }
-                ]
-            },
-            {
-                "fname": "YouTube.apk",
-                "dname": "YouTube ReVanced Advanced (19.07.40)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1218772384568447076/com.google.android.youtube_19.07.40-1544553920.apk?ex=664e17fc&is=664cc67c&hm=90799a3f231fc43ed8a012f17085d1005fd3672b3cb529bd73c6597ec3113658&",
-                "hash": "4e6d670982dc7e4d7fa5643e516e41c87cd8b30ecb62992c17c4190f89fb3d7a",
-                "patches": "-e \"Change player flyout panel toggles\" ",
-                "uri" : " ",
-                "toolMod" : "YT_Advanced_",
-                "cmdMod" : " ",
-                "extras" : [
-                    { "enabled": true },
-                    { 
-                        "ename" : "microG",
-                        "required" : true
-                    },
-                    { 
-                        "ename" : "YTDLnis",
-                        "required" : false
-                    }
-                ]
-            },
-            {
-                "fname": "YouTube_Music.apk",
-                "dname": "YouTube Music ReVanced Advanced (6.33.52)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1205877747352870952/com.google.android.apps.youtube.music_6.33.52-63352230.apk?ex=664dfc2b&is=664caaab&hm=148fd437113a312a8222d606cf2ccbc8984927dd37a3b53d0fed3c9841e9ba15&",
-                "hash": "f7b447199f6781c416ecaebb8c7cbdbe3761901ac96379c511732c1cfc64c0b2",
-                "patches": " ",
-                "uri" : " ",
-                "toolMod" : "YT_Advanced_",
-                "cmdMod" : " ",
-                "extras" : [
-                    { "enabled": true },
-                    { 
-                        "ename" : "microG",
-                        "required" : true
-                    },
-                    { 
-                        "ename" : "YTDLnis",
                         "required" : false
                     }
                 ]
