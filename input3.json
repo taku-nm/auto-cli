@@ -69,14 +69,14 @@
                 "hash": "4101fb68491f0542ea02f27416c285c6bada1638359b52499ee0edcaf2c95c49"
             },
             "patches": {
-                "fname": "revanced-piko-patches-1.29.2.jar",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242720354657505290/piko-revanced-patches-1.29.2.jar?ex=664edd05&is=664d8b85&hm=78718ff859d93a910413d6d0d0e5b1f4679caf2b9df559b655a7ec51eb38180f&",
-                "hash": "193b3055a81e792da44a614d8b126c26a7fb3406ce4df95564697f8103e020d1"
+                "fname": "revanced-piko-patches-1.30.0.jar",
+                "link": "https://github.com/crimera/piko/releases/download/v1.30.0/piko-twitter-patches-1.30.0.jar",
+                "hash": "09ec11c0f71b3d2897a2d1f3b2d00c872b6f73edcebc0e3dda8181f9bf652d44"
             },
             "integrations": {
-                "fname": "revanced-piko-integrations-1.18.1.apk",
-                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.18.1/revanced-integrations-1.18.1.apk",
-                "hash": "01286bb5b462084f405309c5990220a37eac20cd57f8f1327dbec9d2763aff62"
+                "fname": "revanced-piko-integrations-1.19.0.apk",
+                "link": "https://github.com/crimera/revanced-integrations/releases/download/v1.19.0/revanced-integrations-1.19.0.apk",
+                "hash": "80b5c957776d9d1df4089f9f00e1089e5e1572914ffdb957a076838c4338173c"
             }
         },
         "dropped_tools": {
