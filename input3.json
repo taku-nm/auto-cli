@@ -69,9 +69,9 @@
                 "hash": "4101fb68491f0542ea02f27416c285c6bada1638359b52499ee0edcaf2c95c49"
             },
             "patches": {
-                "fname": "revanced-piko-patches-1.29.1.jar",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242560404882718791/piko-revanced-patches-1.29.1.jar?ex=664e480e&is=664cf68e&hm=d68a9e39c3053a01dfa233f0e09ffeb56a9de934ec07390c2e8a8061af2cf0a1&",
-                "hash": "29822729948af5e7242424d1b00fb246d45a1755efcb8e5f81ecec6818dd88bb"
+                "fname": "revanced-piko-patches-1.29.2.jar",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242720354657505290/piko-revanced-patches-1.29.2.jar?ex=664edd05&is=664d8b85&hm=78718ff859d93a910413d6d0d0e5b1f4679caf2b9df559b655a7ec51eb38180f&",
+                "hash": "193b3055a81e792da44a614d8b126c26a7fb3406ce4df95564697f8103e020d1"
             },
             "integrations": {
                 "fname": "revanced-piko-integrations-1.18.1.apk",
