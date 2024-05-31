@@ -24,7 +24,7 @@
             },
             "BCS": {
                 "fname": "bcprov-jdk18on-176.jar",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=66597bd3&is=66582a53&hm=7c5c7c7cb829d23a4135c4fa91cddd9869c725745f62a59cd64845a0313dd979&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=665a2493&is=6658d313&hm=6f766cfd81cde98864aa7f8f6c4feb927339fc0884f1b7051833b2cd2df8644c&",
                 "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
             }
         },
@@ -179,7 +179,7 @@
 			{
                 "fname": "TikTok.apk",
                 "dname": "TikTok (32.5.3)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=66597485&is=66582305&hm=6ea616e6b23548ff91177d36229944c90716facde5c8070c5ad9b428c8eac320&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=665a1d45&is=6658cbc5&hm=32b81571c83716ef880d305cbcd474e6a72e90029e5607c64ccf4197fbbc1c50&",
                 "hash": "ceb5f0e9dc1173a811fb16802cacc97845e09b12f5a70bcdb9a7eb9849f79f43",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
@@ -283,7 +283,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=66597985&is=66582805&hm=488cb23ff9d777fb46bf9e512f1dbddc18deaec0ca9c6665f3e679de61db037e&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=665a2245&is=6658d0c5&hm=09a0aeaa1ab0eaf2db4546d6357a70cbde207bba9744a6b76fb10affa3d82e4f&",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
