@@ -19,12 +19,12 @@
             },
             "JDK": {
                 "fname": "jdk.zip",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=665e1e41&is=665cccc1&hm=c73132b26669ae5f6a3649935f888f29e36b1939bceb80d6957529504eeaaaa2&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=665ec701&is=665d7581&hm=69cbc7e76c8d772f82eb3efecadd3af55df8438acccb80399505505838919efb&",
                 "hash": "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
             },
             "BCS": {
                 "fname": "bcprov-jdk18on-176.jar",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=665e1913&is=665cc793&hm=4dc2e71afae5335fcb094f4b6fda2a5a82df46066eedde9f1be41d0919dffc10&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=665f6a93&is=665e1913&hm=36050d1690ddb7915a3cd2d224ae6068bfc2d14b451a72354e53f8d245bc120b&",
                 "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
             }
         },
@@ -179,7 +179,7 @@
 			{
                 "fname": "TikTok.apk",
                 "dname": "TikTok (32.5.3)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=665e11c5&is=665cc045&hm=134f31b05a22326717906a58b0b95f8f2efbcd85701acc21081dd174b35ffb22&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=665f6345&is=665e11c5&hm=d73a3c94611abf9600859c6c0ea7b251a99f2750b3a15ed57605a537d3be9437&",
                 "hash": "ceb5f0e9dc1173a811fb16802cacc97845e09b12f5a70bcdb9a7eb9849f79f43",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
@@ -192,7 +192,7 @@
 			{
                 "fname": "Twitch.apk",
                 "dname": "Twitch (16.9.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1179519043204550718/tv.twitch.android.app_16.9.1-1609016.apk?ex=665e2736&is=665cd5b6&hm=227cd4212bd66dc479491e6e2f4811fbc13b7e65f897aee39e873f33f7817d7d&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1179519043204550718/tv.twitch.android.app_16.9.1-1609016.apk?ex=665ecff6&is=665d7e76&hm=4574149f54fad2711b5fe446bdf1d15a5af009be4652117ef3f3f75ccc3e5617&",
                 "hash": "137ee0a1e474c2a57f7db0a869f7d78d8225d3468ead7afbbf0d5d56cf29545e",
                 "patches": " ",
                 "uri" : " ",
@@ -283,7 +283,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=665e16c5&is=665cc545&hm=40ef7ffe1b3063b088642fdee00db63d94c6826c612375868f6ec79b65830aab&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=665f6845&is=665e16c5&hm=ad673a6efa331b26ed3ae5d63e4ce24ed4e80b5ed15ef4e4a90d8a5a54dbc322&",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
@@ -450,7 +450,7 @@
 			{
                 "fname": "Spotify.apk",
                 "dname": "Spotify (8.9.8.545)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242573980553187348/com.spotify.music_8.9.8.545.apk?ex=665e26b2&is=665cd532&hm=926258fe7b2ca2765203c7f25051069e478a35f5764891a39ef03fe8551dc3ed&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242573980553187348/com.spotify.music_8.9.8.545.apk?ex=665ecf72&is=665d7df2&hm=dc1391e7a3269b2b54521dbd9474199de938c8b03f3d1a0d2a34fbd19ba41d4b&",
                 "hash": "31b0825d86aaca3bb58789e312437d07f31b9399a0625ddf43103814ebd621a6",
                 "patches": " ",
                 "uri" : " ",
