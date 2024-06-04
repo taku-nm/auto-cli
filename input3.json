@@ -47,19 +47,19 @@
         },
         "YT_android_6_7_tools": {
             "cli": {
-                "fname": "revanced-cli-3.1.1-all.jar",
-                "link": "https://github.com/ReVanced/revanced-cli/releases/download/v3.1.1/revanced-cli-3.1.1-all.jar",
-                "hash": "07026189d31c937e5f0d74f17eea3069c881cd248a94b686cdd8ec35682f5f5f"
+                "fname": "revanced-cli-3.1.3-all.jar",
+                "link": "https://github.com/kitadai31/rvcli/releases/download/v3.1.3/revanced-cli-3.1.3-all.jar",
+                "hash": "da13682b8aa469777c955fb55405dea88a44a68bc85ed41914ee01da6b97daab"
             },
             "patches": {
-                "fname": "revanced-patches-a6_7-2.160.9.jar",
-                "link": "https://github.com/kitadai31/revanced-patches-android6-7/releases/download/v2.160.9/revanced-patches-2.160.9.jar",
-                "hash": "c71d6a32aa1cdce0136371dbc905f0600826162f8048539fda0ba522430d7d5c"
+                "fname": "revanced-patches-a6_7-2.160.10.jar",
+                "link": "https://github.com/kitadai31/revanced-patches-android6-7/releases/download/v2.160.10/revanced-patches-2.160.10.jar",
+                "hash": "f5fdb566c165ae9c02682c6f7acec63aefb5cdd530caeeaf07e730e30e4d33a7"
             },
             "integrations": {
-                "fname": "revanced-integrations-a6_7-0.96.9.apk",
-                "link": "https://github.com/kitadai31/revanced-integrations/releases/download/v0.96.9/revanced-integrations-0.96.9.apk",
-                "hash": "a1e7868f912873fdeb0bae41403f54899fcbdca2ad51e7539e377ef04f7c5597"
+                "fname": "revanced-integrations-a6_7-0.96.10.apk",
+                "link": "https://github.com/kitadai31/revanced-integrations/releases/download/v0.96.10/revanced-integrations-0.96.10.apk",
+                "hash": "551a460d6033c9ab9eb25d9f93a591e65e8838d7cf54a36891f1e4d51af45207"
             }
         },
         "piko_tools": {
@@ -400,7 +400,7 @@
                 "patches": "-e \"custom-branding-name\" -e \"custom-branding-icon-afn-blue\" -e \"custom-branding-icon-afn-red\" -e \"custom-branding-icon-revancify\"",
                 "uri" : " ",
                 "toolMod" : "YT_android_6_7_",
-                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! ",
+                "cmdMod" : " ",
                 "extras" : [
                     { "enabled": true },
                     { 
@@ -421,7 +421,7 @@
                 "patches": " ",
                 "uri" : " ",
                 "toolMod" : "YT_android_6_7_",
-                "cmdMod" : "\"!CLI!\" patch !fname! -b \"!PATCHES!\" -m \"!INTEGRATIONS!\" !patch_sel! !OPTIONS! -o PATCHED_!fname! ",
+                "cmdMod" : " ",
                 "extras" : [
                     { "enabled": true },
                     { 
