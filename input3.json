@@ -47,9 +47,9 @@
         },
         "YT_android_6_7_tools": {
             "cli": {
-                "fname": "revanced-cli-3.1.3-all.jar",
-                "link": "https://github.com/kitadai31/rvcli/releases/download/v3.1.3/revanced-cli-3.1.3-all.jar",
-                "hash": "da13682b8aa469777c955fb55405dea88a44a68bc85ed41914ee01da6b97daab"
+                "fname": "revanced-cli-3.1.4-all.jar",
+                "link": "https://github.com/kitadai31/revanced-cli/releases/download/v3.1.4/revanced-cli-3.1.4-all.jar",
+                "hash": "e048a784b83bb09d4909620afa74c7c7f985ebbade4178dee16fe487053ac12f"
             },
             "patches": {
                 "fname": "revanced-patches-a6_7-2.160.10.jar",
