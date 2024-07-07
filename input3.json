@@ -24,7 +24,7 @@
             },
             "BCS": {
                 "fname": "bcprov-jdk18on-176.jar",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=668a4353&is=6688f1d3&hm=eed43f59f6e98d72bcae94de7a76f61f2fbf4217799231d84991d78c24dc6907&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=668aec13&is=66899a93&hm=8fe7bceaf6df8256897fb9904fa684a2238ab18d279d243cb66aa49fb080b8d5&",
                 "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
             }
         },
@@ -145,7 +145,7 @@
 			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (Google Pixel / Galaxy S24) (7.03.52)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1249439729330684026/com.google.android.apps.youtube.music_7.03.52-70352240-v8a.apk?ex=668a3eac&is=6688ed2c&hm=680f8d53c2a0e95c2897e8587e10cf30cbd044d90ca42bf39beb3a8ba6bfbe8e&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1249439729330684026/com.google.android.apps.youtube.music_7.03.52-70352240-v8a.apk?ex=668ae76c&is=668995ec&hm=31e62e6cc9549ebaeb9b3a8380e3503e3c3a9bc2f0f4121a21ccb953d5ef424e&",
                 "hash": "3c605549122de305b8dd36ed1a7996cd905ae29a979e4b744caecdcb20ed4650",
                 "patches": " ",
                 "uri" : " ",
@@ -162,7 +162,7 @@
 			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (other devices) (7.03.52)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1249439640465707158/com.google.android.apps.youtube.music_7.03.52-70352230i-v7a.apk?ex=668a3e97&is=6688ed17&hm=a74366882762e990f8ea87f2eab0f1d93e82d3a6929f618e0917e5a084c4c04f&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1249439640465707158/com.google.android.apps.youtube.music_7.03.52-70352230i-v7a.apk?ex=668ae757&is=668995d7&hm=394dc3882fcc8a5aef07755d7bd46549a00ae287c2e4549ec41f4aadf5efffa3&",
                 "hash": "8b023b4f9babd33ec08bb7ebdbe8674de3c03255a344a5c5dfbc98ddd395ccb2",
                 "patches": " ",
                 "uri" : " ",
@@ -179,7 +179,7 @@
 			{
                 "fname": "TikTok.apk",
                 "dname": "TikTok (32.5.3)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=668a3c05&is=6688ea85&hm=ae61e724e49f5118b57872913f54fae6f5cdcc27c74d85a277982cc40ca218ab&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=668ae4c5&is=66899345&hm=38e9ff19a84798404ccb172abedce3e316afa8c58948ac942171562752d5dda4&",
                 "hash": "ceb5f0e9dc1173a811fb16802cacc97845e09b12f5a70bcdb9a7eb9849f79f43",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
@@ -283,7 +283,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=668a4105&is=6688ef85&hm=7ca7f3b7fb97257b432f5448a2b82e33a0a1068d4e71f8c7f1f04960fda94cbc&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=668ae9c5&is=66899845&hm=30906111641b6eaaa819d4b9076754afaded98de7536a1a860a7a3398190708f&",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
