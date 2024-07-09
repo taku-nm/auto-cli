@@ -19,12 +19,12 @@
             },
             "JDK": {
                 "fname": "jdk.zip",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=668ceb81&is=668b9a01&hm=0df4f69a6668d919e632ff711fc37cc75d5f54c6e0217b49f0c1cbc7e5fb3aee&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=668d9441&is=668c42c1&hm=4af2f95b381dcb13449b86d039b25de98b0c9cf49055461de28946ce1557bf3e&",
                 "hash": "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
             },
             "BCS": {
                 "fname": "bcprov-jdk18on-176.jar",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=668ce653&is=668b94d3&hm=9599747d70087f04a0d010141a4f54aa827f1354f01c49cb07db73a8efc0298e&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159572530642825378/bcprov-jdk18on-176.jar?ex=668d8f13&is=668c3d93&hm=c57f2b6d6379d2d7bc997866249ec4f79d256c9ca3141fe613716a41954da387&",
                 "hash": "fda85d777aaae168015860b23a77cad9b8d3a1d5c904fda875313427bd560179"
             }
         },
@@ -145,7 +145,7 @@
 			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (Google Pixel / Galaxy S24) (7.03.52)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1249439729330684026/com.google.android.apps.youtube.music_7.03.52-70352240-v8a.apk?ex=668ce1ac&is=668b902c&hm=4d72d41f122600932d0bf6a7e6672021f7bf3236a9f3d02c049832289c89e469&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1249439729330684026/com.google.android.apps.youtube.music_7.03.52-70352240-v8a.apk?ex=668d8a6c&is=668c38ec&hm=1d873ef8f579c59d8c90083b2094caf1f8a87dbddab206a269a94fdcdf7c1b86&",
                 "hash": "3c605549122de305b8dd36ed1a7996cd905ae29a979e4b744caecdcb20ed4650",
                 "patches": " ",
                 "uri" : " ",
@@ -162,7 +162,7 @@
 			{
                 "fname": "YouTube_Music.apk",
                 "dname": "YouTube Music (other devices) (7.03.52)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1249439640465707158/com.google.android.apps.youtube.music_7.03.52-70352230i-v7a.apk?ex=668ce197&is=668b9017&hm=55dd58e368845c989f569750f7c88616dc96ad137d9e5a8c948f889dd920185d&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1249439640465707158/com.google.android.apps.youtube.music_7.03.52-70352230i-v7a.apk?ex=668d8a57&is=668c38d7&hm=ef390d6c95d6738e27331116d9987ff0b1b01ca8ba4e58f41848d38d6f631c12&",
                 "hash": "8b023b4f9babd33ec08bb7ebdbe8674de3c03255a344a5c5dfbc98ddd395ccb2",
                 "patches": " ",
                 "uri" : " ",
@@ -179,7 +179,7 @@
 			{
                 "fname": "TikTok.apk",
                 "dname": "TikTok (32.5.3)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=668cdf05&is=668b8d85&hm=54be48c19cdec657bf0556aeb8498dfae8c886f3ce7fe08ecd64287bb99e5002&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=668d87c5&is=668c3645&hm=06f375f16ade50f4227939bec9245cc1de830184b001002adcc40364220d3b8c&",
                 "hash": "ceb5f0e9dc1173a811fb16802cacc97845e09b12f5a70bcdb9a7eb9849f79f43",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
@@ -283,7 +283,7 @@
             {
                 "fname": "Relay.apk",
                 "dname": "Relay for Reddit (10.2.40)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=668ce405&is=668b9285&hm=40c53bac7a1f7b016cd60e574c0abd7fb80d1e668b52900daf5287be149eb59c&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1159570057324671026/free.reddit.news_10.2.40-641.apk?ex=668d8cc5&is=668c3b45&hm=a398768bd6143343bc0bdf3ab0010437742c82ce7f0b514994793de40fbebf57&",
                 "hash": "bab6f726d1932ef8ffccf43ff741a5b34dff505ea16d15d5474bd9855f588df1",
                 "patches": " ",
                 "uri" : "dbrady://relay",
