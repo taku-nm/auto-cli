@@ -257,7 +257,7 @@
             {
                 "fname": "Sync.apk",
                 "dname": "Sync for Reddit (23.06.30-13:39)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155165102341898292/com.laurencedawson.reddit_sync_v23.06.30-13_39-23033.apk?ex=66bd7716&is=66bc2596&hm=dea9628c8112bc9166162055da1906ea01f09c00d6fda8d50c49c0d512e8a183&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155165102341898292/com.laurencedawson.reddit_sync_v23.06.30-13_39-23033.apk?ex=66be1fd6&is=66bcce56&hm=53bd38a92d79a7b077ae6e0ea8491828aaf027afc0ae06743019c309f16813e6&",
                 "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
@@ -296,7 +296,7 @@
             {
                 "fname": "Boost.apk",
                 "dname": "Boost for Reddit (1.12.12)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154220795447488552/com.rubenmayayo.reddit_1.12.12-210011212.apk?ex=66bd5362&is=66bc01e2&hm=a5f707f5f6a2dff4ea72c6592e65910171aae05ec84ac969b290575acf271021&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1154220795447488552/com.rubenmayayo.reddit_1.12.12-210011212.apk?ex=66bea4e2&is=66bd5362&hm=c0c4726c8e7b6a212156d1a753ba6383e4fc240734917be363c15a9fa32db322&",
                 "hash": "a68c22d632a5dd1f446c3759a171c7dbb9edab2afc3c2f87e39323f198606742",
                 "patches": " ",
                 "uri" : "http://rubenmayayo.com",
@@ -335,7 +335,7 @@
             {
                 "fname": "RiF.apk",
                 "dname": "Rif for Reddit (5.6.22)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk?ex=66bd54b2&is=66bc0332&hm=13f8f16192dcfe2bee034abd50f7716362e75c5b9a464fd53e2ef1c35fe03279&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1156940114342195242/com.andrewshu.android.reddit_5.6.22-4622.apk?ex=66bea632&is=66bd54b2&hm=c2591fd3b961d7f4d66527f3cc3ef6d16ad18df2879cb7bdd6a864d5d7bcd687&",
                 "hash": "88d39f859c850f51542c6a12d8bd3c79706debe0f1dff061ed0fe32b3dc688e1",
                 "patches": " ",
                 "uri" : "redditisfun://auth",
