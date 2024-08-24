@@ -19,7 +19,7 @@
             },
             "JDK": {
                 "fname": "jdk.zip",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=66ca3941&is=66c8e7c1&hm=03cb394b5f92c069b40fe2bcaa399d2238e74cca44f57c319ce323000fdd3ed5&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1149793623324504084/jdk.zip?ex=66cae201&is=66c99081&hm=0cb148747abbfa1920f4c9443d12188e504b6652aed967badbf6c58807cbcf65&",
                 "hash": "5c6b84417f108479c0ff5adc5a3bff1e1af531129573fcfeb2520f8395282e34"
             },
             "BCS": {
@@ -192,7 +192,7 @@
 			{
                 "fname": "Twitch.apk",
                 "dname": "Twitch (16.9.1)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1179519043204550718/tv.twitch.android.app_16.9.1-1609016.apk?ex=66ca4236&is=66c8f0b6&hm=1ff6defc27bfeef60644b3f7e9587fa2b6d9da5fc770951b8f564a6a8aea9027&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1179519043204550718/tv.twitch.android.app_16.9.1-1609016.apk?ex=66caeaf6&is=66c99976&hm=ee432c0cf8920161f18e533ba75cdca0d7bfde6ac298461355359ac6e4082587&",
                 "hash": "137ee0a1e474c2a57f7db0a869f7d78d8225d3468ead7afbbf0d5d56cf29545e",
                 "patches": " ",
                 "uri" : " ",
@@ -450,7 +450,7 @@
 			{
                 "fname": "Spotify.apk",
                 "dname": "Spotify (8.9.8.545)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242573980553187348/com.spotify.music_8.9.8.545.apk?ex=66ca41b2&is=66c8f032&hm=11aab8ac66e19280b3c53dc57d379cf63821b3b98a46dc881d3a6263ec138e60&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1242573980553187348/com.spotify.music_8.9.8.545.apk?ex=66caea72&is=66c998f2&hm=e08bf41c530f8edeab76f49f5bd33e2bec812342d5b11046198042ee74cc98a5&",
                 "hash": "31b0825d86aaca3bb58789e312437d07f31b9399a0625ddf43103814ebd621a6",
                 "patches": " ",
                 "uri" : " ",
