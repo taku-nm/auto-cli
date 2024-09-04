@@ -52,14 +52,14 @@
                 "hash": "e048a784b83bb09d4909620afa74c7c7f985ebbade4178dee16fe487053ac12f"
             },
             "patches": {
-                "fname": "revanced-patches-a6_7-2.160.10.jar",
-                "link": "https://github.com/kitadai31/revanced-patches-android6-7/releases/download/v2.160.10/revanced-patches-2.160.10.jar",
-                "hash": "f5fdb566c165ae9c02682c6f7acec63aefb5cdd530caeeaf07e730e30e4d33a7"
+                "fname": "revanced-patches-a6_7-2.160.11.jar",
+                "link": "https://github.com/kitadai31/revanced-patches-android6-7/releases/download/v2.160.11/revanced-patches-2.160.11.jar",
+                "hash": "aca8099af25b691bd5913ce0f9fe1fa7c175afe6707d09f6a1a32b1b1a38f970"
             },
             "integrations": {
-                "fname": "revanced-integrations-a6_7-0.96.10.apk",
-                "link": "https://github.com/kitadai31/revanced-integrations/releases/download/v0.96.10/revanced-integrations-0.96.10.apk",
-                "hash": "551a460d6033c9ab9eb25d9f93a591e65e8838d7cf54a36891f1e4d51af45207"
+                "fname": "revanced-integrations-a6_7-0.96.11.apk",
+                "link": "https://github.com/kitadai31/revanced-integrations/releases/download/v0.96.11/revanced-integrations-0.96.11.apk",
+                "hash": "761f713080888b813a218246539bf47ce4c83028092ba0774090d29277c09962"
             }
         },
         "piko_tools": {
