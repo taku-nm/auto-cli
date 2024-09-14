@@ -50,7 +50,7 @@ if not !errorlevel! equ 0 (
 )
 
 REM check if current directory contains non-ASCII characters
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "'%cd%' -match '[^\x00-\x7F]'"`) DO ( 
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "'%cd%' -match '[^\x00-\x7F]'"`) DO (
 	 if "%%F" == "True" (
 	   echo.
 		echo  [91m ATTENTION [0m
@@ -65,7 +65,7 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Comma
 )
 
 REM check if major version is 3 at minimum
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "$Host.Version.Major"`) DO ( 
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "$Host.Version.Major"`) DO (
     if not %%F geq 3 (
 	   echo.
 		echo  [91m ATTENTION [0m
@@ -78,7 +78,7 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Comma
 )
 
 REM check if PATH is greater than 2048 to avoid unexpected behaviour
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "$env:PATH.Length"`) DO ( 
+FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -NoProfile -NonInteractive -Command "$env:PATH.Length"`) DO (
     if %%F geq 2048 (
 	   echo.
 		echo  [93m Warning: Your current PATH variable is over 2047 characters long. Current value: %%F [0m
@@ -111,7 +111,7 @@ echo.
 set "MODE=main"
 :modeChange
 
-REM refresh input json 
+REM refresh input json
 del "%localappdata%\revanced-cli\input.json" > nul 2> nul
 powershell -NoProfile -NonInteractive -Command "Invoke-WebRequest 'https://raw.githubusercontent.com/taku-nm/auto-cli/!MODE!/input3.json' -OutFile '!PSlocalData!\revanced-cli\input.json' -Headers @{'Cache-Control'='no-cache'}"
 if exist "%localappdata%\revanced-cli\input.json" (
@@ -270,7 +270,7 @@ REM generate app list
 for /f "tokens=*" %%i in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps.fname"') do (
 	set /a "k=k+1"
 	for /f "tokens=*" %%j in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!k!].dname"') do (
-        echo  [0m !k!. %%j 
+        echo  [0m !k!. %%j
     )
 )
 echo.
@@ -279,7 +279,7 @@ if "!MODE!" == "main" echo   B. Developer Mode
 if "!MODE!" == "dev" echo   B. Normal Mode
 echo.
 set choice=
-set /p choice=Type the number or letter to fetch the corresponding app and hit enter. 
+set /p choice=Type the number or letter to fetch the corresponding app and hit enter.
 if not defined choice goto start
 if %choice% geq 1 if %choice% leq %k% ( goto app_download )
 if '%choice%'=='A' goto custom
@@ -311,12 +311,12 @@ if exist ..\revanced-cli-input\ (
 	echo [93m The revanced-cli-input folder already exists at the location you're running this script in. [0m
 ) else (
 	mkdir ..\revanced-cli-input\ > nul 2> nul
-	echo [92m The folder revanced-cli-input has been created at the location you're running this script in. [0m 
+	echo [92m The folder revanced-cli-input has been created at the location you're running this script in. [0m
 )
 echo  Would you like to provide your own APK to patch or download one of the above and customize the rest?
-set /p c_choice=Type the number to fetch the corresponding app from above and hit enter. Leave empty to provide your own APK. 
+set /p c_choice=Type the number to fetch the corresponding app from above and hit enter. Leave empty to provide your own APK.
 if not defined c_choice goto custom_missing
-if %c_choice% geq 1 if %c_choice% leq %k% ( 
+if %c_choice% geq 1 if %c_choice% leq %k% (
     call :fetchAppJson "%inputJson%" %c_choice%
     echo Downloading !fname!
     call :downloadWithFallback "!fname!" "!link!" "!hash!"
@@ -326,8 +326,8 @@ if %c_choice% geq 1 if %c_choice% leq %k% (
 
 :custom_missing
 echo [93m Ensure that the ONLY files in revanced-cli-input are the app, cli, patches and integrations that you would want to use. [0m
-echo  The app [93mMUST[0m be called 'input.apk' 
-echo  The CLI [93mMUST[0m be called 'cli.jar' 
+echo  The app [93mMUST[0m be called 'input.apk'
+echo  The CLI [93mMUST[0m be called 'cli.jar'
 echo  The patches [93mMUST[0m be called 'patches.jar'.
 echo  The integrations [93mMUST[0m be called 'integrations.apk'
 echo [93m CLI, Patches and integrations are optional. Not providing them will cause the script to use official ReVanced tools. [0m
@@ -406,7 +406,7 @@ echo.
 set /p OUTPUT=
 if '%OUTPUT%'=='' echo  [91m Nu-uh! Provide a name. [0m && goto filename
 echo.
-"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\PATCHED_%OUTPUT%.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%OUTPUT%.apk
+"%JDK%" -jar "%CLI%" patch "..\revanced-cli-input\input.apk" -b "%PATCHES%" -m "%INTEGRATIONS%" %SELECTION% %OPTIONS% --keystore "%KEYSTORE%\PATCHED_%OUTPUT%.secure_keystore" --keystore-entry-alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%OUTPUT%.apk
 goto end
 
 :end
@@ -667,7 +667,7 @@ if "!inputString!"=="Relay.apk" (
     ) else goto standard_patch
 ) else (
 	:standard_patch
-   "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.secure_keystore" --alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%~1
+   "%JDK%" -jar "%CLI%" patch %~1 -b "%PATCHES%" -m "%INTEGRATIONS%" !patch_sel! !OPTIONS! --keystore "%KEYSTORE%\PATCHED_!keyString!.secure_keystore" --keystore-entry-alias="alias" --keystore-password="%KEY_PW%" --keystore-entry-password="ReVanced" -o PATCHED_%~1
 )
 EXIT /B 0
 
@@ -683,7 +683,7 @@ start https://www.reddit.com/prefs/apps
 echo [93m Paste your client ID now. [0m It is written below "installed app". Do NOT place a space at the end. Press enter once you are done.
 echo.
 set /p client_id=
-if not defined client_id echo [91m Provide a client ID [0m && goto redditOptions 
+if not defined client_id echo [91m Provide a client ID [0m && goto redditOptions
 del "%localappdata%\revanced-cli\options.json" > nul 2> nul
 "%JDK%" -jar "%CLI%" options -o "%PATCHES%" > nul 2> nul
 move /y "options.json" "%localappdata%\revanced-cli\" > nul 2> nul
@@ -713,10 +713,10 @@ for /f "tokens=*" %%j in ('powershell -NoProfile -NonInteractive -Command "(Get-
 )
 echo.
 echo  Download any of them now?
-echo [93m Format your answer like this: 1, 2  [0m etc... 
+echo [93m Format your answer like this: 1, 2  [0m etc...
 echo.
 set eC=
-set /p eC=[93m Leave empty to skip. [0m Press enter to confirm. 
+set /p eC=[93m Leave empty to skip. [0m Press enter to confirm.
 if not defined eC EXIT /B 0
 set "eC_lastChar=!eC:~-1!"
 if "!eC_lastChar!"=="," echo [91m Invalid formatting. Remove the comma at the end. [0m && goto :extras
@@ -728,14 +728,14 @@ if !eC_lastChar! geq 1 if !eC_lastChar! leq 9 (
              for /f "tokens=*" %%q in ('powershell -NoProfile -NonInteractive -Command "(Get-Content -Raw '%inputJson%' | ConvertFrom-Json).downloads.apps[!index!].extras[%%b].ename"') do (
                 call :fetchExtraJson "%inputJson%" "%%q"
     	          call :downloadWithFallback "!fname!" "!link!" "!hash!"
-    	       )    
+    	       )
 			 ) else (
 				   echo  Selected App Nr. %%b is invalid. Skipping.
 			 )
        )
    )
 ) else (
-    echo [91m Invalid answer. [0m 
+    echo [91m Invalid answer. [0m
 	 goto :extras
 )
 EXIT /B 0
@@ -745,7 +745,7 @@ for /f "tokens=*" %%a in ("%~1") do (
     for %%b in (%%a) do (
 	   call :fetchToolsJson "%inputJson%" %%b %~2
 	   call :downloadWithFallback "%localappdata%\revanced-cli\revanced-tools\!fname!" "!link!" "!hash!"
-	   set "%%b=%localappdata%\revanced-cli\revanced-tools\!fname!" 
+	   set "%%b=%localappdata%\revanced-cli\revanced-tools\!fname!"
     )
 )
 EXIT /B 0
