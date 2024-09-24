@@ -207,7 +207,7 @@
                 "dname": "Twitter (Android 8+) (10.49.0)",
                 "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1264636504131764244/com.twitter.android_10.49.0-release.0-310490000.apk?ex=66f3a0c6&is=66f24f46&hm=8421686fea5851e7fc27926fa4a2d66f322ee28201af7d7615b6c17f0c6a318a&",
                 "hash": "bad49bc850736fe34cb68fb2d7f7f33bc1978bee5185e1db6a823c8cf3cc4522",
-                "patches": " ",
+                "patches": "-e \"Open links with app chooser\" ",
                 "uri" : " ",
                 "toolMod" : " ",
                 "cmdMod" : " ",
