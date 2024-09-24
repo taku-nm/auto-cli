@@ -178,9 +178,9 @@
             },
 			{
                 "fname": "TikTok.apk",
-                "dname": "TikTok (32.5.3)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1184207062251622510/com.zhiliaoapp.musically_32.5.3-2023205030.apk?ex=66f30b45&is=66f1b9c5&hm=bcd5e105166ae3d9f12c71db7795fe6b9961605732d5dd5a6a94997eef598e23&",
-                "hash": "ceb5f0e9dc1173a811fb16802cacc97845e09b12f5a70bcdb9a7eb9849f79f43",
+                "dname": "TikTok (36.5.4)",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1288191492464185465/com.zhiliaoapp.musically_36.5.4-2023605040.apk?ex=66f44951&is=66f2f7d1&hm=9aa13fe95ca22a56aa587c47f1739ccaf683b499476525ded62760ab0e1afcc3&",
+                "hash": "b560a53fcea5246f03416556fead581cb49e37ff938c60ed10c8ec53defadb3c",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
                 "toolMod" : " ",
