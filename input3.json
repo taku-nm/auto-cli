@@ -179,7 +179,7 @@
 			{
                 "fname": "TikTok.apk",
                 "dname": "TikTok (36.5.4)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1288191492464185465/com.zhiliaoapp.musically_36.5.4-2023605040.apk?ex=6708b891&is=67076711&hm=70efc08cd228e7be2718d389a8883680eeea366e8ef7f23ca1fc6e961b5ee794&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1288191492464185465/com.zhiliaoapp.musically_36.5.4-2023605040.apk?ex=67096151&is=67080fd1&hm=b27b42fcb53145ee1c7b09e064110564b98d905f4030774a7c57daf8978dd316&",
                 "hash": "b560a53fcea5246f03416556fead581cb49e37ff938c60ed10c8ec53defadb3c",
                 "patches": "-i \"SIM spoof\"",
                 "uri" : " ",
@@ -205,7 +205,7 @@
 			{
                 "fname": "Twitter.apk",
                 "dname": "Twitter (Android 8+) (10.49.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1264636504131764244/com.twitter.android_10.49.0-release.0-310490000.apk?ex=6708b8c6&is=67076746&hm=42f9379fa17ffee0b0d9b71b7bafbbfe3d706d47c663a9ee646ffdc5aadd9172&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1264636504131764244/com.twitter.android_10.49.0-release.0-310490000.apk?ex=67096186&is=67081006&hm=7e2876742d944ad9893cedd0ad40b4636c2ad192cfc2bc1fd46ce2d8470d130d&",
                 "hash": "bad49bc850736fe34cb68fb2d7f7f33bc1978bee5185e1db6a823c8cf3cc4522",
                 "patches": "-e \"Open links with app chooser\" ",
                 "uri" : " ",
@@ -244,7 +244,7 @@
 			{
                 "fname": "Instagram.apk",
                 "dname": "Instagram (345.0.0.48.95)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1277684670846468136/com.instagram.android_345.0.0.48.95-374511747.apk?ex=6708bad3&is=67076953&hm=10b84aefeda5543d208d6c737b3c4cf4ab08400d8cad0e42d80f2ff563f49825&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1277684670846468136/com.instagram.android_345.0.0.48.95-374511747.apk?ex=67096393&is=67081213&hm=cc6255ea41649d4a4dcb50f69fc703db8943381ac4e337d8f44d60cbf084e121&",
                 "hash": "d91cdbbc1778285f633bd3802deccf9f958496d9b8fb431224124f1a53f30385",
                 "patches": " ",
                 "uri" : " ",
@@ -374,7 +374,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube Android 5 (16.40.36)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=6708b7a5&is=67076625&hm=7356991db7f719191fd050266f50722f4d81d6005d80de195dbbc2036658e0f6&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1167877731510407238/com.google.android.youtube_16.40.36-1523705280.apk?ex=67096065&is=67080ee5&hm=4433e626979809a5cdcfc373e4db806af30b00359518c3eefb26579643d8995a&",
                 "hash": "a56252e640d3528536b2fcd243d7d30e5c0ebdb4c81fa017a9a45da9aaafcfb6",
                 "patches": " ",
                 "uri" : " ",
@@ -437,7 +437,7 @@
 			{
                 "fname": "Twitter.apk",
                 "dname": "Twitter piko by crimera (10.49.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1264636504131764244/com.twitter.android_10.49.0-release.0-310490000.apk?ex=6708b8c6&is=67076746&hm=42f9379fa17ffee0b0d9b71b7bafbbfe3d706d47c663a9ee646ffdc5aadd9172&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1264636504131764244/com.twitter.android_10.49.0-release.0-310490000.apk?ex=67096186&is=67081006&hm=7e2876742d944ad9893cedd0ad40b4636c2ad192cfc2bc1fd46ce2d8470d130d&",
                 "hash": "bad49bc850736fe34cb68fb2d7f7f33bc1978bee5185e1db6a823c8cf3cc4522",
                 "patches": " ",
                 "uri" : " ",
