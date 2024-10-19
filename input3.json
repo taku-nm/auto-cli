@@ -218,7 +218,7 @@
 			{
                 "fname": "Twitter.apk",
                 "dname": "Twitter (Android 6+) (10.23.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1239253482004021258/com.twitter.android_10.23.0-release.0-310230000.apk?ex=671335fe&is=6711e47e&hm=cba9a54f49eccdc0f17c6b65d10bcd2d3323e65054953e4e2e6cfcfc577d0398&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1239253482004021258/com.twitter.android_10.23.0-release.0-310230000.apk?ex=6713debe&is=67128d3e&hm=812a430043c9bd30f88812b49c8fa53265f133ba3cd6ece5ea9777ee83b91fdc&",
                 "hash": "298f21ff824e135689b70125180e80f2b42aff477a9c20ab9eb2b95b2f05cb49",
                 "patches": " ",
                 "uri" : " ",
@@ -257,7 +257,7 @@
             {
                 "fname": "Sync.apk",
                 "dname": "Sync for Reddit (23.06.30-13:39)",
-                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155165102341898292/com.laurencedawson.reddit_sync_v23.06.30-13_39-23033.apk?ex=67132896&is=6711d716&hm=b1e6ccad8d5dda5bc900e0e17e1b24bac89d6f84ec4bfe0cca131fe180fd7c26&",
+                "link": "https://cdn.discordapp.com/attachments/1149345921516187789/1155165102341898292/com.laurencedawson.reddit_sync_v23.06.30-13_39-23033.apk?ex=6713d156&is=67127fd6&hm=56fed0e7b73db5fc2ee94e32a28445b426c65173f95031148ab318ece3e8493f&",
                 "hash": "6469a8dcc8e2a097892f84e8962e94965713be327b18db6a3110ed96f7fa4190",
                 "patches": " ",
                 "uri" : "http://redditsync/auth",
