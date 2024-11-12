@@ -103,7 +103,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube (Stock logo) (19.16.39)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1247255825630892154/com.google.android.youtube_19.16.39-1545731520.apk?ex=67339e81&is=67324d01&hm=9547085e7121088724bba16fb543d8db27e38168ceec4e67520d9c13e65fc79b&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1247255825630892154/com.google.android.youtube_19.16.39-1545731520.apk?ex=67344741&is=6732f5c1&hm=c0655d0e80e956b3eec56ae30d9783e5930bd91f2f80cf26b0c78c31ce7c791d&",
                 "hash": "5b846ee14af233dd5c342370d4df371d64ba496ce2dd052cc09e01d59c040a83",
                 "patches": " ",
                 "uri" : " ",
@@ -124,7 +124,7 @@
             {
                 "fname": "YouTube.apk",
                 "dname": "YouTube (ReVanced logo) (19.16.39)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1247255825630892154/com.google.android.youtube_19.16.39-1545731520.apk?ex=67339e81&is=67324d01&hm=9547085e7121088724bba16fb543d8db27e38168ceec4e67520d9c13e65fc79b&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1247255825630892154/com.google.android.youtube_19.16.39-1545731520.apk?ex=67344741&is=6732f5c1&hm=c0655d0e80e956b3eec56ae30d9783e5930bd91f2f80cf26b0c78c31ce7c791d&",
                 "hash": "5b846ee14af233dd5c342370d4df371d64ba496ce2dd052cc09e01d59c040a83",
                 "patches": "-i \"Custom branding\"",
                 "uri" : " ",
@@ -348,7 +348,7 @@
             {
                 "fname": "Reddit.apk",
                 "dname": "Reddit (2024.17.0)",
-                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1247256327755923541/com.reddit.frontpage_2024.17.0-1568106.apk?ex=67339ef9&is=67324d79&hm=97c60141d4a8c61574048e5b1501143a4238cc205a111f9d6642ec998667f0c0&",
+                "link": "https://cdn.discordapp.com/attachments/1159971981869977632/1247256327755923541/com.reddit.frontpage_2024.17.0-1568106.apk?ex=673447b9&is=6732f639&hm=54adbd27abd9f73d47ad653e164ee5903028935a5402c62fda2ac550ce26e8e3&",
                 "hash": "3b0eda811fe533ce016734316447c3bc4d084f21d40e535386d9ac153b6523d4",
                 "patches": " ",
                 "uri" : " ",
